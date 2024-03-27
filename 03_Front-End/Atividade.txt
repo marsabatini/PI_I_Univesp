@@ -1,0 +1,5 @@
+
+
+Instalar React pelo VS Code (IDE)
+
+-> Criar projeto no React
