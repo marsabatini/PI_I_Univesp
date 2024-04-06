@@ -1,8 +1,1 @@
-
-Instalar GIT
-
--> Baixar (pull) o repositório
-
-Instalar React pelo VS Code (IDE)
-
--> Criar projeto no React dentro da pasta baixada do GITHUB
+arquivo modificado
