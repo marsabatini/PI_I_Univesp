@@ -20,15 +20,60 @@ USE `teamcreziosp` ;
 CREATE TABLE IF NOT EXISTS `teamcreziosp`.`planos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(30) NOT NULL,
-  `valor` DECIMAL(10,2) NOT NULL,
   `qtd_aulas` INT NOT NULL,
-  `taxa_matricula` DECIMAL(10,2) NULL,
-  `parcelas` INT NULL,
-  `meses_parcelas` INT NULL,
+  `taxa_matricula` DECIMAL(10,2),
+  `kimono` DECIMAL(10,2),
   `ferias` TINYINT(1) NULL,
+  `convidado` DECIMAL(1),
+  `tranferivel` TINYINT(1) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
+
+-- -----------------------------------------------------
+-- Table `teamcreziosp`.`modadlidade_plano`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS teamcreziosp.modalidade_plano (
+	id INT NOT NULL AUTO_INCREMENT,
+    plano INT NOT NULL,
+    valor_parcela DECIMAL(10,2) NOT NULL,
+    numero_parcela INT NOT NULL,
+    PRIMARY KEY (id),
+    INDEX fk_Modalidade_Plano_idx (plano ASC) VISIBLE,
+    CONSTRAINT fk_Modalidade_Plano
+	FOREIGN KEY (plano) 
+	REFERENCES teamcreziosp.planos (id))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `teamcreziosp`.`convidado`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS teamcreziosp.convidado (
+	id INT NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(30),
+	aluno_id INT NOT NULL,
+	PRIMARY KEY (id),
+    INDEX fk_Convidado_idx (aluno_id ASC) VISIBLE,
+    CONSTRAINT fk_Convidado
+    FOREIGN KEY (aluno_id)
+    REFERENCES teamcreziosp.aluno(id))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `teamcreziosp`.`tipo_planos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS teamcreziosp.tipos_planos (
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(30) NOT NULL,
+  descricao VARCHAR(50),
+  PRIMARY KEY (id))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
 
 
 -- -----------------------------------------------------
@@ -99,6 +144,7 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aula` (
   `data` DATE NOT NULL,
   `hora` TIME NOT NULL,
   `sexo_indicado` VARCHAR(20) NULL DEFAULT NULL,
+  `plano` VARCHAR(30) NOT NULL,
   `modelo_aula` VARCHAR(20) NOT NULL,
   `limite_participantes` INT NOT NULL,
   `idade_min` INT NOT NULL,
@@ -121,6 +167,16 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`avaliacao_fisica` (
   `professor` INT NOT NULL,
   `data` DATE NOT NULL,
   `hora` TIME NOT NULL,
+  `peso` DECIMAL(10,2) NOT NULL,
+  `altura` DECIMAL(10,2) NOT NULL,
+  `percentual_gordura` DECIMAL(10,2) NOT NULL,
+  `coxa` DECIMAL(10,2) NOT NULL,
+  `toracica` DECIMAL(10,2) NOT NULL,
+  `axilar_media` DECIMAL(10,2) NOT NULL,
+  `triceps` DECIMAL(10,2) NOT NULL,
+  `subescapular` DECIMAL(10,2) NOT NULL, 
+  `abdominal` DECIMAL(10,2) NOT NULL,
+  `suprailíaca` DECIMAL(10,2) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Avaliacao_fisica_Aluno1_idx` (`aluno` ASC) VISIBLE,
   INDEX `fk_Avaliacao_fisica_Professor1_idx` (`professor` ASC) VISIBLE,
@@ -156,6 +212,16 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`graduacao` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
+-- -----------------------------------------------------
+-- Table `teamcreziosp`.`tipo_faixas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS teamcreziosp.tipo_faixas (
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(30) NOT NULL,
+  nivel DECIMAL(1),
+  PRIMARY KEY (id))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
 
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`agendamento`
