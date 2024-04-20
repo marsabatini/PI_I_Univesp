@@ -1,4 +1,8 @@
 package br.com.teamcreziosp.application.repository;
 
-public class FeedRepository {
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface FeedRepository {
 }

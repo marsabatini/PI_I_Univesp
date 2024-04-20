@@ -2,13 +2,14 @@ package br.com.teamcreziosp.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {UserDetailsServiceAutoConfiguration.class})
 @EnableWebMvc
-public class Application implements WebMvcConfigurer {
+public class TeamCrezioSPApplication implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry){
@@ -19,7 +20,7 @@ public class Application implements WebMvcConfigurer {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(TeamCrezioSPApplication.class, args);
     }
 
 }
