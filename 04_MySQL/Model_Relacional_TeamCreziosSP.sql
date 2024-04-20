@@ -31,7 +31,7 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
 -- -----------------------------------------------------
--- Table `teamcreziosp`.`modadlidade_plano`
+-- Table `teamcreziosp`.`modalidade_plano`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS teamcreziosp.modalidade_plano (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -75,7 +75,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
 
-
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`aluno`
 -- -----------------------------------------------------
@@ -89,12 +88,8 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
   `RG` VARCHAR(12) NOT NULL,
   `CPF` VARCHAR(12) NOT NULL,
   `tel` VARCHAR(20) NULL DEFAULT NULL,
-  `CEP` VARCHAR(10) NOT NULL,
-  `endereco` VARCHAR(30) NOT NULL,
-  `bairro` VARCHAR(30) NOT NULL,
-  `cidade` VARCHAR(30) NOT NULL,
-  `numero` INT NOT NULL,
   `graduacao` VARCHAR(30) NULL DEFAULT NULL,
+   endereco INT NOT NULL, 
   `exame_medico` VARCHAR(255) NULL DEFAULT NULL,
   `aulas_prox_grad` INT NULL DEFAULT NULL,
   `plano` INT NOT NULL,
@@ -110,6 +105,24 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
+
+-- -----------------------------------------------------
+-- Table `teamcreziosp`.`enderecos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS teamcreziosp.enderecos (
+  id INT NOT NULL,
+  CEP VARCHAR(10) NOT NULL,
+  rua VARCHAR(30) NOT NULL,
+  cidade VARCHAR(30) NOT NULL,
+  estado VARCHAR(30) NOT NULL,
+  numero VARCHAR(10) NOT NULL
+  PRIMARY KEY(id_aluno)
+  INDEX fk_enderecos_idx (id ASC) VISIBLE,
+  CONSTRAINT fk_enderecos
+  FOREIGN KEY(id) 
+  REFERENCES teamcreziosp.aluno(endereco));
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
 
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`professor`
@@ -218,7 +231,7 @@ DEFAULT CHARACTER SET = utf8mb3;
 CREATE TABLE IF NOT EXISTS teamcreziosp.tipo_faixas (
   id INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(30) NOT NULL,
-  nivel DECIMAL(1),
+  nivel INT,
   PRIMARY KEY (id))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
