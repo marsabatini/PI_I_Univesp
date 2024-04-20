@@ -1,0 +1,22 @@
+INSERT INTO teamcreziosp.tipo_faixas
+VALUES
+('Faixa Branca',1),
+('Faixa Cinza e Branca',2),
+('Faixa Cinza',3),
+('Faixa Cinza e Preta',4),
+('Faixa Amarela e Branca',5),
+('Faixa Amarela',6),
+('Faixa Amarela e Preta',7),
+('Faixa Laranja e Branca',8),
+('Faixa Laranja',9),
+('Faixa Laranha e Preta', 10),
+('Faixa Verde e Branca',11),
+('Faixa Verde',12),
+('Faixa Verde e Preta',13),
+('Faixa Azul',14),
+('Faixa Roxa',15),
+('Faixa Marrom',16),
+('Faixa Preta',17),
+('Faixa Vermelha e Preta',18),
+('Faixa Vermelha e Branca',19),
+('Faixa Vermelha',20);
