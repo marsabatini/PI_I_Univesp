@@ -1,4 +1,4 @@
-INSERT INTO planos
+INSERT INTO teamcreziosp.planos
 (
     nome,
     qtd_aulas,
@@ -15,6 +15,16 @@ VALUES
     479,
     0,
     0
+);
+
+INSERT INTO teamcreziosp.planos
+(
+    nome,
+    qtd_aulas,
+    taxa_matricula,
+    kimono,
+    ferias,
+    tranferivel
 )
 
 VALUES
@@ -25,6 +35,16 @@ VALUES
     479,
     0,
     0
+);
+
+INSERT INTO teamcreziosp.planos
+(
+    nome,
+    qtd_aulas,
+    taxa_matricula,
+    kimono,
+    ferias,
+    tranferivel
 )
 
 VALUES
@@ -35,6 +55,16 @@ VALUES
     479,
     0,
     0
+);
+
+INSERT INTO teamcreziosp.planos
+(
+    nome,
+    qtd_aulas,
+    taxa_matricula,
+    kimono,
+    ferias,
+    tranferivel
 )
 
 VALUES
@@ -45,9 +75,9 @@ VALUES
     479,
     0,
     0
-)
+);
 
-INSERT INTO planos
+INSERT INTO teamcreziosp.planos
 (
     nome,
     qtd_aulas,
@@ -63,6 +93,15 @@ VALUES
     1,
     1,
     1
+);
+
+INSERT INTO teamcreziosp.planos
+(
+    nome,
+    qtd_aulas,
+    ferias,
+    convidado,
+    tranferivel
 )
 
 VALUES
@@ -72,6 +111,15 @@ VALUES
     1,
     1,
     1
+);
+
+INSERT INTO teamcreziosp.planos
+(
+    nome,
+    qtd_aulas,
+    ferias,
+    convidado,
+    tranferivel
 )
 
 VALUES
@@ -81,6 +129,15 @@ VALUES
     1,
     1,
     1
+);
+
+INSERT INTO teamcreziosp.planos
+(
+    nome,
+    qtd_aulas,
+    ferias,
+    convidado,
+    tranferivel
 )
 
 VALUES
@@ -90,9 +147,9 @@ VALUES
     1,
     1,
     1
-)
+);
 
-INSERT INTO planos
+INSERT INTO teamcreziosp.planos
 (
     nome,
     qtd_aulas,
@@ -104,14 +161,22 @@ VALUES
     'SINGLE',
     2,
     99
+);
+
+INSERT INTO teamcreziosp.planos
+(
+    nome,
+    qtd_aulas,
+    taxa_matricula
 )
+
 
 VALUES 
 (
     'TRIPLE',
     2,
     99
-)
+);
 
 
 
