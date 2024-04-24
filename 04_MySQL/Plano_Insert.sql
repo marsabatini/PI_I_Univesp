@@ -1,182 +1,22 @@
 INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    taxa_matricula,
-    kimono,
-    ferias,
-    tranferivel
-)
+(nome,qtd_aulas,taxa_matricula,kimono,ferias,convidado,transferivel)
 VALUES
-(
-    'WHITE BELT',
-    1,
-    99,
-    479,
-    0,
-    0
-);
+('WHITE BELT',1,99,479,DEFAULT,DEFAULT,DEFAULT),
 
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    taxa_matricula,
-    kimono,
-    ferias,
-    tranferivel
-)
+('BLUE BELT',2,99,479,DEFAULT,DEFAULT,DEFAULT),
 
-VALUES
-(
-    'BLUE BELT',
-    2,
-    99,
-    479,
-    0,
-    0
-);
+('PURPLE BELT',0,99,479,DEFAULT,DEFAULT,DEFAULT),
 
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    taxa_matricula,
-    kimono,
-    ferias,
-    tranferivel
-)
+('KIDS',1,99,319,DEFAULT,DEFAULT,DEFAULT),
 
-VALUES
-(
-    'PURPLE BELT',
-    0,
-    99,
-    479,
-    0,
-    0
-);
+('BLACK BELT',0,DEFAULT,DEFAULT,1,1,1),
 
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    taxa_matricula,
-    kimono,
-    ferias,
-    tranferivel
-)
+('SUPER KIDS',0,DEFAULT,DEFAULT,1,1,1),
 
-VALUES
-(
-    'KIDS',
-    1,
-    99,
-    479,
-    0,
-    0
-);
+('SINGLE +',2,DEFAULT,DEFAULT,1,1,1),
 
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    ferias,
-    convidado,
-    tranferivel
-)
+('TRIPLE +',2,DEFAULT,DEFAULT,1,1,1),
 
-VALUES
-(
-    'BLACK BELT',
-    0,
-    1,
-    1,
-    1
-);
+('SINGLE',2,99,DEFAULT,DEFAULT,DEFAULT,DEFAULT),
 
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    ferias,
-    convidado,
-    tranferivel
-)
-
-VALUES
-(
-    'SUPER KIDS',
-    0,
-    1,
-    1,
-    1
-);
-
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    ferias,
-    convidado,
-    tranferivel
-)
-
-VALUES
-(
-    'SINGLE +',
-    2,
-    1,
-    1,
-    1
-);
-
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    ferias,
-    convidado,
-    tranferivel
-)
-
-VALUES
-(
-    'TRIPLE +',
-    2,
-    1,
-    1,
-    1
-);
-
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    taxa_matricula
-)
-
-VALUES 
-(
-    'SINGLE',
-    2,
-    99
-);
-
-INSERT INTO teamcreziosp.planos
-(
-    nome,
-    qtd_aulas,
-    taxa_matricula
-)
-
-
-VALUES 
-(
-    'TRIPLE',
-    2,
-    99
-);
-
-
-
+('TRIPLE',2,99,DEFAULT,DEFAULT,DEFAULT,DEFAULT);

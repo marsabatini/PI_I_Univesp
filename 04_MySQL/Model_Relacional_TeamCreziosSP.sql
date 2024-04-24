@@ -11,7 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema teamcreziosp
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `teamcreziosp` DEFAULT CHARACTER SET utf8mb3 ;
+CREATE SCHEMA IF NOT EXISTS `teamcreziosp` DEFAULT CHARACTER SET utf8mb4 ;
 USE `teamcreziosp` ;
 
 -- -----------------------------------------------------
@@ -21,14 +21,14 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`planos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(30) NOT NULL,
   `qtd_aulas` INT NOT NULL,
-  `taxa_matricula` DECIMAL(10,2),
-  `kimono` DECIMAL(10,2),
-  `ferias` TINYINT(1) NULL,
-  `convidado` DECIMAL(1),
-  `tranferivel` TINYINT(1) NULL,
+  `taxa_matricula` DECIMAL(10,2) DEFAULT NULL,
+  `kimono` DECIMAL(10,2) DEFAULT NULL,
+  `ferias` TINYINT(1) DEFAULT 0,
+  `convidado` DECIMAL(1) DEFAULT 0,
+  `transferivel` TINYINT(1) DEFAULT 0,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`modalidade_plano`
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS teamcreziosp.modalidade_plano (
 	FOREIGN KEY (plano) 
 	REFERENCES teamcreziosp.planos (id))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -55,12 +55,12 @@ CREATE TABLE IF NOT EXISTS teamcreziosp.convidado (
 	nome VARCHAR(30),
 	aluno_id INT NOT NULL,
 	PRIMARY KEY (id),
-    INDEX fk_Convidado_idx (aluno_id ASC) VISIBLE,
-    CONSTRAINT fk_Convidado
+  INDEX fk_Convidado_idx (aluno_id ASC) VISIBLE,
+  CONSTRAINT fk_Convidado
     FOREIGN KEY (aluno_id)
     REFERENCES teamcreziosp.aluno(id))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS teamcreziosp.tipos_planos (
   descricao VARCHAR(50),
   PRIMARY KEY (id))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -89,21 +89,25 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
   `CPF` VARCHAR(12) NOT NULL,
   `tel` VARCHAR(20) NULL DEFAULT NULL,
   `graduacao` VARCHAR(30) NULL DEFAULT NULL,
-   endereco INT NOT NULL, 
-  `exame_medico` VARCHAR(255) NULL DEFAULT NULL,
+   endereco INT, 
+  `exame_medico` VARCHAR(255) NULL DEFAULT 'Pendente',
   `aulas_prox_grad` INT NULL DEFAULT NULL,
   `plano` INT NOT NULL,
-  `status_plano` VARCHAR(20) NULL DEFAULT NULL,
+  `status_plano` VARCHAR(20) NOT NULL,
   `usuario` VARCHAR(30) NOT NULL,
   `senha` VARCHAR(255) NOT NULL,
   `tipo_user` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Aluno_Plano_idx` (`plano` ASC) VISIBLE,
+  INDEX fk_Aluno_Endereco_idx (endereco ASC) VISIBLE,
   CONSTRAINT `fk_Aluno_Plano`
     FOREIGN KEY (`plano`)
-    REFERENCES `teamcreziosp`.`planos` (`id`))
+    REFERENCES `teamcreziosp`.`planos` (`id`),
+  CONSTRAINT fk_Aluno_Endereco
+    FOREIGN KEY (endereco)
+    REFERENCES teamcreziosp.enderecos(id))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -115,14 +119,10 @@ CREATE TABLE IF NOT EXISTS teamcreziosp.enderecos (
   rua VARCHAR(30) NOT NULL,
   cidade VARCHAR(30) NOT NULL,
   estado VARCHAR(30) NOT NULL,
-  numero VARCHAR(10) NOT NULL
-  PRIMARY KEY(id_aluno)
-  INDEX fk_enderecos_idx (id ASC) VISIBLE,
-  CONSTRAINT fk_enderecos
-  FOREIGN KEY(id) 
-  REFERENCES teamcreziosp.aluno(endereco));
+  numero VARCHAR(10) NOT NULL,
+  PRIMARY KEY(id))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`professor`
@@ -137,15 +137,17 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`professor` (
   `tel` VARCHAR(20) NULL DEFAULT NULL,
   `RG` VARCHAR(12) NOT NULL,
   `CPF` VARCHAR(12) NOT NULL,
-  `endereco` VARCHAR(30) NOT NULL,
-  `bairro` VARCHAR(30) NOT NULL,
-  `cidade` VARCHAR(30) NOT NULL,
-  `numero` INT NOT NULL,
+  `endereco` INT NOT NULL,
   `tipo_user` VARCHAR(30) NOT NULL,
+   usuario VARCHAR(30) NOT NULL,
   `senha` VARCHAR(30) NOT NULL,
-  PRIMARY KEY (`id`))
+  PRIMARY KEY (`id`),
+  INDEX fk_Professor_Endereco_idx (endereco ASC) VISIBLE,
+  CONSTRAINT fk_Professor_Endereco
+    FOREIGN KEY (endereco) 
+    REFERENCES teamcreziosp.enderecos(id))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -168,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aula` (
     FOREIGN KEY (`professor`)
     REFERENCES `teamcreziosp`.`professor` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -200,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`avaliacao_fisica` (
     FOREIGN KEY (`professor`)
     REFERENCES `teamcreziosp`.`professor` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -223,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`graduacao` (
     FOREIGN KEY (`professor`)
     REFERENCES `teamcreziosp`.`professor` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`tipo_faixas`
@@ -234,7 +236,7 @@ CREATE TABLE IF NOT EXISTS teamcreziosp.tipo_faixas (
   nivel INT,
   PRIMARY KEY (id))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`agendamento`
@@ -254,7 +256,7 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`agendamento` (
     FOREIGN KEY (`aula`)
     REFERENCES `teamcreziosp`.`aula` (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb3;
+DEFAULT CHARACTER SET = utf8mb4;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
