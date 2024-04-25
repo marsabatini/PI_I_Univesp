@@ -80,6 +80,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
   `id` INT NOT NULL AUTO_INCREMENT,
+  `date`  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
   `nome` VARCHAR(45) NOT NULL,
   `sobrenome` VARCHAR(45) NOT NULL,
   `data_nasc` DATE NOT NULL,
@@ -89,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
   `CPF` VARCHAR(12) NOT NULL,
   `tel` VARCHAR(20) NULL DEFAULT NULL,
   `graduacao` VARCHAR(30) NULL DEFAULT NULL,
-   endereco INT, 
+  `endereco` INT NULL DEFAULT 'Pendente', 
   `exame_medico` VARCHAR(255) NULL DEFAULT 'Pendente',
   `aulas_prox_grad` INT NULL DEFAULT NULL,
   `plano` INT NOT NULL,
@@ -114,7 +115,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `teamcreziosp`.`enderecos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS teamcreziosp.enderecos (
-  id INT NOT NULL,
+  id INT AUTO_INCREMENT,
   CEP VARCHAR(10) NOT NULL,
   rua VARCHAR(30) NOT NULL,
   cidade VARCHAR(30) NOT NULL,
@@ -127,7 +128,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`professor`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `teamcreziosp`.`professor` (
+CREATE TABLE IF NOT EXISTS `teamcreziosp`.`funcionario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `sobrenome` VARCHAR(45) NOT NULL,
