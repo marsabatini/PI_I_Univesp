@@ -35,14 +35,15 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS teamcreziosp.modalidade_plano (
 	id INT NOT NULL AUTO_INCREMENT,
-    plano INT NOT NULL,
-    valor_parcela DECIMAL(10,2) NOT NULL,
-    numero_parcela INT NOT NULL,
-    PRIMARY KEY (id),
-    INDEX fk_Modalidade_Plano_idx (plano ASC) VISIBLE,
-    CONSTRAINT fk_Modalidade_Plano
-	FOREIGN KEY (plano) 
-	REFERENCES teamcreziosp.planos (id))
+  plano INT NOT NULL,
+  valor_parcela DECIMAL(10,2) NOT NULL,
+  numero_parcela INT NOT NULL,
+  validade VARCHAR(30),
+  PRIMARY KEY (id),
+  INDEX fk_Modalidade_Plano_idx (plano ASC) VISIBLE,
+  CONSTRAINT fk_Modalidade_Plano
+	  FOREIGN KEY (plano) 
+	  REFERENCES teamcreziosp.planos (id))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -52,7 +53,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS teamcreziosp.convidado (
 	id INT NOT NULL AUTO_INCREMENT,
-	nome VARCHAR(30),
+	nome_completo VARCHAR(100),
 	aluno_id INT NOT NULL,
 	PRIMARY KEY (id),
   INDEX fk_Convidado_idx (aluno_id ASC) VISIBLE,
@@ -81,8 +82,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `date`  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
-  `nome` VARCHAR(45) NOT NULL,
-  `sobrenome` VARCHAR(45) NOT NULL,
+  `nome_completo` VARCHAR(100) NOT NULL,
   `data_nasc` DATE NOT NULL,
   `sexo` VARCHAR(20) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
   `CPF` VARCHAR(12) NOT NULL,
   `tel` VARCHAR(20) NULL DEFAULT NULL,
   `graduacao` VARCHAR(30) NULL DEFAULT NULL,
-  `endereco` INT NULL DEFAULT 'Pendente', 
+  `endereco` VARCHAR(100),
   `exame_medico` VARCHAR(255) NULL DEFAULT 'Pendente',
   `aulas_prox_grad` INT NULL DEFAULT NULL,
   `plano` INT NOT NULL,
@@ -100,53 +100,29 @@ CREATE TABLE IF NOT EXISTS `teamcreziosp`.`aluno` (
   `tipo_user` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Aluno_Plano_idx` (`plano` ASC) VISIBLE,
-  INDEX fk_Aluno_Endereco_idx (endereco ASC) VISIBLE,
   CONSTRAINT `fk_Aluno_Plano`
     FOREIGN KEY (`plano`)
-    REFERENCES `teamcreziosp`.`planos` (`id`),
-  CONSTRAINT fk_Aluno_Endereco
-    FOREIGN KEY (endereco)
-    REFERENCES teamcreziosp.enderecos(id))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4;
-
-
--- -----------------------------------------------------
--- Table `teamcreziosp`.`enderecos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS teamcreziosp.enderecos (
-  id INT AUTO_INCREMENT,
-  CEP VARCHAR(10) NOT NULL,
-  rua VARCHAR(30) NOT NULL,
-  cidade VARCHAR(30) NOT NULL,
-  estado VARCHAR(30) NOT NULL,
-  numero VARCHAR(10) NOT NULL,
-  PRIMARY KEY(id))
+    REFERENCES `teamcreziosp`.`planos` (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
 -- -----------------------------------------------------
--- Table `teamcreziosp`.`professor`
+-- Table `teamcreziosp`.`funcionario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teamcreziosp`.`funcionario` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `sobrenome` VARCHAR(45) NOT NULL,
+  `nome_completo` VARCHAR(100) NOT NULL,
   `data_nasc` DATE NOT NULL,
   `sexo` VARCHAR(20) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `tel` VARCHAR(20) NULL DEFAULT NULL,
   `RG` VARCHAR(12) NOT NULL,
   `CPF` VARCHAR(12) NOT NULL,
-  `endereco` INT NOT NULL,
+  `endereco` VARCHAR(100),
   `tipo_user` VARCHAR(30) NOT NULL,
    usuario VARCHAR(30) NOT NULL,
   `senha` VARCHAR(30) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX fk_Professor_Endereco_idx (endereco ASC) VISIBLE,
-  CONSTRAINT fk_Professor_Endereco
-    FOREIGN KEY (endereco) 
-    REFERENCES teamcreziosp.enderecos(id))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -238,6 +214,7 @@ CREATE TABLE IF NOT EXISTS teamcreziosp.tipo_faixas (
   PRIMARY KEY (id))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
+
 
 -- -----------------------------------------------------
 -- Table `teamcreziosp`.`agendamento`
