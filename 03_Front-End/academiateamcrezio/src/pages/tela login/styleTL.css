@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header {
+    width: 100%;
+    max-height: 120px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    
+}
+.img-logo {
+    width: 225px;
+    height: 120px;
+    padding: 10px;
+    margin: 30px 0px 0px 50px;   
+    cursor: pointer;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+.logo-texto {
+    margin-left: 20px;
+}
+.menu li {
+    display: inline-block;
+    margin-right: 100px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 21px;
+}
+.menu li:hover {
+    color: #3d3e40;
+}
+
+.menu li a {
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    
+}
+.menu button {
+    width: 90px;
+    height: 58px;
+    font-size: 19px;
+    color: #fff;
+    background-color: #3d3e40;
+    border-radius: 5px;
+    margin-right: 100px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    background-color:#A21500;
+    bottom: 0;
+    position: fixed;
+}
+footer .boxs {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   flex:1;
+}
+footer .area--icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+footer .areat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+.boxs h2 {
+    color: #fff ;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+.boxs ul li {
+    margin: 10px;
+    list-style: none;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+}
+.boxs ul li a {
+    text-decoration: none;
+}
+.imgb {
+    width: 100px;
+    height: 100px;
+    margin: 24px 0px 0px 65px;
+}
+.rsicon {
+    width: 30px;
+    height: 30px;
+}
+.boxs a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.boxs a:hover {
+    color: #6b6b6b;
+}
+body { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:#fff;
+}
+.login {
+    background: #f0f0f0;
+    width: 600px;
+    padding: 40px;
+    height: 550px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5) ;
+
+    
+}
+.login h2{
+    margin-bottom: 120px;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+}
+.login .caixa-u {
+    position: relative;
+    margin-bottom: 15px;
+}
+.login .caixa-u input{
+    width: 100%;
+    padding: 10px 0px;
+    outline: none;
+    border: 0;
+    background:transparent;
+    border-bottom: 1px solid #fff;
+    color:#000;
+    font-size: 16px;
+    margin-bottom: 30px ;
+}
+.login .caixa-u label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0; 
+    color:#000000;
+    font-size: 25px ;
+    pointer-events: none;
+    transition: .5s;
+}
+.login .caixa-u input:focus~label,
+.login .caixa-u input:valid~label
+{
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 20px;
+}
+.forget {
+    font-size: 20px;
+    color: #000;
+    display: flex;
+    justify-content:flex-end;
+    margin-bottom: 15px;
+    margin-top: -30px;
+}
+.b-ent{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+.l-bnt  {
+    border: none;
+    width: 111px;
+    height: 55px;
+    font-size: 19px;
+    color: #fff;
+    background-color:#A21500;
+    border-radius: 15px;
+    
+}
+.cadastro {
+    width: 400px;
+    font-size: 10px;
+    background-color: #A21500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.cadastro p {
+    position: relative;  
+    font-size: 20px; 
+    color: #f0f0f0;
+    margin-bottom: 50px;
+}
+.container { 
+    display: flex;
+}
+.c-bnt {
+    width: 111px;
+    height: 55px;
+    font-size: 19px;
+    color: #fff;
+    background-color:#1d1d1d;
+    border-radius: 15px; 
+    border: none;
+    align-content: center;  
+}
+.flexz {
+    margin-top: 55px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+.flexz img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px; 
+}   
+
