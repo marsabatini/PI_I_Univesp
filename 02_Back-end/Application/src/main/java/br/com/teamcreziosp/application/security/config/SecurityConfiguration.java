@@ -34,10 +34,13 @@ public class SecurityConfiguration{
                         .requestMatchers("/api/index",
                                         "/api/cadastro",
                                         "/api/login",
-                                        "/api/aulaexperimental").permitAll()
+                                        "/api/aulaexperimental",
+                                        "/api/aulaexperimental/consulta/query={email}",
+                                        "api/aulaexperimental/atualiza={email}")               //===> REFATORAR: permitir apenas Roles EXPERIMENTAL
+                                        .permitAll()
                         .requestMatchers("api/agenda").hasRole("EXPERIMENTAL")
                         .requestMatchers("/api/aluno/agenda").hasRole("ALUNO")
-                        .requestMatchers("/api/cadastrofuncionario").hasRole("ALUNO"))  //===> Endpoint funciona, mas acesso por hasRole não
+                        .requestMatchers("/api/cadastrofuncionario").hasRole("ADMIN"))  //===> Endpoint funciona, mas acesso por hasRole não
                 .cors(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)

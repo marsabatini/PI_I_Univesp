@@ -19,16 +19,10 @@ import java.time.LocalTime;
 @Setter
 public class RegisterRequestAlunoExperimental {
 
-    @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[A-Z]+(.)*")
     private String nomeCompleto;
 
-    @Email(message = "E-mail inválido.")
-    @Column(unique = true)
-    @NotBlank(message = "Campo obrigatório.")
     private String email;
 
-    @NotBlank(message = "Campo obrigatório.")
     private String telefone;
 
 }

@@ -54,11 +54,9 @@ public class AlunoExperimental implements UserDetails {
 
     private boolean presenca;
 
-    @Min(value = 1, message = "O valor mínimo permitido é 1.")
-    @Max(value = 5, message = "O valor máximo permitido é 5.")
-    private int avaliacao;
+    private int avaliacao;      // ===> REFATORAR: 1 a 5 estrelinhas
 
-    @Size(min = 50, max = 500, message = "Seu comentário deve conter entre 50 e 500 caracteres.")
+    @Size(min = 20, max = 500, message = "Seu comentário deve conter entre 50 e 500 caracteres.")
     private String comentario;
 
     @Override
