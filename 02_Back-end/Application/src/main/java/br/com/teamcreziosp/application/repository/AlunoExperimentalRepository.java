@@ -1,13 +1,14 @@
 package br.com.teamcreziosp.application.repository;
 
 import br.com.teamcreziosp.application.model.Aluno;
+import br.com.teamcreziosp.application.model.AlunoExperimental;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
+public interface AlunoExperimentalRepository extends JpaRepository<AlunoExperimental, Integer> {
 
-    Optional<Aluno> findByEmail(String email);
+    Optional<AlunoExperimental> findByEmail(String email);
 }
