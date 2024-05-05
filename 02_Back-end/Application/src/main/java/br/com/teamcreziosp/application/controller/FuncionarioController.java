@@ -15,4 +15,5 @@ public class FuncionarioController {
         return ResponseEntity.ok("Olá querido professor/treinador");
     }
 
+
 }

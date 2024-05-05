@@ -1,5 +1,6 @@
 package br.com.teamcreziosp.application.security.auth;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AuthenticationRequest {
 
+    @NotBlank(message = "Este campo é obrigatório.")
     private String email;
 
-    String password;
+    @NotBlank(message = "Este campo é obrigatório.")
+    String senha;
 }
