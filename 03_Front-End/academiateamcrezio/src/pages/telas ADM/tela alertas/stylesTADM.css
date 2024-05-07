@@ -188,16 +188,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.caixas {
-    width: 52% ;
-    height: 450px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0px;
-    align-items: center;
-    margin-bottom: 90px;
-}
+
 .imagens1 img{
     width: 300px;
     height: 300px;
@@ -216,6 +207,7 @@ body {
     display: flex;
     margin: 10px;
     padding-top: 140px;
+
 }
 .imagens:hover {
     cursor: pointer;
@@ -288,40 +280,10 @@ body {
 
 }
 
-.avisos {
-    height: 600px;
-    width: 1400px;
-    background-color: #d1d1d1;
-    border: #3d3e40;
-    margin-block-start: 25px;
-    margin-inline-start: 35px;
-    margin-inline-end: 150px;
-    margin-block-end: 30px;
-    padding: 15px 20px;
-    overflow-y: auto;
-}
-
-.avisos li{
-    display:flex;
-    justify-content: space-between;
-    margin-block-start:25px ;
-    margin-block-end: 15px;
-    margin-inline-start: 30px; 
-    gap: 15px;
-}
-
-.avisos h2 {
-    color:#A21500;
-    justify-content: left;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px #acacac;
-}
-
 .h4{
     background-color: #A21500;
-    color:white;
     width: 1600px;
+    color:white;
     justify-content: center;
     font-size: 30px;
     text-align: center;
@@ -330,38 +292,35 @@ body {
     margin-block-start: 10px;
 }
 
-.inserção_avisos {
+.alertas {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.caixas {
+    width: 675px;
+    height: 325px;
+    justify-content: center;
     margin-block-start: 25px;
-    margin-inline-start: 35px;
-    margin-block-end: 30px;
-    gap: 40px;
+    margin-block-end: 25px;
+    overflow-y: scroll;
+
 }
 
-.inserção_avisos input {
-    border-radius: 5px;
-    text-align: left;
-    padding-bottom: 65px;
+.caixas h2{
+    font-size: 30px;
+    color: #3d3e40;
     padding-left: 10px;
-    width: 1400px;
-    height: 120px;
-    font-family: 'Times New Roman';
+}
+
+.caixas li{
+    color: white;
+    margin-block-start: 5px;
+    margin-inline-start: 10px;
+    list-style: none;
     font-size: 20px;
-}
-
-.inserção_avisos button{
-    width: 100px;
-    height: 50px;
-    font-size: 18px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #fff;
-    background-color: #0b721c;
-    border-radius: 5px;
-}
-
-.trash {
-    width: 20px;
-    height: 20px;
-    align-self: center;
+    font-family:"Engravers";
+    font-weight: bold;
 }
