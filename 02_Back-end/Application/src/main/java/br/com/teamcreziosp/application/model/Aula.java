@@ -1,32 +1,35 @@
 package br.com.teamcreziosp.application.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.Data;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
-@Table(name = "aluno")
-@Getter
-@Setter
+@Data
+@Table(name = "aulas")
 public class Aula {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer professor;
-    private LocalDate data;
-    private LocalTime hora;
-    private String sexoIndicado;
-    private Integer plano;
-    private String modeloAula;
-    private Integer limiteParticipantes;
-    private Integer idadeMin;
-    private Integer idadeMax;
+
+    private Integer id_professor;
+
+    private LocalDateTime data;
+
+    @ManyToOne
+    @JoinColumn(name = "id_tipo")
+    private TiposAula id_tipo;
+
+    private Integer qtddLimiteAlunos;
+
+    @ManyToMany
+    @JoinTable(
+            name = "aula_aluno",
+            joinColumns = @JoinColumn(name = "id_aula"),
+            inverseJoinColumns = @JoinColumn(name = "id_aluno"))
+    private List<Aluno> alunosInscritos;
 
 }
