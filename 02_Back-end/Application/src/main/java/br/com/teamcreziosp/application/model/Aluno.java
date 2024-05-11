@@ -75,6 +75,12 @@ public class Aluno implements UserDetails {
 
     private String statusPlano;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    @ManyToMany
+    private List<Aula> aulas;
+
 
 //###################################################################################################################
 //    ====> Criar CLASSE ENDERECO: falta Estado, CEP e Complemento
@@ -91,10 +97,6 @@ public class Aluno implements UserDetails {
 //
 //    private String cidade;
 //###################################################################################################################
-
-
-    @Enumerated(EnumType.STRING)
-    private Role role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
