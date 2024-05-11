@@ -1,7 +1,19 @@
 package br.com.teamcreziosp.application.model;
 
-import br.com.teamcreziosp.application.security.Role;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import lombok.Data;
 
-public class Professor extends Funcionario{
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+@Entity
+@DiscriminatorValue("Professor")
+public class Professor extends Funcionario {
+
+    @OneToMany(mappedBy = "id_professor")
+    private List<Aula> aulas = new ArrayList<>();
 
 }

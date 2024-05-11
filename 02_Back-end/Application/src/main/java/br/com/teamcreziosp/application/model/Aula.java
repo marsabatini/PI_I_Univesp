@@ -15,7 +15,9 @@ public class Aula {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer id_professor;
+    @ManyToOne
+    @JoinColumn(name = "id_professor")
+    private Professor id_professor;
 
     private LocalDateTime data;
 
