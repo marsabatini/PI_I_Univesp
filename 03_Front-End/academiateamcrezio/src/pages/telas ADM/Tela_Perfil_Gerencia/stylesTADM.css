@@ -378,3 +378,192 @@ body {
 {
     background-color: #fff;
 }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: inline;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #A21500;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #A21500;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #Aluno_situacao
+  { 
+    margin-bottom: 30px;
+    display: flex;
+    padding: 10px;
+    margin-bottom: 50px; 
+    align-items: center; 
+    padding-left: 20px;
+    padding-bottom: 20px;
+  } 
+ 
+  .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin-left: auto;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-box input::placeholder {
+    font-size: 16px;
+}
+
+/* Icon Styling */
+.search-box input {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="%23000" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+#Aluno_editor 
+{
+    
+    display: flex;
+    align-items: center;  
+    padding: 10px;
+    margin-bottom: 50px; 
+}
+
+#informacoes_Aluno
+{
+    
+    display: flex;
+    align-items: center;  
+    width: 50%;
+}
+#agenda_aluno
+{
+     
+    margin-left: auto;
+}
+
+.Aluno_input_dados
+{ 
+    border: red solid 1px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+#Aluno_input_dados_forms input[type="text"], #Aluno_input_dados_forms input[type="date"], #Aluno_input_dados_forms select { 
+    
+    box-sizing: border-box; /* Inclui padding e borda na largura definida */
+    /*margin-right: auto;*/
+    width: auto;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Adjusts the corner rounding. Increase for more rounded corners */
+    border: 1px solid #ccc; /* Optional: adds a light border around the input/select */
+    outline: none; 
+}
+
+ 
+.form-row 
+{ 
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;  
+    width: 100%;
+}
+
+.form-row input, .form-row select {
+    flex-grow: 1; /* Cresce para ocupar o espaço restante */
+    margin-left: 10px; /* Espaço entre o label e o campo de entrada */
+}
+
+.form-row label { 
+    display: inline;
+    padding: 5px; /* Adds padding inside the label */ 
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.foto-p
+{
+    border: red solid 1px; 
+    height: 100%;
+    box-sizing: border-box;
+    align-self: flex-start;
+}
+
+#notificacoes_para_aluno
+{
+    border: red solid 1px;
+    display: block;
+}

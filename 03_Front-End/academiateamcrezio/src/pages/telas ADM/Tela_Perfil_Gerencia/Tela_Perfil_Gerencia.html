@@ -58,8 +58,101 @@
                 </h3>
             </div>
             <div class="Gerencia_perfis">
- 
-    
+                
+                <div id="Aluno_situacao">
+                    <div style="margin-right: 10px;">Trancado</div>
+                    
+                    <label class="switch">
+                        <input type="checkbox"> 
+                        <span class="slider round"></span>
+                    </label>
+
+                    <div class="search-box">
+                        <input type="text" placeholder="Procurar aluno" />
+                        <button type="submit"><span>></span></button>
+                    </div>
+                </div>
+
+
+                <div id="Aluno_editor">
+
+                    <div id="informacoes_Aluno">
+                        
+                        <div class="foto-p">
+                            <img src="img/fotoperfil.jpeg" alt="">
+                        </div>
+
+                        <div class ="Aluno_input_dados">
+                            
+                            <form style="flex-grow: 1;" id="Aluno_input_dados_forms">
+                                <div class="form-row">
+                                    <label for="nome">NOME:</label>
+                                    <input type="text" id="nome" name="nome" placeholder="nome">
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="status">STATUS:</label>
+                                    <select id="status" name="status">
+                                        <option value="active">Ativo</option>
+                                        <option value="inactive">Inativo</option>
+                                    </select>
+                                </div>                                  
+
+                                <div class="form-row">
+                                    <label for="matricula">MATRÍCULA:</label>
+                                    <input type="text" id="matricula" name="matricula" placeholder="insira matricula">
+                                </div>                
+
+                                <div class="form-row">
+                                    <label for="graduacao">GRADUAÇÃO:</label> 
+                                    <select id="graduacao" name="graduacao" placeholder="faixa">
+                                        <option value="Branca">Branca</option>
+                                        <option value="Preta">Preta</option>
+                                    </select>
+                                </div>                
+
+                                <div class="form-row">
+                                <label for="plano">PLANO:</label>
+                                <input type="text" id="plano" name="plano" placeholder="plano">
+                                </div>                
+                                
+                                <div class="form-row">
+                                <label for="validade_plano">VALIDADE DO PLANO:</label>
+                                <input type="date" id="validade_plano" name="validade_plano">
+                                </div>
+
+                                <div class="form-row">
+                                <label for="prox_vencimento">PRÓXIMO VENCIMENTO:</label>
+                                <input type="date" id="prox_vencimento" name="prox_vencimento">
+                                </div>
+
+                                <div class="form-row">
+                                <label for="validade_exame_medico">VALIDADE EXAME MÉDICO:</label>
+                                <input type="date" id="validade_exame_medico" name="validade_exame_medico">
+                                </div>
+                                 
+                            </form> 
+
+                        
+                        </div>
+
+                        <div id="notificacoes_para_aluno">
+                            hwbqk
+                        </div>
+                        
+   
+
+                    </div>
+
+                    <div id="agenda_aluno">
+                        <div class="foto-p">
+                            <img src="img/fotoperfil.jpeg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
  
             </section>
