@@ -500,19 +500,24 @@ body {
 #informacoes_Aluno
 {
     
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    grid-template-rows: auto auto;
     align-items: center;  
     width: 50%;
 }
 #agenda_aluno
 {
      
-    margin-left: auto;
+    margin-left: auto; 
+    width: 50%;
+    height: 100%;
+    
+    align-self: flex-start;
 }
 
 .Aluno_input_dados
-{ 
-    border: red solid 1px;
+{  
     display: flex;
     align-items: center;
     padding: 10px;
@@ -521,7 +526,9 @@ body {
     flex-grow: 1;
 }
 
-#Aluno_input_dados_forms input[type="text"], #Aluno_input_dados_forms input[type="date"], #Aluno_input_dados_forms select { 
+#Aluno_input_dados_forms input[type="text"], #Aluno_input_dados_forms input[type="date"], #Aluno_input_dados_forms select,
+#notificacoes_para_aluno input[type="text"], #notificacoes_para_aluno input[type="date"], #notificacoes_para_aluno select 
+{ 
     
     box-sizing: border-box; /* Inclui padding e borda na largura definida */
     /*margin-right: auto;*/
@@ -552,18 +559,130 @@ body {
     padding: 5px; /* Adds padding inside the label */ 
     padding-left: 5px;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .foto-p
-{
-    border: red solid 1px; 
+{ 
     height: 100%;
     box-sizing: border-box;
     align-self: flex-start;
 }
 
 #notificacoes_para_aluno
+{ 
+    grid-column: span 2;
+    padding: 10px;
+    box-sizing: border-box; 
+    margin-top: 10px;
+    display: flex;
+    
+}
+
+#Exame_medico
+{  
+    display: grid;  
+    grid-template-columns: 3fr 1fr ;
+    grid-template-rows: auto auto;
+    align-items: center;  
+    width: 100%;
+}
+
+.file-upload-btn
 {
-    border: red solid 1px;
-    display: block;
+    border: solid 1px #ccc;
+    border-radius: 10px; 
+    margin: 1px; 
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between content */
+    color: #000; /* Black text */ 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 10px;
+    cursor: pointer; 
+}
+/* Vector */
+
+.file-upload-btn {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Adjust based on your needs */
+    line-height: 1em; /* Line height to match the font size */
+    font-size: 20px;
+    color: #ccc;
+    grid-column: 1; 
+    grid-row: 1;
+    margin-left: 30px;
+    width: 90%;
+}
+
+#Exame_medico button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.enviar-button {
+    background-color: #2C2D2D; /* Black background */
+    margin-left: 10px; /* Spacing between buttons */ 
+    border-radius: 10px;
+    font-size: 16px;
+    width: 80%;
+    font-size: 20px;
+}
+
+.view-button {
+    background-color: #2C2D2D; /* Dark grey background */
+    margin-top: 10px; /* Separate it from the other buttons */  
+    margin-left: 40px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#envia_btn
+{
+    grid-column: 2;  
+    width: 100%; 
+}
+
+#upload_btn
+{
+    grid-row: 1;
+    grid-column: 1; 
+}
+
+#ver_arquivo
+{
+    grid-row: 2;
+    grid-column: 1; 
+}
+
+#Validar_exame_medico_area
+{
+    display: flex;
+    margin-top: 20px;
+}
+
+#data_exame
+{
+    width: 50%;
+    margin-left: 40px;
+} 
+
+#validar_exame_medico_btn
+{
+    background-color: #2C2D2D; /* Black background */
+    margin-left: 10px; /* Spacing between buttons */ 
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%; 
+    padding : 10px; 
+    color: white;
 }

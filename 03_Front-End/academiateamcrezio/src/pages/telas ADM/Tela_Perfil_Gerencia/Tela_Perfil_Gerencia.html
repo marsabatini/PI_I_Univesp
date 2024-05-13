@@ -137,7 +137,32 @@
                         </div>
 
                         <div id="notificacoes_para_aluno">
-                            hwbqk
+                            
+                            <div style="font-weight: bold; margin-right: 30px;font-size: 24px;">NOTIFICAÇÕES:</div>
+                            
+                            <div style="flex-grow: 1">
+                                
+                                <div class="form-row">
+                                    <select id="Noticacao_1" name="Noticacao_1" placeholder="Noticação 1"> 
+                                    </select>
+                                </div>   
+                                    <div class="form-row">
+                                    <select id="Noticacao_2" name="Noticacao_2" placeholder="Noticação 2"> 
+                                    </select>
+                                </div>   
+
+                                <div class="form-row">
+                                    <select id="Noticacao_3" name="Noticacao_3" placeholder="Noticação 3"> 
+                                    </select>
+                                </div>   
+
+                                <div class="form-row">
+                                    <select id="Noticacao_4" name="Noticacao_4" placeholder="Noticação 4"> 
+                                    </select>
+                                 </div>   
+
+                            </div>
+
                         </div>
                         
    
@@ -145,9 +170,43 @@
                     </div>
 
                     <div id="agenda_aluno">
-                        <div class="foto-p">
-                            <img src="img/fotoperfil.jpeg" alt="">
+                        <div id="Exame_medico">
+                            
+                            <div id="upload_btn">
+                                <label for="file-upload" class="file-upload-btn">Anexar Arquivo Médico
+                                    <img src="img/save_icon.png" alt="logotipo" style="margin-left: auto;">
+                                </label>
+                                <input type="file" id="file-upload" style="display: none;" onchange="updateLabel()"> 
+                            </div>
+                            
+                            <div id="envia_btn">
+                                <button class="enviar-button" type="button">Enviar!</button>
+                            </div>
+
+                            <div id="ver_arquivo">
+                                <button class="view-button" type="button">Ver Exame Médico!</button>
+                            </div>
+
                         </div>
+
+                    <div id="Validar_exame_medico_area">
+                        <div id="data_exame">
+                            Realizado dia 13/12/2023
+                        </div>
+                        <div >
+                            <button id="validar_exame_medico_btn" type="button">Validar Exame Médico</button>
+                        </div>
+                    </div>
+
+                     <div id="avaliacao_fisica_agendamento"> 
+                     </div>
+
+                    <div id="graduacao_agendamento"> 
+                    </div>
+
+                    <div id="associar_convidado_area"> 
+                    </div>
+
 
                     </div>
                 </div>
@@ -157,6 +216,7 @@
  
             </section>
         </div>
+        <script src="Tela_Perfil_Gerencia.js"></script>
     </body>
     <footer>
         <div class="imgb_left">
