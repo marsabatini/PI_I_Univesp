@@ -20,7 +20,4 @@ public class TiposAula {
 
     private String descricao;
 
-    @OneToMany(mappedBy = "id_tipo")
-    private List<Aula> aulas = new ArrayList<>();
-
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -28,10 +29,6 @@ public class Aula {
     private Integer qtddLimiteAlunos;
 
     @ManyToMany
-    @JoinTable(
-            name = "aula_aluno",
-            joinColumns = @JoinColumn(name = "id_aula"),
-            inverseJoinColumns = @JoinColumn(name = "id_aluno"))
-    private List<Aluno> alunosInscritos;
+    private List<Aluno> alunosInscritos = new ArrayList<>();
 
 }

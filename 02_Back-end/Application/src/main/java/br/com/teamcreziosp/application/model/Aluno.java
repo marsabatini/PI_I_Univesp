@@ -78,9 +78,6 @@ public class Aluno implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @ManyToMany
-    private List<Aula> aulas;
-
 
 //###################################################################################################################
 //    ====> Criar CLASSE ENDERECO: falta Estado, CEP e Complemento
