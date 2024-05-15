@@ -22,7 +22,7 @@ header {
     width: 225px;
     height: 120px;
     padding: 10px;
-    margin: 30px 0px 0px 50px;   
+    margin: 15px 0px 0px 50px;   
     cursor: pointer;
 }
 
@@ -52,8 +52,8 @@ header {
     
 }
 .menu button {
-    width: 70px;
-    height: 50px;
+    width: 90px;
+    height: 58px;
     font-size: 19px;
     color: #fff;
     background-color: #3d3e40;
@@ -64,9 +64,9 @@ header {
 footer {
     display: flex;
     width: 100%;
-    background-color:#A21500;
+    background-color:#a21500;
     bottom: 0;
-    
+    position: fixed;
 }
 footer .boxs {
    display: flex;
@@ -119,152 +119,66 @@ footer .areat {
 .boxs a:hover {
     color: #6b6b6b;
 }
-
 body {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    background: #fff;
-    
+    background: #D9D9D9;
 }
-.form {
-    width: 850px;
+.recuperação {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px;
     height: auto;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    background: #eee;
-    padding: 3rem;
+    width: auto;
+    border-radius: 10px;
+    background: #fff;
 }
-.form h1 {
-    margin-bottom: 1em;
-    display: flex;
-    text-align: center;
-
-}
-.b-cadastro {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.bc {
-    font-size: 27px ;
-    color: #fff;
-    width: 175px;
-    height: 70px;
-    background: #A21500;
-    text-decoration: none;
-    border-radius: 20px;
-    border: none;
-}
-.b-cadastro button a {
-    text-decoration: none;
-    color: #fff;
-}
-.ter {
-    display: flex;
-    justify-content: space-between;
-}
-
-.name {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-.name label {
-    font-size: 25px;
-}
-.name input {
-    width: 700px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-.input-group1 {
-    display: flex;
-    gap: 100px;
-    margin-bottom: 15px;
-}
-.input-group1 label {
-    font-size: 25px;
-}
-.input-group1 input {
-    width: 300px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-.email {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-
-}
-.email label {
-    font-size: 25px;
-}
-.email input {
-    width: 700px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-.telefone {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-
-}
-.telefone label {
-    font-size: 25px;
-}
-.telefone input {
-    width: 300px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.endereço{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-
-}
-.endereço label {
-    font-size: 25px;
-}
-.endereço input {
-    width: 700px ;
-    height: 75px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-.responsavel {
-    display: flex;
-    gap: 50px;
+.recuperação h1 {
+    font-size: 60px;
     margin-bottom: 20px;
 }
-.responsavel label {
+.recuperação h3 {
     font-size: 25px;
+    text-align: start;
+    margin: 25px 0px;
+    width: 55%;
+    color: #6b6b6b;
 }
-.responsavel input {
-    width: 325px ;
-    height: 37px;
-    border: none;
+.recuperação span {
+    font-size: 18px;
+    text-align: start;
+    margin: 25px 0px;
+    width: 350px;
+    color: #6b6b6b;
+}
+.recuperação button {
+    width: 200px;
+    height: 52px;
+    font-size: 19px;
+    color: #fff;
+    background: #1d1d1d;
     border-radius: 5px;
+    border: none;
+}
+.emailveri {
+    display: flex;
+    flex-direction: column;
+}
+.emailveri input {
+    width: 525px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 19px;
     padding: 10px;
-    font-size: 20px;
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+    border: 1px solid
 }

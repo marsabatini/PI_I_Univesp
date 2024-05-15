@@ -22,7 +22,7 @@ header {
     width: 225px;
     height: 120px;
     padding: 10px;
-    margin: 30px 0px 0px 50px;   
+    margin: 15px 0px 0px 50px;   
     cursor: pointer;
 }
 
@@ -52,8 +52,8 @@ header {
     
 }
 .menu button {
-    width: 70px;
-    height: 50px;
+    width: 90px;
+    height: 58px;
     font-size: 19px;
     color: #fff;
     background-color: #3d3e40;
@@ -64,9 +64,9 @@ header {
 footer {
     display: flex;
     width: 100%;
-    background-color:#A21500;
+    background-color:#a21500;
     bottom: 0;
-    
+    position: fixed;
 }
 footer .boxs {
    display: flex;
@@ -119,152 +119,56 @@ footer .areat {
 .boxs a:hover {
     color: #6b6b6b;
 }
-
 body {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    background: #fff;
-    
+    background: #d9d9d9;
 }
-.form {
-    width: 850px;
+.nova-s {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px;
     height: auto;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    background: #eee;
-    padding: 3rem;
+    width: auto;
+    border-radius: 10px;
+    background: #fff;
 }
-.form h1 {
-    margin-bottom: 1em;
-    display: flex;
-    text-align: center;
-
+.nova-s h1 { 
+    margin: 30px;
+    font-size: 50px;
 }
-.b-cadastro {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.bc {
-    font-size: 27px ;
+.nova-s button {
+    width: 200px;
+    height: 52px;
+    font-size: 19px;
     color: #fff;
-    width: 175px;
-    height: 70px;
-    background: #A21500;
-    text-decoration: none;
-    border-radius: 20px;
+    background: #1d1d1d;
+    border-radius: 5px;
     border: none;
+    margin: 25px;
 }
-.b-cadastro button a {
-    text-decoration: none;
-    color: #fff;
-}
-.ter {
-    display: flex;
-    justify-content: space-between;
-}
-
-.name {
+.input-g {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
-}
-.name label {
     font-size: 25px;
+    margin: 10px 25px;
+    color: #1d1d1d;
 }
-.name input {
-    width: 700px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
+.input-g input { 
+    width: 525px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 19px;
     padding: 10px;
-    font-size: 20px;
-}
-.input-group1 {
-    display: flex;
-    gap: 100px;
-    margin-bottom: 15px;
-}
-.input-group1 label {
-    font-size: 25px;
-}
-.input-group1 input {
-    width: 300px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-.email {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-
-}
-.email label {
-    font-size: 25px;
-}
-.email input {
-    width: 700px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-.telefone {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-
-}
-.telefone label {
-    font-size: 25px;
-}
-.telefone input {
-    width: 300px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.endereço{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-
-}
-.endereço label {
-    font-size: 25px;
-}
-.endereço input {
-    width: 700px ;
-    height: 75px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-}
-.responsavel {
-    display: flex;
-    gap: 50px;
-    margin-bottom: 20px;
-}
-.responsavel label {
-    font-size: 25px;
-}
-.responsavel input {
-    width: 325px ;
-    height: 37px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+    border: 2 px solid
 }
