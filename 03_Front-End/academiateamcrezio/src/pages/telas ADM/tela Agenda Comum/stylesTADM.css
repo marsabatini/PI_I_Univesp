@@ -408,14 +408,12 @@ body {
 }
 
 .calendar ul li{
-    position: relative;
     width: calc(100% / 7);
     justify-items: center;
     text-align: center;
 }
 
 .calendar .days li{
-    z-index: 1;
     margin-bottom: 25px;
     cursor:pointer;
 }
@@ -426,6 +424,8 @@ body {
 
 .calendar li.active{
     color:#fff;
+    background-color: #A21500;
+    border-radius: 1em;
 }
 
 .calendar .days li::before{
@@ -435,19 +435,17 @@ body {
     width: 40px;
     top: 50%;
     left: 50%;
-    z-index: -1;
     border-radius: 50%;
     transform: translate(-50%,-50%);
 
 }
 
-.days li:hover::before{
+.days li:hover{
     background-color: #869c84c9;
+    border-radius: 1em ;
 }
 
-.days li.active::before{
-    background-color: #A21500;
-}
+
 
 .Titulo_Semana{
     display: flex;
@@ -517,6 +515,10 @@ body {
 .Semana-Dia-Atual .aula li:active,
 .alter_aula{
     transform: scale(.9);
+}
+
+.Agendamento {
+    width: 1200px;
 }
 
 .Agenda_Publica {
@@ -596,22 +598,29 @@ body {
 
 .alter_aula{
     background-color: #18191a;
-    width: 400px;
-    height: 500px;
+    width: 420px;
+    height: auto;
     align-items: center;
     justify-content: center;
     position: absolute;
-    margin-left: 180px;
+    border-radius: 10px;
+    border:2px #18191a solid;
     transition: all .4s;
     z-index: -1;
     transform: scale(.4);
     opacity: 0;
+    top:35%;
+    left: 40%;
 }
 
 .alter_aula.opened {
+    position: absolute;
     z-index: 1;
     transform: scale(1);
     opacity: 1;
+    top:35%;
+    left: 40%;
+
 }
 
 .alter_aula h2{
@@ -625,6 +634,7 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     border-bottom: 2px #fff solid;
+    text-align: center;
 }
 
 .check_buttons p {
@@ -648,6 +658,7 @@ body {
     height: 40px;
     padding: 5px;
     margin-top: 5px;
+    width: 100%;
 }
 
 
@@ -724,11 +735,96 @@ body {
     
 }
 
+.alter_professor {
+    display: flex;
+    background-color: #acacac;
+    border-top: 2px #fff solid;
+    margin-bottom: 1px;
+}
+
+.alter_professor p {
+    font-size: 15px;
+    align-self: center;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.alter_professor select {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    justify-content: left;
+    width: 100%;
+}
+
+.alter_participantes button{
+    background-color: #598134;
+    border:none;
+    border-radius: 5px;
+    height: 20px;
+    font-size: 12px;
+    font-family: 'Calibri';
+    width: 55px;
+    padding: 3px;
+    text-align: center;
+    align-self: center;
+    color: #fff;
+}
+
+.alter_participantes button.excluir {
+    background-color: #bb1e1e;
+    
+}
+
+
+.alter_participantes button:hover{
+    background-color: #3d5823;
+    cursor: pointer;
+}
+
+
+
+.alter_participantes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #acacac;
+}
+
+.alter_participantes div{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.alter_participantes input {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;  
+    font-size: 20px;
+    font-family: 'Calibri';
+    font-weight: 300;
+    padding: 5px;
+}
+
+
+
 .salvar_fechar {
     display: flex;
     justify-items: center;
     justify-content: space-around;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .cancelar_button {
@@ -737,11 +833,11 @@ body {
     background-color: #A21500;
     color: #fff;
     font-family: 'Calibri'; 
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 5px;
     font-size: 20px;
     text-align: center;
-    cursor: pointer;
+    border: none;
 }
 
 .salvar_button {
@@ -750,10 +846,20 @@ body {
     background-color: #598134;
     color: #fff;
     font-family: 'Calibri'; 
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 5px;
     font-size: 20px;
     text-align: center;
+    border: none;
+}
+
+.salvar_button:hover {
+    background-color: #3d5823;
+    cursor: pointer;
+}
+
+.cancelar_button:hover {
+    background-color: #741000;
     cursor: pointer;
 }
 

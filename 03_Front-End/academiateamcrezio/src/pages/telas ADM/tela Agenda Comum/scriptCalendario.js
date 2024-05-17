@@ -5,15 +5,17 @@ prevNextIcons     = document.querySelectorAll(".menu_calendario span");
 // atribuindo nova data, ano e mês atual
 let date    = new Date(),
 currYear    = date.getFullYear(),
-currMonth   = date.getMonth();
+currMonth   = date.getMonth(),
+currDayweek = date.getDay(),
+currDay     = date.getDate();
 
 const months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
 const renderCalendar = () => {
-    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // primeiro dia do mês
-    lastDateofMonth     = new Date(currYear, currMonth + 1, 0).getDate(), // ultima data do mês
-    LastDayofMonth      = new Date(currYear, currMonth, lastDateofMonth).getDay(), // ultimo dia do ultimo mês
-    LastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); //  ultima data do ultimo mês
+    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // primeiro dia da semana do mês
+    lastDateofMonth     = new Date(currYear, currMonth + 1, 0).getDate(), // ultima dia do mês
+    LastDayofMonth      = new Date(currYear, currMonth, lastDateofMonth).getDay(), // ultimo dia da semana  mês
+    LastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); //  ultima dia do ultimo mês
     let liTag           = "";
 
     for (let i = firstDayofMonth; i > 0; i--) {

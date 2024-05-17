@@ -68,7 +68,7 @@
                         </h2>
                     </div>
                     <form>
-                        <select class="modalidade_input" id="modalidade" name="modalidade" aria-placeholder="Todas as Modalidades">
+                        <select class="modalidade_input" id="modalidade" name="modalidade">
                             <option value="Todas as Modalidades" >Todas as Modalidades</option>
                             <option value="Boxe">Boxe</option>
                             <option value="Jiu-Jitsu">Jiu-Jitsu</option>
@@ -88,13 +88,13 @@
                         
                         <div class="calendar">
                             <ul class="weeks">
+                                <li class="inactive">Domingo</li>
                                 <li>Segunda</li>
                                 <li>Terça</li>
                                 <li>Quarta</li>
                                 <li>Quinta</li>
                                 <li>Sexta</li>
                                 <li>Sábado</li>
-                                <li class="inactive">Domingo</li>
                             </ul>
                             <ul class="days"></ul>
                         </div>
@@ -113,7 +113,7 @@
                         </h2>
                     </div>
                     <form>
-                        <select class="modalidade_input" id="modalidade" name="modalidade">
+                        <select class="modalidade_input" id="filtro_modalidade" name="modalidade">
                             <option value="Todas as Modalidades" >Todas as Modalidades</option>
                             <option value="Boxe">Boxe</option>
                             <option value="Jiu-Jitsu">Jiu-Jitsu</option>
@@ -124,7 +124,7 @@
                         </select>
                     </form>
                     <form>
-                        <input class="aluno_input" id="modalidade" name="modalidade" type="text" placeholder="Insira nome, sobrenome ou matricula(id)"></input>
+                        <input class="aluno_input" id="select_modalidade" name="modalidade" type="text" placeholder="Insira nome, sobrenome ou matricula(id)"></input>
                         <div class="alunos">
                             <ul>
                                 <li>Alunos ficarão aqui...</li>
@@ -133,7 +133,7 @@
                     </form>
                 </div>
 
-                <div style="width: 1200px;">
+                <div class="Agendamento">
                     <div>
                         <h2 class="titulos">
                             AGENDA COMUM - PÚBLICA
@@ -141,47 +141,22 @@
                     </div>
                     <div class="Titulo_Semana">
                         <div style="display: flex;justify-content: left;align-items: center;">
-                        <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                        <span id="prevWeek" class="material-symbols-rounded">chevron_left</span>
                         <h2 style="margin-left: 5px;">Semana Anterior</h2>
                         </div>
                         <div style="display: flex; justify-content: right;align-items: center;">
                         <h2 style="margin-right: 5px;">Próxima Semana</h2>
-                        <span id="next" class="material-symbols-rounded">chevron_right</span>
+                        <span id="nextWeek" class="material-symbols-rounded">chevron_right</span>
                         </div>
                     </div>
                     <div class="Agenda_Publica">
                         <div class="horario">
-                            <ul>
-                                <li>06:00</li>
-                                <li>07:00</li>
-                                <li>08:00</li>
-                                <li>10:00</li>
-                                <li>11:00</li>
-                                <li>06:00</li>
-                                <li>12:00</li>
-                                <li>13:00</li>
-                                <li>14:00</li>
-                                <li>15:00</li>
-                                <li>16:00</li>
-                                <li>17:00</li>
-                                <li>18:00</li>
-                                <li>19:00</li>
-                                <li>20:00</li>
-                                <li>21:00</li>
-                            </ul>
+                            <ul></ul>
                         </div>
 
                         <div class="Semana-Dia-Atual">
-                            <ul class="dia_semana">
-                                <li>Segunda - 29/04</li>
-                                <li>Terça - 30/04</li>
-                                <li>Quarta - 01/04</li>
-                                <li>Quinta - 02/04</li>
-                                <li>Sexta - 03/04</li>
-                                <li>Sábado - 04/04</li>
-                            </ul>
-                            <ul class="aula">
-                                <li onclick="handlePopup(true)">MODALIDADE<br>0 VAGAS</li>
+                            <ul class="dia_semana"></ul>
+                            <ul class="aula"></ul>
                                 <div class="alter_aula" id="alter_aula">
                                     <div class="check_buttons">
                                         <div>
@@ -200,12 +175,12 @@
                                             <p>Sempre</p>
                                         </div>
                                     </div>
-                                    <div>
-                                        <h2>Segunda - 29/04 - 06:00 horas</h2>
-                                    </div>
-                                    <div class="alter_aula_participantes">
+                                    
+                                    <h2 style="text-align: center;">Segunda - 29/04 - 06:00 horas</h2>
+                                    
+                                    <div class="">
                                         <form action="" class="modalidade">
-                                        <select class="modalidade">
+                                        <select class="modalidade" id="modalidade_aula">
                                             <option value="Vazio">Vazio</option>
                                             <option value="Boxe">Boxe</option>
                                             <option value="Jiu-Jitsu">Jiu-Jitsu</option>
@@ -214,110 +189,73 @@
                                             <option value="Kids">Kids</option>
                                             <option value="Teen">Teen</option>
                                         </select>
-                                        <p style="background-color: #aaaaaa;">0 INSCRITOS DE 8 VAGAS</p>
+                                        <p style="background-color: #aaaaaa; text-align: center;">0 INSCRITOS DE 8 VAGAS</p>
+                                            <div class="alter_professor">
+                                            <p>Responsável:</p>
+                                            <select>
+                                                <option value="Professor">Professor</option>
+                                                <option value="Eduardo">Eduardo</option>
+                                                <option value="Everton">Everton</option>
+                                            </select>
+                                            </div>
+                                            <div class="alter_participantes">
+
+                                            <div id="aluno_1">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_2">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+                                            
+                                            <div id="aluno_3">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+                                            
+                                            <div id="aluno_4">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_5">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                             <div id="aluno_6">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_7">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_8">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            </div>
                                         </form>
                                         <div class="salvar_fechar">
-                                            <button type="submit" class="cancelar_button" id="Cancelar" onclick="handlePopup(false)">Cancelar</button>
-                                            <button type="submit" class="salvar_button" id="Salvar">Salvar</button>
+                                            <button type="submit" class="cancelar_button" id="Cancelar" onclick="handlePopup(false)">CANCELAR</button>
+                                            <button type="submit" class="salvar_button" id="Salvar">SALVAR</button>
                                         </div>
                                     </div>
                                 </div>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                                <li>MODALIDADE<br>0 VAGAS</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="alter_modalidade">
@@ -329,7 +267,7 @@
                         </div>
                         <div>
                             <form >
-                                <select id="modalidade" name="modalidade">
+                                <select id="modalidade" id="excluir_modalidade">
                                     <option value="Todas as Modalidades" >Todas as Modalidades</option>
                                     <option value="Boxe">Boxe</option>
                                     <option value="Jiu-Jitsu">Jiu-Jitsu</option>
