@@ -1,0 +1,307 @@
+<!DOCTYPE hmtml>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda Comum</title>
+        <link rel="stylesheet" href="stylesTADM.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <script src="scriptCalendario.js" defer></script>
+        <script src="scriptAgenda_Publica.js" defer></script>
+    </head>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"></div>
+            <div class="logo-texto">
+            <img src="img/logoa.jpeg" alt="logotipo" class="img-logo">
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li> <a href=""></a>Academia+</a></li>
+                <li> <a href=""></a>Nossa historia</li>
+                <li> <a href=""></a> Planos</li>
+                <li> <a href=""></a>Contato</li>
+                <li> <a href=""></a>Loja+</li>
+                <button>Login</button >
+            </ul>   
+            </div>
+            </div> 
+    </header>
+    <body>
+        <div class="caixa">
+            <section style="margin-block-start: 10px;background-color: #d1d1d1;justify-content: center;height: 100%;">
+            <div class="gerenciador">
+                <div style>
+                    <h2 class="titulo_gerenciador" >Gerenciador</h2>
+                </div>
+                <div>
+                <ul>
+                    <li> <a href="telas ADM/tela avisos/tela avisos.html">Avisos e Eventos</a></li>
+                    <li> <a href="">Alertas</a></li>
+                    <li> <a href="">Chat</a></li>
+                    <li> <a href="">Agenda Comum</a></li>
+                    <li> <a href="">Agenda Personal</a></li>
+                    <li> <a href="">Presença</a></li>
+                    <li> <a href="">Cadastros</a></li>
+                    <li> <a href="">Planos</a></li>
+                    <li> <a href="">Perfis</a></li>
+                    <li> <a href="">Mural</a></li>
+                    <li> <a href="">Loja Física</a></li>
+                    <li> <a href="">Professores e Treinadores</a></li>
+                </ul>
+                </div>
+            </div>
+            </section>
+            <section style="width: 1600px; height: 100%;">
+                <div class="h4">
+                    <h3>
+                    AGENDA COMUM
+                    </h3>
+                </div>
+                
+            <div class="agenda">
+                <div class="consulta_modalidade">
+                    <div>
+                        <h2 class="titulos">
+                            AULA
+                        </h2>
+                    </div>
+                    <form>
+                        <select class="modalidade_input" id="modalidade" name="modalidade">
+                            <option value="Todas as Modalidades" >Todas as Modalidades</option>
+                            <option value="Boxe">Boxe</option>
+                            <option value="Jiu-Jitsu">Jiu-Jitsu</option>
+                            <option value="Self-Defense">Self-Defense</option>
+                            <option value="Muay-Thay">Muay-Thay</option>
+                            <option value="Kids">Kids</option>
+                            <option value="Teen">Teen</option>
+                        </select>
+                    </form>
+                    <div class="menu_calendario">
+
+                        <div class="menu_calendario_data_atual">
+                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                            <h2 class="current-date"></h2>
+                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                        </div>
+                        
+                        <div class="calendar">
+                            <ul class="weeks">
+                                <li class="inactive">Domingo</li>
+                                <li>Segunda</li>
+                                <li>Terça</li>
+                                <li>Quarta</li>
+                                <li>Quinta</li>
+                                <li>Sexta</li>
+                                <li>Sábado</li>
+                            </ul>
+                            <ul class="days"></ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div style="width: 2.5px; height: 550px;background-color: #b1b1b1">
+                    
+                </div>
+
+                <div class="consulta_modalidade">
+                    <div>
+                        <h2 class="titulos">
+                            ALUNO
+                        </h2>
+                    </div>
+                    <form>
+                        <select class="modalidade_input" id="filtro_modalidade" name="modalidade">
+                            <option value="Todas as Modalidades" >Todas as Modalidades</option>
+                            <option value="Boxe">Boxe</option>
+                            <option value="Jiu-Jitsu">Jiu-Jitsu</option>
+                            <option value="Self-Defense">Self-Defense</option>
+                            <option value="Muay-Thay">Muay-Thay</option>
+                            <option value="Kids">Kids</option>
+                            <option value="Teen">Teen</option>
+                        </select>
+                    </form>
+                    <form>
+                        <input class="aluno_input" id="select_modalidade" name="modalidade" type="text" placeholder="Insira nome, sobrenome ou matricula(id)"></input>
+                        <div class="alunos">
+                            <ul>
+                                <li>Alunos ficarão aqui...</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="Agendamento">
+                    <div>
+                        <h2 class="titulos">
+                            AGENDA COMUM - PÚBLICA
+                        </h2>
+                    </div>
+                    <div class="Titulo_Semana">
+                        <div style="display: flex;justify-content: left;align-items: center;">
+                        <span id="prevWeek" class="material-symbols-rounded">chevron_left</span>
+                        <h2 style="margin-left: 5px;">Semana Anterior</h2>
+                        </div>
+                        <div style="display: flex; justify-content: right;align-items: center;">
+                        <h2 style="margin-right: 5px;">Próxima Semana</h2>
+                        <span id="nextWeek" class="material-symbols-rounded">chevron_right</span>
+                        </div>
+                    </div>
+                    <div class="Agenda_Publica">
+                        <div class="horario">
+                            <ul></ul>
+                        </div>
+
+                        <div class="Semana-Dia-Atual">
+                            <ul class="dia_semana"></ul>
+                            <ul class="aula"></ul>
+                                <div class="alter_aula" id="alter_aula">
+                                    <div class="check_buttons">
+                                        <div>
+                                            <input type="checkbox" class="liga_desliga__checkbox" id="liga_desliga">
+                                            <label for="liga_desliga" class="liga_desliga__botao"></label>
+                                            <p>Trancado</p>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="liga_desliga__checkbox" id="once">
+                                            <label for="once" class="once_all_button"></label>
+                                            <p>Só desta vez</p>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="liga_desliga__checkbox" id="all">
+                                            <label for="all" class="once_all_button"></label>
+                                            <p>Sempre</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <h2 style="text-align: center;" id="nome_aula"></h2>
+                                    
+                                    <div class="">
+                                        <form action="" class="modalidade">
+                                        <select class="modalidade" id="modalidade_aula">
+                                            <option value="Vazio">Vazio</option>
+                                            <option value="Boxe">Boxe</option>
+                                            <option value="Jiu-Jitsu">Jiu-Jitsu</option>
+                                            <option value="Self-Defense">Self-Defense</option>
+                                            <option value="Muay-Thay">Muay-Thay</option>
+                                            <option value="Kids">Kids</option>
+                                            <option value="Teen">Teen</option>
+                                        </select>
+                                        <p style="background-color: #aaaaaa; text-align: center;">0 INSCRITOS DE 8 VAGAS</p>
+                                            <div class="alter_professor">
+                                            <p>Responsável:</p>
+                                            <select>
+                                                <option value="Professor">Professor</option>
+                                                <option value="Eduardo">Eduardo</option>
+                                                <option value="Everton">Everton</option>
+                                            </select>
+                                            </div>
+                                            <div class="alter_participantes">
+
+                                            <div id="aluno_1">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_2">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+                                            
+                                            <div id="aluno_3">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+                                            
+                                            <div id="aluno_4">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_5">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_6">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_7">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            <div id="aluno_8">
+                                            <label>Aluno:</label>
+                                            <input placeholder="Pesquisa"></input>
+                                            <button type="submit">Adicionar</button>
+                                            </div>
+
+                                            </div>
+                                        </form>
+                                        <div class="salvar_fechar">
+                                            <button type="submit" class="cancelar_button" id="Cancelar" onclick="handlePopup(false)">CANCELAR</button>
+                                            <button type="submit" class="salvar_button" id="Salvar">SALVAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="alter_modalidade">
+                        <div>
+                        <form >
+                            <input id="cor_modalidade" name="cor_modalidade" type="text" placeholder="digite uma nova modalidade"></input>
+                            <button class="Inserir_Excluir" type="submit" id="inserir" name="inserir">Inserir</button>
+                        </form>
+                        </div>
+                        <div>
+                            <form >
+                                <select id="modalidade" id="excluir_modalidade">
+                                    <option value="Todas as Modalidades" >Todas as Modalidades</option>
+                                    <option value="Boxe">Boxe</option>
+                                    <option value="Jiu-Jitsu">Jiu-Jitsu</option>
+                                    <option value="Self-Defense">Self-Defense</option>
+                                    <option value="Muay-Thay">Muay-Thay</option>
+                                    <option value="Kids">Kids</option>
+                                    <option value="Teen">Teen</option>
+                                </select>
+                                <button class="Inserir_Excluir" type="submit" id="excluir" name="excluir">Excluir</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </section>
+        </div>
+    </body>
+    <footer>
+        <div class="imgb_left">
+        <img src="img/Logo tc 2.png" alt=" logobaixo">
+        </div>
+    <div class="boxs">
+        <div class="area--icons">
+                <a href=""></a> <img src="img/instagram.png" alt="facebook" class="rsicon"></a>
+                <a href=""></a> <img src="img/tiktok.png" alt="facebook" class="rsicon"></a>
+                <a href=""></a> <img src="img/whatsapp.png" alt="facebook" class="rsicon"></a>
+                <a href=""></a> <img src="img/instagram.png" alt="facebook" class="rsicon"></a>
+                <a href=""></a> <img src="img/instagram.png" alt="facebook" class="rsicon"></a>
+            </ul>
+        </div>       
+    </div>
+        <div class="imgb_right">
+        <img src="img/Logo tc 2.png" alt=" logobaixo">
+        </div>
+    </footer>
+</html>
