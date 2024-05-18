@@ -1,11 +1,10 @@
 import React from 'react';
+import Routes from './routes';
+import './Global.css';
 
-import './global.css';
-
-import MainRoutes from './routes';
 
 export default function App() {
   return (
-    <MainRoutes/>
+    <Routes/>
   );
 }
