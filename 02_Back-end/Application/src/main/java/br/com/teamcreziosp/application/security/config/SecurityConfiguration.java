@@ -37,7 +37,10 @@ public class SecurityConfiguration{
                                         "/api/aulaexperimental",
                                         "/api/aulaexperimental/consulta/query={email}",
                                         "/api/aulaexperimental/atualiza={email}",
-                                        "/api/files/upload")
+                                        "/api/files/upload",
+                                        "api/aulaexperimental/atualiza={email}",
+                                        "/teamcrezio/adm/tiposaulas",
+                                        "/teamcrezio/adm/tiposaulas/{id}")               //===> REFATORAR: permitir apenas Roles EXPERIMENTAL
                                         .permitAll()
                         .requestMatchers("/api/agenda").hasAuthority("EXPERIMENTAL")
                         .requestMatchers("/api/aluno/agenda").hasAuthority("ALUNO")

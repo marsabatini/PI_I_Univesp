@@ -17,8 +17,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-
-
 @Data
 @Builder
 @NoArgsConstructor
@@ -26,8 +24,6 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo_func")
 @Table(name = "Funcionario", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Funcionario implements UserDetails {
 

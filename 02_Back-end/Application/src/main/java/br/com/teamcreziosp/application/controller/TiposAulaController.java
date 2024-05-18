@@ -32,8 +32,8 @@ public class TiposAulaController {
     }
 
     @DeleteMapping("/tiposaulas")
-    public void delete(@RequestBody TiposAula produto) {
-        repository.delete(produto);
+    public void delete(@RequestBody TiposAula tiposAula) {
+        repository.delete(tiposAula);
     }
 
     @PutMapping("/tiposaulas")

@@ -1,21 +1,18 @@
 package br.com.teamcreziosp.application.model;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import java.util.ArrayList;
-import java.util.List;
-
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-@DiscriminatorValue("Professor")
 public class Professor extends Funcionario {
 
-//    ====> AGORA COMENTANDO A RELAĆÃO ELE FUNCIONA!
 
-    @OneToMany(mappedBy = "id_professor")
-    private List<Aula> aulas = new ArrayList<>();
+
+
+    //@OneToMany(mappedBy = "id_professor")
+    //private List<Aula> aulas = new ArrayList<>();
 
 }
