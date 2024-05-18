@@ -8,4 +8,11 @@ import lombok.EqualsAndHashCode;
 @Data
 @Entity
 public class Professor extends Funcionario {
+
+
+
+
+    //@OneToMany(mappedBy = "id_professor")
+    //private List<Aula> aulas = new ArrayList<>();
+
 }

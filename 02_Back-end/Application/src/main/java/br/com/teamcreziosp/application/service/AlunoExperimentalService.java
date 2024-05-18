@@ -58,9 +58,24 @@ public class AlunoExperimentalService {
         AlunoExperimental alunoExperimental = alunoExperimentalOptional
                 .orElseThrow(() -> new UserNotFoundException("E-mail não cadastrado."));
 
-        alunoExperimental.setModalidade(alunoAtualizado.getModalidade());
-        alunoExperimental.setDiaAula(alunoAtualizado.getDiaAula());
-        alunoExperimental.setHoraAula(alunoAtualizado.getHoraAula());
+        if(!alunoExperimental.isPresenca()) {
+            if (alunoAtualizado.getModalidade() != null && !alunoAtualizado.getModalidade().isBlank()) {
+                alunoExperimental.setModalidade(alunoAtualizado.getModalidade());
+            }
+
+            if (alunoAtualizado.getDiaAula() != null && !alunoAtualizado.getDiaAula().isBlank()) {
+                alunoExperimental.setDiaAula(alunoAtualizado.getDiaAula());
+            }
+
+            if (alunoAtualizado.getHoraAula() != null && !alunoAtualizado.getHoraAula().isBlank()) {
+                alunoExperimental.setHoraAula(alunoAtualizado.getHoraAula());
+            }
+        }
+
+        if (alunoExperimental.isPresenca()) {
+            alunoExperimental.setAvaliacao(alunoAtualizado.getAvaliacao());
+            alunoExperimental.setComentario(alunoAtualizado.getComentario());
+        }
 
         return alunoExperimentalRepository.save(alunoExperimental);
     }

@@ -26,7 +26,7 @@ public class AlunoExperimentalController {
 
     // Criar enpoint para ATUALIZAR dia e horário para aula experimental
     @PatchMapping("/atualiza={email}")
-    public ResponseEntity<AlunoExperimental> atualiza(@RequestParam String email, @RequestBody AlunoExperimental alunoExperimental){
+    public ResponseEntity<AlunoExperimental> atualiza(@PathVariable String email, @RequestBody AlunoExperimental alunoExperimental){
         return ResponseEntity.ok(service.atualizarAlunoExperimental(email, alunoExperimental));
     }
 
