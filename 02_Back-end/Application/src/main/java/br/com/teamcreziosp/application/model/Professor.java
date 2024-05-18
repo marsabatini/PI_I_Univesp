@@ -13,6 +13,8 @@ import java.util.List;
 @DiscriminatorValue("Professor")
 public class Professor extends Funcionario {
 
+//    ====> AGORA COMENTANDO A RELAĆÃO ELE FUNCIONA!
+
     @OneToMany(mappedBy = "id_professor")
     private List<Aula> aulas = new ArrayList<>();
 

@@ -76,7 +76,7 @@ public class JwtService {
                 .parserBuilder()
                 .setSigningKey(getSignInKey())
                 .build()
-                .parseClaimsJwt(token)
+                .parseClaimsJws(token) // Arrumar para incluir um JWT assinado (jws)
                 .getBody();
     }
 
