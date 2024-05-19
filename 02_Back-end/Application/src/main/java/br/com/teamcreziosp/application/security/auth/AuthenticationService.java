@@ -150,6 +150,7 @@ public class AuthenticationService implements UserDetails {
 
         Integer id;
         String nome;
+        String role;
         UserDetails userEmail;
 
         var aluno = alunoRepository.findByEmail(request.getEmail());
@@ -159,10 +160,12 @@ public class AuthenticationService implements UserDetails {
         if(funcionario.isPresent()){
             id = funcionario.get().getId();
             nome = funcionario.get().getNome();
+            role = funcionario.get().getRole().toString();
             userEmail = funcionario.get();
         } else if(aluno.isPresent()){
             id = aluno.get().getId();
             nome = aluno.get().getNome();
+            role = aluno.get().getRole().toString();
             userEmail = aluno.get();
         } else {
             // Apesar de reduntante, pois a classe ApplicationConfig lança a mesma exception,
@@ -176,6 +179,7 @@ public class AuthenticationService implements UserDetails {
                 .token(jwtToken)
                 .id(id)
                 .nome(nome)
+                .role(Role.valueOf(role))
                 .build();
     }
 

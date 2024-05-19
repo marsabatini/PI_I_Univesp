@@ -1,5 +1,6 @@
 package br.com.teamcreziosp.application.security.auth;
 
+import br.com.teamcreziosp.application.security.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,4 +17,7 @@ public class AuthenticationResponse {
     Integer id;
 
     String nome;
+
+    Role role;
+
 }

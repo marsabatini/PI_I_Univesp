@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --color-cinza-escuro: #3D3E40;
+    --color-cinza-medio: #4B4C4D;
+    --color-cinza-claro: #686869;
+    --color-vermelho-escuro: #700809;
+    --color-vermelho-medio: #A21500;
+    --color-vermelho-claro: #DD6457;
+    --color-fundo-escuro: #928C7F;
+    --color-fundo-medio: #6F6C61;
+    --color-fundo-claro: #FFFFFF;
+    --color-danger-variant: rgb(247, 88, 66, 0.4);
+    --color-success: #41F1B6;
+    --color-warning: #FFBB55;
+    --color-white:#FFF;
+
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+
+    --card-border-radius: 2rem; /* css do Dashboard */
+    --border-radius-1: 0.4rem;  /* css do Dashboard */
+    --border-radius-2: 0.8rem;  /* css do Dashboard */
+    --border-radius-3: 1.2rem;  /* css do Dashboard */
+
+    --card-padding: 1.8rem;     /* css do Dashboard */
+    --padding-1: 1.2rem;        /* css do Dashboard */
+
+    --box-shadow: 0 2rem 3rem var(--color-light); /* css do Dashboard */
+
+}
+
+
+
+body{
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 1.7;
+    color: var(--color-cinza-escuro);
+    background: var(--color-fundo-claro);
+}
+
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5{
+    line-height: 1.2rem;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.3rem;
+}
+
+a{
+    color: var(--color-cinza-escuro);
+}

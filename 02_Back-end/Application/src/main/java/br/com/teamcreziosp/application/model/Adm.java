@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @Entity
-@DiscriminatorValue("Administrador")
+//@DiscriminatorValue("Administrador")
 public class Adm extends Funcionario{
 
 

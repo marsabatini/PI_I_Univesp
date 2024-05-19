@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
-import "../../Home/adm/Agenda/agenda.modules.css"
+import "../../Home/Adm/Agenda/agenda.modules.css";
 
 function Gerenciador_ADM() {
 
