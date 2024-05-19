@@ -11,11 +11,12 @@ currDay     = date.getDate();
 
 const months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
-const renderCalendar = () => {
-    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // primeiro dia da semana do mês
+let firstDayofMonth     = new Date(currYear, currMonth, 1).getDay(), // primeiro dia da semana do mês
     lastDateofMonth     = new Date(currYear, currMonth + 1, 0).getDate(), // ultima dia do mês
     LastDayofMonth      = new Date(currYear, currMonth, lastDateofMonth).getDay(), // ultimo dia da semana  mês
     LastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); //  ultima dia do ultimo mês
+
+const renderCalendar = () => {
     let liTag           = "";
 
     for (let i = firstDayofMonth; i > 0; i--) {

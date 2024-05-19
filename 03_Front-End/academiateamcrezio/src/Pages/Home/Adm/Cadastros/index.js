@@ -1,0 +1,193 @@
+import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
+import "./cadastros.modules.css";
+import Gerenciador_ADM from "../../../Components/Gerenciador";
+import foto_perfil from "../../../../Assets/fotoperfil.jpeg";
+
+export default function Cadastros() {
+
+    return (
+
+        <>
+            <div>
+                <section>
+
+                    <div class="caixa">
+                        <Gerenciador_ADM/>
+                        <section className="profiles_section">
+                            <div className="h3">
+                                <h3>
+                                    PERFIS
+                                </h3>
+                            </div>
+                            <div className="Gerencia_perfis">
+
+                                <div id="Aluno_situacao">
+                                    <div className="lock_checkbox">Trancado</div>
+
+                                    <label className="switch">
+                                        <input type="checkbox"/>
+                                            <span className="slider round"></span>
+                                    </label>
+
+                                    <div className="search-box">
+                                        <input type="text" placeholder="Procurar aluno" />
+                                        <button type="submit"><span></span></button>
+                                    </div>
+                                </div>
+
+
+                                <div id="Aluno_editor">
+
+                                    <div id="informacoes_Aluno">
+
+                                        <div className="foto-p">
+                                            <img src={foto_perfil} alt=""/>
+                                        </div>
+
+                                        <div className="Aluno_input_dados">
+
+                                            <form class="input_dados_forms" id="Aluno_input_dados_forms">
+                                                <div className="form-row">
+                                                    <label for="nome">NOME:</label>
+                                                    <input type="text" id="nome" name="nome" placeholder="nome"/>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <label for="status">STATUS:</label>
+                                                    <select id="status" name="status">
+                                                        <option value="active">Ativo</option>
+                                                        <option value="inactive">Inativo</option>
+                                                    </select>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <label for="matricula">MATRÍCULA:</label>
+                                                    <input type="text" id="matricula" name="matricula" placeholder="insira matricula"/>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <label for="graduacao">GRADUAÇÃO:</label>
+                                                    <select id="graduacao" name="graduacao" placeholder="faixa">
+                                                        <option value="Branca">Branca</option>
+                                                        <option value="Preta">Preta</option>
+                                                    </select>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <label for="plano">PLANO:</label>
+                                                    <input type="text" id="plano" name="plano" placeholder="plano"/>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <label for="validade_plano">VALIDADE DO PLANO:</label>
+                                                    <input type="date" id="validade_plano" name="validade_plano"/>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <label for="prox_vencimento">PRÓXIMO VENCIMENTO:</label>
+                                                    <input type="date" id="prox_vencimento" name="prox_vencimento"/>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <label for="validade_exame_medico">VALIDADE EXAME MÉDICO:</label>
+                                                    <input type="date" id="validade_exame_medico" name="validade_exame_medico"/>
+                                                </div>
+
+                                            </form>
+
+
+                                        </div>
+
+                                        <div id="notificacoes_para_aluno">
+
+                                            <div className="notifications">NOTIFICAÇÕES:</div>
+
+                                            <div className="select_notifications">
+
+                                                <div className="form-row">
+                                                    <select id="Noticacao_1" name="Noticacao_1" placeholder="Noticação 1">
+                                                    </select>
+                                                </div>
+                                                <div className="form-row">
+                                                    <select id="Noticacao_2" name="Noticacao_2" placeholder="Noticação 2">
+                                                    </select>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <select id="Noticacao_3" name="Noticacao_3" placeholder="Noticação 3">
+                                                    </select>
+                                                </div>
+
+                                                <div className="form-row">
+                                                    <select id="Noticacao_4" name="Noticacao_4" placeholder="Noticação 4">
+                                                    </select>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div id="agenda_aluno">
+                                        <div id="Exame_medico">
+
+                                            <div id="upload_btn">
+                                                <label for="file-upload" class="file-upload-btn">Anexar Arquivo Médico
+                                                    {/* <img src={} alt="logotipo" className="img_medical_exam"/> */}
+                                                </label>
+                                                <input className="validate_medical_exam" type="file" id="file-upload" onchange="updateLabel()"/>
+                                            </div>
+
+                                            <div id="envia_btn">
+                                                <button className="enviar-button" type="button">Enviar!</button>
+                                            </div>
+
+                                            <div id="ver_arquivo">
+                                                <button className="view-button" type="button">Ver Exame Médico!</button>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Validar_exame_medico_area">
+                                            <div id="data_exame">
+                                                Realizado dia 13/12/2023
+                                            </div>
+                                            <div >
+                                                <button id="validar_exame_medico_btn" type="button">Validar Exame Médico</button>
+                                            </div>
+                                        </div>
+
+                                        <div id="avaliacao_fisica_agendamento">
+                                        </div>
+
+                                        <div id="graduacao_agendamento">
+                                        </div>
+
+                                        <div id="associar_convidado_area">
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </section>
+                    </div>
+                    <script src="Tela_Perfil_Gerencia.js"></script>
+
+                </section>
+            </div>
+        </>
+
+    );
+
+}
+
+    

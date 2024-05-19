@@ -1,24 +1,36 @@
 import { Link } from "react-router-dom";
 import styles from "./footer.module.css";
+
 import logo from "../../../Assets/logopng.png";
+import tiktok from "../../../Assets/tiktok.png";
+import instagram from "../../../Assets/instagram.png";
+import whatsapp from "../../../Assets/whatsapp.png";
+
+
 
 function Footer() {
 
     return (
+
         <>
             <div className={styles.linha}></div>
             <div class="container">
                 <footer>
                     <img src={ logo } alt="logobaixo" className="imgb"/>
                         <div className="boxs">
-                            <Link to="/login">login</Link>
+                            
+                            <Link to="/login">login  </Link>
+                            <Link to="/Agenda">Agenda</Link>
+                            <Link to="/Alertas">Alertas</Link>
+                            <Link to="/Avisos">Avisos</Link>
+                            <Link to="/Cadastros">Cadastros</Link>
+                            <Link to="/Mural">Mural</Link>
+
                             <h2>Onde nos encontrar</h2>
                             <div className="area--icons">
-                                {/* <a Link className=""> <img src= {} alt="facebook" class="rsicon"/></a>
-                                <a Link className=""> <img src= {} alt="facebook" class="rsicon"/></a>
-                                <a Link className=""> <img src= {} alt="facebook" class="rsicon"/></a>
-                                <a Link className=""> <img src= {} alt="facebook" class="rsicon"/></a>
-                                <a Link className=""> <img src= {} alt="facebook" class="rsicon"/></a>   */}
+                                <a Link className=""> <img src= {tiktok} alt="facebook" class="rsicon"/></a>
+                                <a Link className=""> <img src= {instagram} alt="facebook" class="rsicon"/></a>
+                                <a Link className=""> <img src= {whatsapp} alt="facebook" class="rsicon"/></a>
                             </div>
                         </div>
                         <div className="boxs">
@@ -40,6 +52,7 @@ function Footer() {
                 </footer>
             </div>
         </>
+
     );
 }
 
