@@ -236,6 +236,10 @@ body {
     height: auto;
 }
 
+.conteudo_gerenciado {
+    width: 1600px;
+}
+
 .gerenciador{
     display: block;
     margin-inline-start: 5px;

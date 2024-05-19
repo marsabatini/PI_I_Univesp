@@ -288,35 +288,6 @@ body {
 
 }
 
-.avisos {
-    height: 600px;
-    width: 1400px;
-    background-color: #fff;
-    border: #3d3e40;
-    margin-block-start: 25px;
-    margin-inline-start: 35px;
-    margin-inline-end: 150px;
-    margin-block-end: 30px;
-    padding: 15px 20px;
-    overflow-y: auto;
-}
-
-.avisos li{
-    display:flex;
-    justify-content: space-between;
-    margin-block-start:25px ;
-    margin-block-end: 15px;
-    margin-inline-start: 30px; 
-    gap: 15px;
-}
-
-.avisos h2 {
-    color:#A21500;
-    justify-content: left;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px #acacac;
-}
 
 .h3{
     background-color: #A21500;
@@ -330,38 +301,6 @@ body {
     margin-block-start: 10px;
 }
 
-.inserção_avisos {
-    display: flex;
-    align-items: center;
-    margin-block-start: 25px;
-    margin-inline-start: 35px;
-    margin-block-end: 30px;
-    gap: 8px;
-    flex-direction: column;
-    margin-left: 145px;
-}
-
-.inserção_avisos input {
-    border-radius: 3px;
-    text-align: left;
-    padding-bottom: 65px;
-    padding-left: 10px;
-    width: 700px;
-    height: 100px;
-    font-family: 'Times New Roman';
-    font-size: 20px;
-    
-}
-
-.inserção_avisos button{
-    width: 150px;
-    height: 50px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #A21500;
-    border-radius: 5px;
-    border: none;
-}
 
 .trash {
     width: 20px;
