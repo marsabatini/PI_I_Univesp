@@ -91,7 +91,7 @@ export default function Login() {
                                 <label>Senha</label>
                             </div>
                             <div className="esquecerSenha">
-                                <Link className="esqueceu" to="/"> Esqueci a senha </Link>
+                                <Link className="esqueceu" to="/Redefinir_Senha"> Esqueci a senha </Link>
                             </div>
                             <a href="" className="b-ent">
                                 <button type="submit" className="l-bnt">Entrar</button>

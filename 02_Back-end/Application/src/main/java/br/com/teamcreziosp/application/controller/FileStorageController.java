@@ -22,7 +22,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+/*
 @Controller
 @RequestMapping("/api/files")
 public class FileStorageController {
@@ -96,3 +96,4 @@ public class FileStorageController {
         return ResponseEntity.ok(fileNames);
     }
 }
+*/

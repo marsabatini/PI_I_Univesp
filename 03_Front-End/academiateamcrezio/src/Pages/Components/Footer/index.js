@@ -11,7 +11,6 @@ import whatsapp from "../../../Assets/whatsapp.png";
 function Footer() {
 
     return (
-
         <>
             <div className={styles.linha}></div>
             <div class="container">
