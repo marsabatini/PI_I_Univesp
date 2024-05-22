@@ -1,0 +1,78 @@
+.footer {
+
+    display: flex;
+    width: 100%;
+    background-color:#A21500;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    max-height: 130px;
+    padding: 10px;
+}
+
+.logo_footer {
+
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-self: center;
+    margin-left: 30px;
+
+}
+
+.boxs {
+
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   
+}   
+
+.area_icons {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 41px;
+
+}
+
+.rsicon {
+
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+.areat {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    
+}
+
+.areat a{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.footer_titles {
+    
+    color: #fff;
+    font-size: 20px;
+    margin: 10px 0px 10px 0px;
+
+}
+
+
+

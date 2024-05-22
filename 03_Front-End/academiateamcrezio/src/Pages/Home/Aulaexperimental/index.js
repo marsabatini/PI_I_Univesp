@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
+
 import "./aula_experimental.modules.css"
 
 export default function Aula_Experimental() {
@@ -11,7 +14,7 @@ export default function Aula_Experimental() {
         <>
             <div>
                 <section>
-
+                    <Header/>
                     <h1>faça uma aula experimental gratis</h1>
                     <div class="box">
                         <div className="box-u">
@@ -28,7 +31,7 @@ export default function Aula_Experimental() {
                         </div>
                         <button className="button">Ver datas disponiveis</button>
                     </div>
-
+                    <Footer/>
                 </section>
             </div>
         </>

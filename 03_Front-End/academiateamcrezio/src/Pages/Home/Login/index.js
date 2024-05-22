@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import './styles.css';
 
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
+
 import api from '../../../Services/Api';
 
 import logo from "../../../Assets/logopng.png"
@@ -57,6 +60,7 @@ export default function Login() {
     return (
         <div>
             <section>
+                <Header/>
                 <div class="container">
                     <div className="cadastro">
                         <div className="flexz">
@@ -101,9 +105,7 @@ export default function Login() {
                         </form>
                     </div>
                 </div>
-
-
-
+                <Footer/>
             </section >
         </div >
     );

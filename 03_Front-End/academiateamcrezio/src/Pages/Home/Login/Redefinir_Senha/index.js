@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../../Components/Header";
+import Footer from "../../../Components/Footer";
+
 import "./redefinir_senha.modules.css";
 
 export default function Redefinir_Senha() {
@@ -11,7 +14,7 @@ export default function Redefinir_Senha() {
         <>
             <div>
                 <section>
-
+                    <Header/>
                     <form action="">
                         <div className="recuperação">
                             <h1 className="center">esqueci minha senha</h1>
@@ -23,7 +26,7 @@ export default function Redefinir_Senha() {
                             <button>envie email para redefinição</button>
                         </div>
                     </form>
-
+                    <Footer/>
                 </section>
             </div>
         </>
