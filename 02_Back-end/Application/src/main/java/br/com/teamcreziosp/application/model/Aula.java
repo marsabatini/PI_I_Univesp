@@ -22,13 +22,13 @@ public class Aula {
 
     private LocalDateTime data;
 
-    @ManyToOne
-    @JoinColumn(name = "id_tipo")
-    private TiposAula id_tipo;
-
-    private Integer qtddLimiteAlunos;
-
-    @ManyToMany
-    private List<Aluno> alunosInscritos = new ArrayList<>();
+//    @ManyToOne
+//    @JoinColumn(name = "id_tipo")
+//    private TiposAula id_tipo;
+//
+//    private Integer qtddLimiteAlunos;
+//
+//    @ManyToMany
+//    private List<Aluno> alunosInscritos = new ArrayList<>();
 
 }

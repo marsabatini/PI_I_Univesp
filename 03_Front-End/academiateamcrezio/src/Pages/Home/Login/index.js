@@ -12,9 +12,7 @@ export default function Login() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const [id, setId]       = useState('');
-    const [nome, setNome]   = useState('');
-    const [role, setRole]   = useState('');
+
 
     const navigate = useNavigate();
 
@@ -40,7 +38,7 @@ export default function Login() {
             // Precisaremos fazer a lógica para, caso seja funcionário ou aluno
             if (response.data.role == "ALUNO") {
                 navigate('/perfil')
-            } else if (response.data.role == "ADM") {
+            } else if (response.data.role == "ADMIN") {
                 navigate('/adm')
             } else if (response.data.role == "PROFESSOR" || response.data.role == "TREINADOR") {
                 navigate('/funcionario')
