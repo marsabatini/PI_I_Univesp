@@ -10,7 +10,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping(value = "/teamcrezio/adm")
+@RequestMapping(value = "/adm")
 public class TiposAulaController {
 
     @Autowired

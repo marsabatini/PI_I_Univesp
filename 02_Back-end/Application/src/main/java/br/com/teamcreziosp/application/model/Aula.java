@@ -1,5 +1,6 @@
 package br.com.teamcreziosp.application.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,13 +19,14 @@ public class Aula {
 
     @ManyToOne
     @JoinColumn(name = "id_professor")
-    private Professor id_professor;
+    private Professor professor;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime data;
 
     @ManyToOne
     @JoinColumn(name = "id_tipo")
-    private TiposAula id_tipo;
+    private TiposAula tipo;
 
     private Integer qtddLimiteAlunos;
 
