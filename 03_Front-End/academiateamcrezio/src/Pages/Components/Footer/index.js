@@ -25,6 +25,9 @@ function Footer() {
                             <Link to="/Avisos">Avisos</Link>
                             <Link to="/Cadastros">Cadastros</Link>
                             <Link to="/Mural">Mural</Link>
+                            <Link to="/Aluno">Aluno</Link>
+                            <Link to="/Aula_Experimental">Aula_Experimental</Link>
+                            <Link to="/Planos">Planos</Link>
 
                             <h2>Onde nos encontrar</h2>
                             <div className="area--icons">
