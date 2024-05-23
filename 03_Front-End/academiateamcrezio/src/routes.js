@@ -32,9 +32,9 @@ export default function AppRoutes() {
                 <Route path="/adm/avisos" element={<Avisos/>} />
                 <Route path="/adm/cadastros" element={<Cadastros/>} />
                 <Route path="/adm/mural" element={<Mural/>} />
-                <Route path="/Aluno" element={<Aluno/>} />
-                <Route path="/Aula_Experimental" element={<Aula_Experimental/>} />
-                <Route path="/Planos" element={<Planos/>} />
+                <Route path="/aluno" element={<Aluno/>} />
+                <Route path="/aula_Experimental" element={<Aula_Experimental/>} />
+                <Route path="/planos" element={<Planos/>} />
 
                 {/* <Route path="/perfil" element={<Perfil/>} /> */}
             </Routes>

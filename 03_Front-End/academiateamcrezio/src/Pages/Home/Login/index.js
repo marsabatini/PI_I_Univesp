@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import './styles.css';
 
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
+
 import api from '../../../Services/Api';
 
 import logo from "../../../Assets/logopng.png"
@@ -55,14 +58,15 @@ export default function Login() {
     return (
         <div>
             <section>
+                <Header/>
                 <div class="container">
                     <div className="cadastro">
                         <div className="flexz">
                             <img src={logo} alt="logo tc" />
                             <p> Caso não seja cadastrado ainda, crie sua conta!</p>
-                            <a href="">
-                                <button class="c-bnt">cadastrar</button>
-                            </a>
+                            <Link to="/cadastro">
+                                <button className="c-bnt">Cadastrar</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="login-column">
@@ -93,15 +97,13 @@ export default function Login() {
                             <div className="esquecerSenha">
                                 <Link className="esqueceu" to="/Redefinir_Senha"> Esqueci a senha </Link>
                             </div>
-                            <a href="" className="b-ent">
+                            <Link to="/aluno" className="b-ent">
                                 <button type="submit" className="l-bnt">Entrar</button>
-                            </a>
+                            </Link>
                         </form>
                     </div>
                 </div>
-
-
-
+                <Footer/>
             </section >
         </div >
     );

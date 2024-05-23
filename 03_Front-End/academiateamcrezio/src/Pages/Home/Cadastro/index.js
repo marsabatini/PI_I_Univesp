@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import InputMask from 'react-input-mask';
 
 import "./styles.css";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
+
 import logo from "../../../Assets/logopng.png"
 
 import api from "../../../Services/Api";
@@ -62,13 +66,14 @@ export default function Cadastro() {
     return (
         <div>
             <section>
-            <div className="cadastro-card-container">
+                <Header />
+                <div className="cadastro-card-container">
                     <div className="cadastro-card">
                         <div className="cadastro-card-logo">
                             <Link className="link-inicio" to="/"><img src={logo} alt="Nínive" /></Link>
                         </div>
                         <div className="cadastro-card-header">
-                            <h1>Crie sua conta</h1>
+                            <h1>Faça seu cadastro</h1>
                         </div>
                         <form className="cadastro-card-form" onSubmit={cadastrarAluno}>
                             <div className="form-item">
@@ -98,8 +103,9 @@ export default function Cadastro() {
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
-                                <input
+                                <span className="form-item-icon material-symbols-rounded">perm_contact_calendar</span>
+                                <InputMask
+                                    mask="99/99/9999"
                                     className="dtNasc"
                                     title="Digite sua data de nascimento."
                                     name="dtNasc"
@@ -108,10 +114,12 @@ export default function Cadastro() {
                                     onChange={e => setDatanascimento(e.target.value)}
                                     placeholder="Data de nascimento"
                                     required
-                                />
+                                >
+                                    {(inputProps) => <input type="text" {...inputProps} />}
+                                </InputMask>
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">wc</span>
                                 <input
                                     className="sexo"
                                     title="Sexo"
@@ -119,12 +127,12 @@ export default function Cadastro() {
                                     type="text"
                                     value={sexo}
                                     onChange={e => setSexo(e.target.value)}
-                                    placeholder=""
+                                    placeholder="Sexo"
                                     required
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">id_card</span>
                                 <input
                                     className="rg"
                                     title="Digite seu RG"
@@ -137,7 +145,7 @@ export default function Cadastro() {
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">id_card</span>
                                 <input
                                     className="cpf"
                                     title="Digite seu CPF"
@@ -163,7 +171,7 @@ export default function Cadastro() {
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">phone_iphone</span>
                                 <input
                                     className="telefone"
                                     title="Digite seu telefone"
@@ -176,7 +184,7 @@ export default function Cadastro() {
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">home</span>
                                 <input
                                     className="Endereco"
                                     title="Digite seu endereço"
@@ -189,7 +197,7 @@ export default function Cadastro() {
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">home</span>
                                 <input
                                     className="Numero"
                                     title="Digite o número de seu endereço"
@@ -202,7 +210,7 @@ export default function Cadastro() {
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">home</span>
                                 <input
                                     className="Cidade"
                                     title="Digite sua cidade"
@@ -215,7 +223,7 @@ export default function Cadastro() {
                                 />
                             </div>
                             <div className="form-item">
-                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <span className="form-item-icon material-symbols-rounded">home</span>
                                 <input
                                     className="CEP"
                                     title="Digite seu CEP"
@@ -281,6 +289,7 @@ export default function Cadastro() {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </section>
         </div>
     );

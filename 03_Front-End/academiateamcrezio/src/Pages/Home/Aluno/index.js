@@ -15,7 +15,7 @@ export default function Aluno() {
         <>
             <div>
                 <section> 
-                   
+                   <Header/>
                     <div class="container">
                         <div className="foto-p">
                             <img src={foto_perfil} alt="" />
@@ -59,6 +59,7 @@ export default function Aluno() {
                             </p>
                         </div>
                     </div>
+                    <Footer/>
                 </section>
             </div>
         </>

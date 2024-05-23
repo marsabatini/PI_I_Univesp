@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../../Components/Header";
+import Footer from "../../../Components/Footer";
 
 import "./nova_senha.modules.css";
 
@@ -15,7 +17,7 @@ export default function Nova_Senha() {
         <>
             <div>
                 <section>
-
+                    <Header/>
                     <form action="">
                         <div className="nova-s">
                             <h1>escolha sua nova senha</h1>
@@ -32,7 +34,7 @@ export default function Nova_Senha() {
                             </div>
                         </div>
                     </form>
-
+                    <Footer/>
                 </section>
             </div>
         </>

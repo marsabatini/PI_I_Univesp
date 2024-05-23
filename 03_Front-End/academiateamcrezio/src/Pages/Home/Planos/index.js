@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
+
 import "./planos.modules.css";
 
 export default function Planos() {
@@ -11,8 +14,8 @@ export default function Planos() {
         <>
             <div>
                 <section>
-
-                    <br /> <br /><br /><br /><br /><br /> <br />
+                    <Header/>
+                    
                     <div class="container">
                         <h1>Planos</h1>
                         <div className="caixas">
@@ -281,7 +284,7 @@ export default function Planos() {
                     <button className="button">marque gratuitamente uma aula experimental</button>
                     <br />
 
-
+                <Footer/>
                 </section>
             </div>
         </>

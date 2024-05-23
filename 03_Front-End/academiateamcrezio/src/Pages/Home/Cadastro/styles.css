@@ -1,6 +1,7 @@
 /* @import url("../reset.css"); */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0');
 
 
 body{
@@ -37,8 +38,6 @@ body{
 
 .cadastro-card-logo img{
     width: 150px;
-    margin-left: 25%;
-    margin-bottom: 50px;
 }
 
 .cadastro-card-logo,
@@ -76,6 +75,7 @@ body{
     flex-direction: column;
     gap: 1.5rem;
 }
+
 
 .cadastro-card-form .form-item{
     position: relative;
@@ -122,7 +122,7 @@ body{
 }
 
 .cadastro-card input:focus{
-    background: #A7A9E0;
+    background: #DD6457;
 }
 
 .cadastro-card input[type="checkbox"]{
@@ -134,7 +134,7 @@ body{
 .cadastro-card-form button{
     display: block;
     margin: 0 auto;
-    background-color: #D9D9D9;
+    background-color: #c2bbbb;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
     padding: 1rem;
     width: 200px;
@@ -148,7 +148,8 @@ body{
 }
 
 .cadastro-card-form button:hover{
-    background-color: #8053DF;
+
+    background-color: #DD6457;
     cursor: pointer;
 }
 
@@ -180,7 +181,7 @@ body{
     align-items: center;
     justify-content: center;
     columns: black;
-    color: blue;
+    color: #3D3E40;
     width: 50px;
     height: 50px;
     background: #D9D9D9;
@@ -190,7 +191,7 @@ body{
 
 .cadastro-card-social-btns a:hover{
     color: black;
-    background: #8053DF;
+    background: #DD6457;
     transform: scale(1.1);
 }
 

@@ -1,42 +1,15 @@
-
-
-.boxs h2 {
-    color: #fff ;
-    margin-bottom: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
-}
-.boxs ul li {
-    margin: 10px;
-    list-style: none;
-    color: #fff;
-    font-weight: 400;
-    font-style: normal;
-}
-.boxs ul li a {
-    text-decoration: none;
-}
-.imgb {
-    width: 100px;
-    height: 100px;
-    margin: 24px 0px 0px 65px;
-}
-.rsicon {
-    width: 30px;
-    height: 30px;
-}
-.boxs a {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-}
-.boxs a:hover {
-    color: #6b6b6b;
 }
 body { 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -60,6 +33,7 @@ body {
 .login .caixa-u {
     position: relative;
     margin-bottom: 15px;
+    text-align: start;
 }
 .login .caixa-u input{
     width: 100%;
@@ -99,10 +73,8 @@ body {
     margin-top: -30px;
 }
 .b-ent{
-    align-items: center;
-    display: flex;
-    justify-content: center;
     margin-top: 45px;
+
 }
 .l-bnt  {
     border: none;
@@ -130,6 +102,9 @@ body {
     color: #f0f0f0;
     margin-bottom: 50px;
 }
+.container { 
+    display: flex;
+}
 .c-bnt {
     width: 111px;
     height: 55px;
@@ -154,4 +129,7 @@ body {
     height: 150px;
     margin-bottom: 50px; 
 }   
-
+.all {
+    display: flex;
+    justify-content: center;
+}

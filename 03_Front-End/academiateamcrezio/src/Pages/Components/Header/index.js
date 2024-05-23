@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import header_style from "./header.module.css";
 
-import logo_master from "../../../Assets/logoa.jpeg";
+import logo_header from "../../../Assets/logoa.jpeg";
 
 export default function Header() {
 
@@ -10,21 +10,21 @@ export default function Header() {
         <>
             <div>
                 <section>
-                    <div className={header_style.linha}></div>
-                    <header>
-                        <div class="container-logo">
-                            <div className="logo-imagem"></div>
-                            <div className="logo-texto">
-                                <img src={logo_master} alt="logotipo" class="img-logo" />
-                            </div>
-                            <div className="menu">
+
+                    <header class={header_style.header}>
+                        <div>
+                          <Link to="/home"> <img src={logo_header} alt="logotipo" className={header_style.img_logo}></img> </Link>
+                        </div>
+                        <div className={header_style.header_options}>
+
+                            <div className={header_style.menu}>
                                 <ul>
-                                    <li> <a Link className="">Academia+     </a></li>
-                                    <li> <a Link className="">Nossa historia</a></li>
-                                    <li> <a Link className="">Planos        </a></li>
-                                    <li> <a Link className="">Contato       </a></li>
-                                    <li> <a Link className="">Loja+         </a></li>
-                                    <button>Login</button >
+                                    <li> <a Link to="/">Academia+     </a></li>
+                                    <li> <a Link to="/">Nossa historia</a></li>
+                                    <li> <a Link to="/">Planos        </a></li>
+                                    <li> <a Link to="/">Contato       </a></li>
+                                    <li> <a Link to="/">Loja+         </a></li>
+                                 <Link to="/login">  <button>Login</button > </Link>
                                 </ul>
                             </div>
                         </div>
