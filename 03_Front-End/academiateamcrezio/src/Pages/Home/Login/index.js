@@ -47,7 +47,7 @@ export default function Login() {
             }
         } catch (err) {
             // mensagemErro('Usuário e/ou senha inválido(s).')
-            alert("Usuário desconhecido")
+            alert('Usuário e/ou senha inválido(s).');
         }
     };
 
