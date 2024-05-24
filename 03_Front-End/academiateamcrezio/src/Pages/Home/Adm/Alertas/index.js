@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../../Components/Header";
+
 import "./alerta.modules.css";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
 
@@ -14,11 +16,12 @@ export default function Alertas() {
             <div>
                 <section>
 
-                    <div class="caixa">
+                    <div class="caixa_alerta">
+                        <Header/>
                         <Gerenciador_ADM />
                         <section className="alert_section">
-                            <div className="h3">
-                                <h3>
+                            <div >
+                                <h3 className="titulo_alerta">
                                     ALERTAS
                                 </h3>
                             </div>

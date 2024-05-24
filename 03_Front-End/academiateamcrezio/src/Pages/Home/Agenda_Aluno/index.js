@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
-import style_agenda from "./agenda.modules.css";
+import style_agenda_aluno from "./agenda_aluno.modules.css";
 
-import Aulas from "../../../Components/Aulas";
-import Gerenciador_ADM from "../../../Components/Gerenciador";
-import Header from "../../../Components/Header";
+import Aulas from "../../Components/Aulas";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 
-
-export default function Agenda() {
+export default function Agenda_Aluno() {
 
 
     return (
@@ -17,23 +16,14 @@ export default function Agenda() {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"></link>
             <div>
                 <section>
+
                     <div class="caixa_agenda">
                         <Header />
-                        <Gerenciador_ADM />
-                        <section className="conteudo_gerenciado">
 
-                            <h4 className="titulo_agenda">
-                                AGENDA COMUM
-                            </h4>
-
-
+                        <section className="section_agenda_aluno">
                             <div className="agenda">
                                 <div className="consulta_modalidade">
-                                    <div>
-                                        <h2 className="titulos">
-                                            AULA
-                                        </h2>
-                                    </div>
+
                                     <form>
                                         <select className="modalidade_input" id="modalidade" name="modalidade">
                                             <option value="Todas as Modalidades" >Todas as Modalidades</option>
@@ -113,28 +103,16 @@ export default function Agenda() {
                                 <div className="consulta_modalidade">
                                     <div>
                                         <h2 className="titulos">
-                                            ALUNO
+                                            AGENDA DO FULANO
                                         </h2>
                                     </div>
-                                    <form>
-                                        <select className="modalidade_input" id="filtro_modalidade" name="modalidade">
-                                            <option value="Todas as Modalidades" >Todas as Modalidades</option>
-                                            <option value="Boxe">Boxe</option>
-                                            <option value="Jiu-Jitsu">Jiu-Jitsu</option>
-                                            <option value="Self-Defense">Self-Defense</option>
-                                            <option value="Muay-Thay">Muay-Thay</option>
-                                            <option value="Kids">Kids</option>
-                                            <option value="Teen">Teen</option>
-                                        </select>
-                                    </form>
-                                    <form>
-                                        <input className="aluno_input" id="select_modalidade" name="modalidade" type="text" placeholder="Insira nome, sobrenome ou matricula(id)"></input>
-                                        <div className="alunos">
-                                            <ul>
-                                                <li>Alunos ficarão aqui...</li>
-                                            </ul>
-                                        </div>
-                                    </form>
+
+                                    <div className="agenda_alunos">
+                                        <ul>
+                                            <li>Agenda do Aluno...</li>
+                                        </ul>
+                                    </div>
+
                                 </div>
 
                                 <div className="Agendamento">
@@ -145,11 +123,10 @@ export default function Agenda() {
 
                                     <div className="Agenda_Publica">
 
-
                                         <div>
 
 
-                                            <ul className="header_agenda">
+                                            <ul className="header_agenda_aluno">
                                                 <li>Data</li>
                                                 <li>Horario</li>
                                                 <li>Modalidade</li>
@@ -170,52 +147,23 @@ export default function Agenda() {
                                                 <Aulas />
                                                 <Aulas />
                                                 <Aulas />
+                                                <Aulas />
+                                                <Aulas />
+                                                <Aulas />
+                                                <Aulas />
+                                                <Aulas />
                                                
-
                                             </div>
-
-                                        </div>
-
-
-
-                                    </div>
-                                    <div className="alter_modalidade">
-                                        <div>
-                                            <form >
-                                                <input id="cor_modalidade" name="cor_modalidade" type="text" placeholder="digite uma nova modalidade"></input>
-                                                <button className="Inserir_Excluir" type="submit" id="inserir_modalidade" name="inserir_modalidade">Inserir</button>
-                                            </form>
-                                        </div>
-
-                                        <div>
-                                            <form >
-                                                <select className="modalidade" id="excluir_modalidade">
-                                                    <option value="Todas as Modalidades" >Todas as Modalidades</option>
-                                                    <option value="Boxe">Boxe</option>
-                                                    <option value="Jiu-Jitsu">Jiu-Jitsu</option>
-                                                    <option value="Self-Defense">Self-Defense</option>
-                                                    <option value="Muay-Thay">Muay-Thay</option>
-                                                    <option value="Kids">Kids</option>
-                                                    <option value="Teen">Teen</option>
-                                                </select>
-                                                <button className="Inserir_Excluir" type="submit" id="excluir" name="excluir">Excluir</button>
-                                            </form>
                                         </div>
 
                                     </div>
-
-                                    <h2 className="titulos">Inserir nova aula</h2>
-                                        <div className="inserir_nova_aula">
-                                            <form>
-                                                <input/>
-                                            </form>
-                                        </div>
+                                    
                                 </div>
                             </div>
 
                         </section>
                     </div>
-
+                    <Footer />
                 </section>
             </div>
 
