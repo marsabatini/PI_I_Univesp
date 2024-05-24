@@ -25,6 +25,7 @@ export default function Header() {
                                     <li> <a Link to="/">Contato       </a></li>
                                     <li> <a Link to="/">Loja+         </a></li>
                                  <Link to="/login">  <button>Login</button > </Link>
+                                 <Link to="/cadastro"> <button>cadastrar</button></Link>
                                 </ul>
                             </div>
                         </div>

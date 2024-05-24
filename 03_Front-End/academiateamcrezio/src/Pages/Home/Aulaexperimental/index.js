@@ -26,7 +26,7 @@ export default function Aula_Experimental() {
         }
 
         try {
-            await api.post('api/aulaexperimental', data);
+            await api.post('/api/aulaexperimental', data);
 
             alert('Aluno experimental Cadastrado. Mas não está integrado com a agenda!!!!');
 

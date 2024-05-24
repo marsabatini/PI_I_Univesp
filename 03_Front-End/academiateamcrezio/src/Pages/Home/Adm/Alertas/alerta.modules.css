@@ -7,59 +7,7 @@
     font-weight: 400;
     font-style: normal;
 }
-header {
-    width: 100%;
-    max-height: 150px;
-    background-color: #fff;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    
-}
-.img-logo {
-    width: 225px;
-    height: 120px;
-    padding: 10px;
-    margin: 30px 0px 0px 50px;   
-    cursor: pointer;
-}
 
-.container-logo {
-    display: flex;
-    align-items: center;
-}
-.logo-texto {
-    margin-left: 20px;
-}
-.menu li {
-    display: inline-block;
-    margin-right: 100px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 21px;
-}
-.menu li:hover {
-    color: #3d3e40;
-}
-
-.menu li a {
-    font-size: 80px;
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    
-}
-.menu button {
-    width: 70px;
-    height: 50px;
-    font-size: 19px;
-    color: #fff;
-    background-color: #3d3e40;
-    border-radius: 5px;
-    margin-right: 100px;
-}
 
 footer {
     display: flex;
@@ -199,16 +147,17 @@ body {
     height: 300px;
     padding: 10px;
 }
-.caixa {
+
+.caixa_alerta {
     height: auto;
     width: 100%;
     justify-content: center;
     align-self: center;
     display: flex;
     margin: 10px;
-    padding-top: 140px;
 
 }
+
 .imagens:hover {
     cursor: pointer;
 }
@@ -227,80 +176,27 @@ body {
     height: 80px;
 }
 
-.menu_gerenciador { 
-    margin-block-start: 10px;
-    background-color: #d1d1d1;
-    justify-content: center;
-    height: auto;
-}
-
-.gerenciador{
-    display: block;
-    margin-inline-start: 5px;
-    top: 0;
-    font-size: 20px;
-    width: 250px;
-    height: 760px;
-    justify-content: left;
-    background-color: #d1d1d1;
-}
-
-.gerenciador li a{
-    color:black;
-    text-decoration: none;
-}
-
-.gerenciador a:hover{
-    color:#3d3e40;
-}
-
-.gerenciador ul li a{
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.gerenciador li{
-    padding: 10px 5px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-inline-start: 10px;
-    margin-inline-end: 15px;
-    margin-block-start: 8px;
-    margin-block-end: 5px;
-    border: #6b6b6b;
-    background-color: #fff;
-    list-style: none;
-    box-shadow: 2px 2px #acacac;
-}
 
 
-.titulo_gerenciador{
-    background-color: #18191a;
-    color:white;
-    font-size: 25px;
-    text-align: center;
-    justify-content: center;
-    margin-inline-start: 10px;
-    margin-inline-end: 10px;
-    margin-block-start: 10px;
-    margin-block-end: 12px;
-
-}
-
-.h3{
+.titulo_alerta{
     background-color: #A21500;
+    height: 50px;
     width: 1600px;
     color:white;
     justify-content: center;
+    align-items: center;
+    display: flex;
     font-size: 30px;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-block-start: 10px;
+    
 }
 
 .alert_section {
     width: 1600px;
+    padding: 0;
 }
 
 .alertas {
@@ -327,6 +223,8 @@ body {
     font-size: 30px;
     color: #3d3e40;
     padding-left: 10px;
+    margin: 0;
+    line-height: 1;
 }
 
 .graduacao li{
@@ -356,6 +254,8 @@ body {
     font-size: 30px;
     color: #3d3e40;
     padding-left: 10px;
+    margin: 0;
+    line-height: 1;
 }
 
 .avaliacao_fisica li{
@@ -384,6 +284,8 @@ body {
     font-size: 30px;
     color: #3d3e40;
     padding-left: 10px;
+    margin: 0;
+    line-height: 1;
 }
 
 .exame_medico li{
@@ -412,6 +314,8 @@ body {
     color: #3d3e40;
     padding-left: 10px;
     background-color: rgb(15, 109, 163);
+    margin: 0;
+    line-height: 1;
 }
 
 .mensalidade li{
