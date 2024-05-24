@@ -39,7 +39,9 @@ body {
     border-radius: 8px;
     width: 380px;
 }
+
 .button {
+
     background: #a21500;
     border-radius: 20px;
     border: none;
@@ -48,7 +50,18 @@ body {
     font-size: 22px;
     color: white;
     margin: 15px 0;
+    transition: all .3s;
+
 }
+
+.button:hover {
+
+    background-color: #DD6457;
+
+}
+
+
+
 h1{ 
     text-align: center;
     padding-bottom: 20px;

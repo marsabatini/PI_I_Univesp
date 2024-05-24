@@ -57,9 +57,9 @@ export default function Login() {
 
     return (
         <div>
-            <section>
+            <section className="login_section">
                 <Header/>
-                <div class="container">
+                <div class="container_login">
                     <div className="cadastro">
                         <div className="flexz">
                             <img src={logo} alt="logo tc" />
@@ -78,7 +78,6 @@ export default function Login() {
                                     type="text"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
-                                    placeholder="E-mail"
                                     required
                                 />
                                 <label>Usuario</label>
@@ -89,7 +88,6 @@ export default function Login() {
                                     type="password"
                                     value={senha}
                                     onChange={e => setSenha(e.target.value)}
-                                    placeholder="Senha"
                                     required
                                 />
                                 <label>Senha</label>
@@ -97,9 +95,11 @@ export default function Login() {
                             <div className="esquecerSenha">
                                 <Link className="esqueceu" to="/Redefinir_Senha"> Esqueci a senha </Link>
                             </div>
-                            <Link to="/aluno" className="b-ent">
-                                <button type="submit" className="l-bnt">Entrar</button>
-                            </Link>
+                            <div className="div_entrar_button">
+                                <Link to="/aluno" className="b-ent">
+                                    <button type="submit" className="l-bnt">Entrar</button>
+                                </Link>
+                            </div>
                         </form>
                     </div>
                 </div>

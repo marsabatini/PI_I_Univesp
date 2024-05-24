@@ -37,7 +37,7 @@ body {
 }
 .login .caixa-u input{
     width: 100%;
-    padding: 10px 0px;
+    padding: 10px 0px 0px;
     outline: none;
     border: 0;
     background:transparent;
@@ -50,19 +50,20 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 0; 
+    padding: 10px 0px 0px; 
     color:#000000;
     font-size: 25px ;
     pointer-events: none;
     transition: .5s;
+    line-height: 0.8;
 }
 .login .caixa-u input:focus~label,
 .login .caixa-u input:valid~label
 {
-    top: -20px;
+    top: -28px;
     left: 0;
-    color: white;
-    font-size: 20px;
+    color: rgb(212, 212, 212);
+    font-size: 15px;
 }
 .forget {
     font-size: 20px;
@@ -102,7 +103,8 @@ body {
     color: #f0f0f0;
     margin-bottom: 50px;
 }
-.container { 
+
+.container_login { 
     display: flex;
 }
 .c-bnt {
@@ -132,4 +134,18 @@ body {
 .all {
     display: flex;
     justify-content: center;
+}
+
+.login_section {
+
+    display: flex;
+
+}
+
+.div_entrar_button {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
 }
