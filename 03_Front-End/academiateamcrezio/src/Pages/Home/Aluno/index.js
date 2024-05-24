@@ -33,6 +33,7 @@ export default function Aluno() {
                             <span>forma de pagamento:</span>
                             <span>proximo vencimento:</span>
                         </div>
+                        <button>sair</button>
                     </div>
                     <span className="alerta"> notificaçoes importantes</span>
                     <span className="linha"></span>
