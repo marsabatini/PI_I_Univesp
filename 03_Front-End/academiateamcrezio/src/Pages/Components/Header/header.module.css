@@ -5,6 +5,7 @@
     left: 0;
     max-height: 150px;
     position: fixed;
+    display: flex;
     top: 0;
     background-color: #fff;
     border-bottom: 2px #3D3E40 solid;

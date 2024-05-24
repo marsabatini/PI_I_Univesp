@@ -7,59 +7,7 @@
     font-weight: 400;
     font-style: normal;
 }
-header {
-    width: 100%;
-    max-height: 150px;
-    background-color: #fff;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    
-}
-.img-logo {
-    width: 225px;
-    height: 120px;
-    padding: 10px;
-    margin: 30px 0px 0px 50px;   
-    cursor: pointer;
-}
 
-.container-logo {
-    display: flex;
-    align-items: center;
-}
-.logo-texto {
-    margin-left: 20px;
-}
-.menu li {
-    display: inline-block;
-    margin-right: 100px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 21px;
-}
-.menu li:hover {
-    color: #3d3e40;
-}
-
-.menu li a {
-    font-size: 80px;
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    
-}
-.menu button {
-    width: 70px;
-    height: 50px;
-    font-size: 19px;
-    color: #fff;
-    background-color: #3d3e40;
-    border-radius: 5px;
-    margin-right: 100px;
-}
 
 footer {
     display: flex;
@@ -208,14 +156,14 @@ body {
     height: 300px;
     padding: 10px;
 }
-.caixa {
+.caixa_mural {
     height: auto;
     width: 100%;
     justify-content: center;
     align-self: center;
     display: flex;
     margin: 10px;
-    padding-top: 140px;
+    
 }
 .imagens:hover {
     cursor: pointer;
@@ -289,7 +237,7 @@ body {
 }
 
 
-.h3{
+.titulo_mural{
     background-color: #A21500;
     color:white;
     width: 1600px;
@@ -307,13 +255,11 @@ body {
     height: 20px;
     align-self: center;
 }
-.section {
+.mural_section {
     width: 1600px;
+    padding: 0;
 }
-.container {
-    margin-top: 20px;
-    gap: 15px;
-}
+
 .preview-image img {
     width: 250px;
     height: 225px;

@@ -14,6 +14,7 @@ import Aula_Experimental from "./Pages/Home/Aulaexperimental";
 import Nova_Senha from "./Pages/Home/Login/Nova_Senha";
 import Redefinir_Senha from "./Pages/Home/Login/Redefinir_Senha";
 import Planos from "./Pages/Home/Planos";
+import Agenda_Aluno from "./Pages/Home/Agenda_Aluno";
 
 
 export default function AppRoutes() {
@@ -35,6 +36,7 @@ export default function AppRoutes() {
                 <Route path="/Aluno" element={<Aluno/>} />
                 <Route path="/Aula_Experimental" element={<Aula_Experimental/>} />
                 <Route path="/Planos" element={<Planos/>} />
+                <Route path="/Agenda_Aluno" element={<Agenda_Aluno/>} />
 
                 {/* <Route path="/perfil" element={<Perfil/>} /> */}
             </Routes>

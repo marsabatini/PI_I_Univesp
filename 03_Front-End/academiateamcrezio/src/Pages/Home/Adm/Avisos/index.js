@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../../Components/Header";
+
 import "./avisos.modules.css";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
 import lixo from "../../../../Assets/trash.png";
@@ -13,15 +15,16 @@ export default function Avisos() {
         
             <div>
                 <section>
-                    <div class="caixa">
+                    <div class="caixa_avisos">
+                        <Header/>
                         <Gerenciador_ADM/>
                         <section class="warning_section">
-                            <div className="h3">
-                                <h3>
+                            
+                                <h3 className="titulo_avisos">
                                     AVISOS E EVENTOS
                                 </h3>
-                            </div>
-                            <div className="avisos">
+                   
+                            <div className="quadro_avisos">
                                 <h2>
                                     Avisos e Eventos
                                 </h2>

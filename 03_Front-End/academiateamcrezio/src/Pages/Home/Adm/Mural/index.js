@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../../Components/Header";
 
 import "./mural.modules.css";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
@@ -14,14 +15,15 @@ export default function Mural() {
             <div>
                 <section>
 
-                    <div class="caixa">
+                    <div class="caixa_mural">
+                        <Header/>
                         <Gerenciador_ADM/>
-                        <section className="section">
-                            <div className="h3">
-                                <h3>
-                                    Mural
-                                </h3>
-                            </div>
+                        <section className="mural_section">
+                            
+                            <h3 className="titulo_mural">
+                                Mural
+                            </h3>
+                       
 
                             <div className="container">
                                 <div className="preview-image">

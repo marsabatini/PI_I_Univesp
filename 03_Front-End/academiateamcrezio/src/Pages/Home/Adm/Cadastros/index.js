@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+import Header from "../../../Components/Header";
+
 import "./cadastros.modules.css";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
 import foto_perfil from "../../../../Assets/fotoperfil.jpeg";
@@ -13,14 +15,15 @@ export default function Cadastros() {
             <div>
                 <section>
 
-                    <div class="caixa">
+                    <div class="caixa_perfis">
+                        <Header/>
                         <Gerenciador_ADM/>
                         <section className="profiles_section">
-                            <div className="h3">
-                                <h3>
+                            
+                                <h3 className="titulo_perfis">
                                     PERFIS
                                 </h3>
-                            </div>
+    
                             <div className="Gerencia_perfis">
 
                                 <div id="Aluno_situacao">

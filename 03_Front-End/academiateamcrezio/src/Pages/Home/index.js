@@ -29,6 +29,7 @@ export default function Inicio() {
                             <Link to="/Aula_Experimental">Aula_Experimental</Link><br/>
                             <Link to="/Planos">Planos</Link><br/>
                             <Link to="/Nova_Senha">Nova_Senha</Link><br/>
+                            <Link to="/Agenda_Aluno">Agenda_Aluno</Link><br/>
 
                         <Footer/>
                     </section>
