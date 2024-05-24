@@ -33,7 +33,7 @@ export default function AppRoutes() {
                 <Route path="/adm/cadastros" element={<Cadastros/>} />
                 <Route path="/adm/mural" element={<Mural/>} />
                 <Route path="/aluno" element={<Aluno/>} />
-                <Route path="/aula_Experimental" element={<Aula_Experimental/>} />
+                <Route path="/aula_experimental" element={<Aula_Experimental/>} />
                 <Route path="/planos" element={<Planos/>} />
 
                 {/* <Route path="/perfil" element={<Perfil/>} /> */}
