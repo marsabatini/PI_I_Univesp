@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 import Header from "../../../Components/Header";
 
-import "./cadastros.modules.css";
+import "./perfis.modules.css";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
 import foto_perfil from "../../../../Assets/fotoperfil.jpeg";
 

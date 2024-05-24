@@ -151,7 +151,7 @@ body {
 }
 .caixa_agenda {
     height: auto;
-    width: 100%;
+    width: auto;
     justify-content: center;
     align-self: center;
     display: flex;

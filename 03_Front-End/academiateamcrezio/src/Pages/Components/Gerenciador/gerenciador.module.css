@@ -15,9 +15,6 @@
     text-decoration: none;
 }
 
-.gerenciador a:hover{
-    color:#3d3e40;
-}
 
 .gerenciador ul li a{
     text-decoration: none;
@@ -36,7 +33,11 @@
     background-color: #fff;
     list-style: none;
     box-shadow: 2px 2px #acacac;
+    cursor: pointer;
+
 }
+
+
 
 
 .titulo_gerenciador{
