@@ -13,7 +13,7 @@ export default function Header() {
 
                     <header class={header_style.header}>
                         <div>
-                            <img src={logo_header} alt="logotipo" className={header_style.img_logo} />
+                          <Link to="/home"> <img src={logo_header} alt="logotipo" className={header_style.img_logo}></img> </Link>
                         </div>
                         <div className={header_style.header_options}>
 
@@ -24,7 +24,8 @@ export default function Header() {
                                     <li> <a Link to="/">Planos        </a></li>
                                     <li> <a Link to="/">Contato       </a></li>
                                     <li> <a Link to="/">Loja+         </a></li>
-                                    <button>Login</button >
+                                 <Link to="/login">  <button>Login</button > </Link>
+                                 <Link to="/cadastro"> <button>cadastrar</button></Link>
                                 </ul>
                             </div>
                         </div>

@@ -9,7 +9,7 @@
     top: 0;
     background-color: #fff;
     border-bottom: 2px #3D3E40 solid;
-
+    z-index: 1000;
 }
 
 .header_options{

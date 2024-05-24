@@ -15,9 +15,7 @@ export default function Login() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const [id, setId]       = useState('');
-    const [nome, setNome]   = useState('');
-    const [role, setRole]   = useState('');
+
 
     const navigate = useNavigate();
 
@@ -43,7 +41,7 @@ export default function Login() {
             // Precisaremos fazer a lógica para, caso seja funcionário ou aluno
             if (response.data.role == "ALUNO") {
                 navigate('/perfil')
-            } else if (response.data.role == "ADM") {
+            } else if (response.data.role == "ADMIN") {
                 navigate('/adm')
             } else if (response.data.role == "PROFESSOR" || response.data.role == "TREINADOR") {
                 navigate('/funcionario')
@@ -52,7 +50,7 @@ export default function Login() {
             }
         } catch (err) {
             // mensagemErro('Usuário e/ou senha inválido(s).')
-            alert("Usuário desconhecido")
+            alert('Usuário e/ou senha inválido(s).');
         }
     };
 
@@ -66,9 +64,9 @@ export default function Login() {
                         <div className="flexz">
                             <img src={logo} alt="logo tc" />
                             <p> Caso não seja cadastrado ainda, crie sua conta!</p>
-                            <a href="">
-                                <button class="c-bnt">cadastrar</button>
-                            </a>
+                            <Link to="/cadastro">
+                                <button className="c-bnt">Cadastrar</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="login-column">
@@ -99,9 +97,9 @@ export default function Login() {
                             <div className="esquecerSenha">
                                 <Link className="esqueceu" to="/Redefinir_Senha"> Esqueci a senha </Link>
                             </div>
-                            <a href="" className="b-ent">
+                            <Link to="/aluno" className="b-ent">
                                 <button type="submit" className="l-bnt">Entrar</button>
-                            </a>
+                            </Link>
                         </form>
                     </div>
                 </div>

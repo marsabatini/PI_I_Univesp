@@ -23,20 +23,20 @@ export default function AppRoutes() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Home" element={<Home />} />
-                <Route path="/Cadastro" element={<Cadastro />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Redefinir_Senha" element={<Redefinir_Senha />} />
-                <Route path="/Nova_Senha" element={<Nova_Senha />} />
-                <Route path="/Agenda" element={<Agenda/>} />
-                <Route path="/Alertas" element={<Alertas/>} />
-                <Route path="/Avisos" element={<Avisos/>} />
-                <Route path="/Cadastros" element={<Cadastros/>} />
-                <Route path="/Mural" element={<Mural/>} />
-                <Route path="/Aluno" element={<Aluno/>} />
-                <Route path="/Aula_Experimental" element={<Aula_Experimental/>} />
-                <Route path="/Planos" element={<Planos/>} />
-                <Route path="/Agenda_Aluno" element={<Agenda_Aluno/>} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/login/Redefinir_Senha" element={<Redefinir_Senha />} />
+                <Route path="/login/Nova_Senha" element={<Nova_Senha />} />
+                <Route path="/adm/agenda" element={<Agenda/>} />
+                <Route path="/adm/alertas" element={<Alertas/>} />
+                <Route path="/adm/avisos" element={<Avisos/>} />
+                <Route path="/adm/cadastros" element={<Cadastros/>} />
+                <Route path="/adm/mural" element={<Mural/>} />
+                <Route path="/aluno" element={<Aluno/>} />
+                <Route path="/aula_Experimental" element={<Aula_Experimental/>} />
+                <Route path="/planos" element={<Planos/>} />
+                <Route path="/agenda_aluno" element={<Agenda_Aluno/>} />
 
                 {/* <Route path="/perfil" element={<Perfil/>} /> */}
             </Routes>

@@ -78,6 +78,17 @@ public class Aluno implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @NotBlank(message = "Campo obrigatório.")
+    private String endereco;
+
+    @NotBlank(message = "Campo obrigatório.")
+    private String numEndereco;
+
+    @NotBlank(message = "Campo obrigatório.")
+    private String cidade;
+
+    @NotBlank(message = "Campo obrigatório.")
+    private String cep;
 
 //###################################################################################################################
 //    ====> Criar CLASSE ENDERECO: falta Estado, CEP e Complemento

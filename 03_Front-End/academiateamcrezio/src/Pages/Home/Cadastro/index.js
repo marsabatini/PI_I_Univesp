@@ -1,158 +1,298 @@
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import InputMask from 'react-input-mask';
+
+import "./styles.css";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
+
+import logo from "../../../Assets/logopng.png"
+
+import api from "../../../Services/Api";
 
 
 
+export default function Cadastro() {
+
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [sobrenome, setSobrenome] = useState('');
+    const [dataNascimento, setDatanascimento] = useState('');
+    const [sexo, setSexo] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [rg, setRg] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [numEndereco, setNumendereco] = useState('');
+    const [cidade, setCidade] = useState('');
+    const [cep, setCep] = useState('');
 
 
+    const navigate = useNavigate();
+
+    async function cadastrarAluno(e) {
+        e.preventDefault();
+
+        const data = {
+            nome,
+            sobrenome,
+            dataNascimento,
+            email,
+            senha,
+            sexo,
+            telefone,
+            rg,
+            cpf,
+            endereco,
+            numEndereco,
+            cidade,
+            cep
+        }
+
+        try {
+            await api.post('api/cadastro', data);
+
+            alert('Usuário cadastrado com mensagemSucesso.');
+
+            navigate('/login');
+
+        } catch (err) {
+            alert('Não foi possível cadastrar.');
+        }
+
+    }
+
+    return (
+        <div>
+            <section>
+                <Header />
+                <div className="cadastro-card-container">
+                    <div className="cadastro-card">
+                        <div className="cadastro-card-logo">
+                            <Link className="link-inicio" to="/"><img src={logo} alt="Nínive" /></Link>
+                        </div>
+                        <div className="cadastro-card-header">
+                            <h1>Faça seu cadastro</h1>
+                        </div>
+                        <form className="cadastro-card-form" onSubmit={cadastrarAluno}>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <input
+                                    className="nome"
+                                    title="Digite seu primeiro nome."
+                                    name="nome"
+                                    type="text"
+                                    value={nome}
+                                    onChange={e => setNome(e.target.value)}
+                                    placeholder="Primeiro nome"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">account_circle</span>
+                                <input
+                                    className="sobrenome"
+                                    title="Digite seu último nome."
+                                    name="sobrenome"
+                                    type="text"
+                                    value={sobrenome}
+                                    onChange={e => setSobrenome(e.target.value)}
+                                    placeholder="Último nome"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">perm_contact_calendar</span>
+                                <InputMask
+                                    mask="99/99/9999"
+                                    className="dtNasc"
+                                    title="Digite sua data de nascimento."
+                                    name="dtNasc"
+                                    type="text"
+                                    value={dataNascimento}
+                                    onChange={e => setDatanascimento(e.target.value)}
+                                    placeholder="Data de nascimento"
+                                    required
+                                >
+                                    {(inputProps) => <input type="text" {...inputProps} />}
+                                </InputMask>
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">wc</span>
+                                <input
+                                    className="sexo"
+                                    title="Sexo"
+                                    name="sexo"
+                                    type="text"
+                                    value={sexo}
+                                    onChange={e => setSexo(e.target.value)}
+                                    placeholder="Sexo"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">id_card</span>
+                                <input
+                                    className="rg"
+                                    title="Digite seu RG"
+                                    name="rg"
+                                    type="text"
+                                    value={rg}
+                                    onChange={e => setRg(e.target.value)}
+                                    placeholder="RG"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">id_card</span>
+                                <input
+                                    className="cpf"
+                                    title="Digite seu CPF"
+                                    name="cpf"
+                                    type="text"
+                                    value={cpf}
+                                    onChange={e => setCpf(e.target.value)}
+                                    placeholder="CPF"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">mail</span>
+                                <input
+                                    className="email"
+                                    title="Digite seu e-mail."
+                                    name="email"
+                                    type="text"
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                    placeholder="E-mail"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">phone_iphone</span>
+                                <input
+                                    className="telefone"
+                                    title="Digite seu telefone"
+                                    name="telefone"
+                                    type="text"
+                                    value={telefone}
+                                    onChange={e => setTelefone(e.target.value)}
+                                    placeholder="Telefone"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">home</span>
+                                <input
+                                    className="Endereco"
+                                    title="Digite seu endereço"
+                                    name="endereco"
+                                    type="text"
+                                    value={endereco}
+                                    onChange={e => setEndereco(e.target.value)}
+                                    placeholder="Endereço"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">home</span>
+                                <input
+                                    className="Numero"
+                                    title="Digite o número de seu endereço"
+                                    name="numero"
+                                    type="text"
+                                    value={numEndereco}
+                                    onChange={e => setNumendereco(e.target.value)}
+                                    placeholder="Número"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">home</span>
+                                <input
+                                    className="Cidade"
+                                    title="Digite sua cidade"
+                                    name="cidade"
+                                    type="text"
+                                    value={cidade}
+                                    onChange={e => setCidade(e.target.value)}
+                                    placeholder="Cidade"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">home</span>
+                                <input
+                                    className="CEP"
+                                    title="Digite seu CEP"
+                                    name="cep"
+                                    type="text"
+                                    value={cep}
+                                    onChange={e => setCep(e.target.value)}
+                                    placeholder="CEP"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">lock</span>
+                                <input
+                                    className="senha"
+                                    title="Digite sua senha."
+                                    name="password"
+                                    type="password"
+                                    value={senha}
+                                    onChange={e => setSenha(e.target.value)}
+                                    placeholder="Senha"
+                                    required />
+                            </div>
+                            <div className="form-item">
+                                <span className="form-item-icon material-symbols-rounded">lock</span>
+                                <input
+                                    className="confSenha"
+                                    title="Digite novamente sua senha."
+                                    name="confpass"
+                                    type="password"
+                                    placeholder="Confirme sua senha"
+                                    required
+                                />
+                            </div>
+                            <div className="form-item-other">
+                                <Link className="link-quem" to="/quem-somos">Sobre o Projeto</Link>
+                                <div className="checkbox">
+                                    <label for="rememberMeCheckbox">Aceito os Termos</label>
+                                    <input type="checkbox" id="rememberMeCheckbox" checked />
+                                </div>
+                            </div>
+                            <button type="submit">Cadastrar</button>
+                        </form>
+                        <div className="cadastro-card-footer">
+                            <Link className="link-login" to="/login">Fazer login</Link>
+                        </div>
+                    </div>
+                    <div className="cadastro-card-social">
+                        <div>Cadastrar Com</div>
+                        <div class="cadastro-card-social-btns">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <Footer />
+            </section>
+        </div>
+    );
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// <!DOCTYPE html>
-// <html lang="pt-br">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <link rel="stylesheet" href="styleTC.css">
-//     <title>Tela Cadastre-se</title>
-// </head>
-// <header>
-//     <div class="container-logo">
-//         <div class="logo-imagem"></div>
-//         <div class="logo-texto">
-//         <img src="img/logoa.jpeg" alt="logotipo" class="img-logo">
-//     </div>
-//     </div>
-//     <div class="menu">
-//         <ul>
-//             <li> <a href=""></a>Academia+</a></li>
-//             <li> <a href=""></a>Nossa historia</li>
-//             <li> <a href=""></a> Planos</li>
-//             <li> <a href=""></a>Contato</li>
-//             <li> <a href=""></a>Loja+</li>
-//             <a href="tela login.html"><button>Login</button ></a>
-//         </ul>   
-//         </div>
-//         </div> 
-// </header>
-// <body>
-//     <br> <br><br><br> <br> <br>
-//     <div class="conteiner">
-//         <div class="form">
-//             <form action="#">
-//                 <div class="inicio">
-//                     <div class="titulo">
-//                         <h1>faça seu cadastro</h1>
-//                     </div>
-//                    <div class="name">
-//                         <label for="">nome completo</label>
-//                         <input type="text" name="nome" id="nome" required>
-//                    </div>
-//                    <div class="input-group1">
-//                         <div >
-//                             <label for="">cpf</label>
-//                             <input type="number" id="cpf" name="cpf" required>
-//                         </div>
-//                         <div>
-//                             <label for="date">data de nascimento</label>
-//                             <input type="date" id="date" name="date" required>
-//                         </div>
-//                    </div>
-//                    <div class="email">
-//                         <label for="email">email</label>
-//                         <input type="email" name="email" id="email" required>
-//                    </div>
-//                    <div class="telefone">
-//                         <label for="telefone">telefone</label>
-//                         <input type="tel" name="tel" id="telefone" required>
-//                    </div>
-//                    <div class="endereço">
-//                         <label for="endereço">endereço completo</label>
-//                         <input type="text" name="endereço" id="endereço" required>
-//                    </div >
-//                    <div class="responsavel">
-//                         <div>
-//                         <label for="responsavel">responsavel</label>
-//                         <input type="" name="email" id="email" placeholder="somente necessario para menores de idade">
-//                     </div>
-//                     <div>
-//                         <label for="tel-r">telefone do responsavel</label>
-//                         <input type="tel" name="tel-r" id="tel-r" >
-//                     </div>
-//                         </div>
-//                    <div class="name">
-//                         <label for="senha">senha</label>
-//                         <input type="password" name="password" id="senha" required>
-//                     </div>
-//                 <div class="name">
-//                     <label for="c-senha">confirmar senha</label>
-//                     <input type="password" name="password" id="c-senha" required>
-//                 </div>
-            
-                   
-//                 <div class="b-cadastro">
-//                     <button class="bc"><a href="#">cadastrar</a></button>
-//                 </div>
-//                 </div>
-//             </form>
-//         </div>
-//     </div> 
-//     <br> <br>
-// </body>
-// <footer> 
-//     <img src="img/Logo tc 2.png" alt=" logobaixo" class="imgb">
-//     <div class="boxs">
-//         <h2>Onde nos encontrar</h2>
-//         <div class="area--icons">
-//                 <a href=""></a> <img src="assets/img/instagram.png" alt="facebook" class="rsicon"></a>
-//                 <a href=""></a> <img src="assets/img/tiktok.png" alt="facebook" class="rsicon"></a>
-//                 <a href=""></a> <img src="assets/img/whatsapp.png" alt="facebook" class="rsicon"></a>
-//                 <a href=""></a> <img src="assets/img/instagram.png" alt="facebook" class="rsicon"></a>
-//                 <a href=""></a> <img src="assets/img/instagram.png" alt="facebook" class="rsicon"></a>
-//             </ul>
-//         </div>       
-//     </div>
-//     <div class="boxs">
-//         <h2>Onde nos encontrar</h2>
-//         <div class="areat">
-//             <span href="#">(11)98973-2215</span>
-//             <span href="#">contato@teamcrezio.com.br</span>
-//             <span href="#">Rua Dr. Miranda de Azevedo, 415-Pompeia, São Paulo</span>  
-//         </div>       
-//     </div>
-//     <div class="boxs">
-//         <h2>Onde nos encontrar</h2>
-//         <div class="areat">
-//             <a href="#">Atendimento</a>
-//             <a href="#">Aulas</a>
-//             <a href="#">Team Crezio Petropolis</a>
-//         </div>        
-//     </div>
-// </footer>
-// </html>
-// </html>

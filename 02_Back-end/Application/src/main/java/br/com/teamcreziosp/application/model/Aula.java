@@ -26,7 +26,7 @@ public class Aula {
 
     @ManyToOne
     @JoinColumn(name = "id_tipo")
-    private TiposAula tipo;
+    private TiposAula id_tipo;
 
     private Integer qtddLimiteAlunos;
 

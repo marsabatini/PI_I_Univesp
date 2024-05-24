@@ -239,9 +239,12 @@ body {
 
 .titulo_mural{
     background-color: #A21500;
-    color:white;
+    height: 50px;
     width: 1600px;
+    color:white;
     justify-content: center;
+    align-items: center;
+    display: flex;
     font-size: 30px;
     text-align: center;
     padding-top: 5px;
