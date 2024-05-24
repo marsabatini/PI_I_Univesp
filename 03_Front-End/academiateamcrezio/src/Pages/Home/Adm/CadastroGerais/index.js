@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import InputMask from 'react-input-mask';
 
 import Header from "../../../Components/Header";
-import Footer from "../../../Components/Footer";
+import Footer_Adm from "../../../Components/Footer_Adm";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
 
 import style_cadastros_gerais from "./cadastrogerais.module.css"
@@ -176,13 +176,14 @@ export default function Cadastro_Geral() {
                                     </form>
 
                                 </div>
-
+                            
                             </div>
 
-
+                        <Footer_Adm/>
                         </section>
+                        
                     </div>
-
+                    
 
 
                 </section>

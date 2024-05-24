@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 import Header from "../../../Components/Header";
+import Gerenciador_ADM from "../../../Components/Gerenciador";
+import Footer_Adm from "../../../Components/Footer_Adm";
 
 import "./perfis.modules.css";
-import Gerenciador_ADM from "../../../Components/Gerenciador";
 import foto_perfil from "../../../../Assets/fotoperfil.jpeg";
 
 export default function Cadastros() {
@@ -180,11 +181,11 @@ export default function Cadastros() {
 
 
                             </div>
-
+                            <Footer_Adm/>
                         </section>
-                    </div>
+                    </div>  
                     <script src="Tela_Perfil_Gerencia.js"></script>
-
+                  
                 </section>
             </div>
         </>

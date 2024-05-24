@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 import Header from "../../../Components/Header";
+import Footer_Adm from "../../../Components/Footer_Adm";
+import Gerenciador_ADM from "../../../Components/Gerenciador";
 
 import "./alerta.modules.css";
-import Gerenciador_ADM from "../../../Components/Gerenciador";
 
 
 export default function Alertas() {
@@ -70,9 +71,9 @@ export default function Alertas() {
                                 </div>
                             </div>
 
+                        <Footer_Adm/>   
                         </section>
                     </div>
-
                 </section>
             </div>
         </>

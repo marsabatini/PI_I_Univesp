@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 import Header from "../../../Components/Header";
+import Footer_Adm from "../../../Components/Footer_Adm";
+import Gerenciador_ADM from "../../../Components/Gerenciador";
 
 import "./avisos.modules.css";
-import Gerenciador_ADM from "../../../Components/Gerenciador";
 import lixo from "../../../../Assets/trash.png";
 
 export default function Avisos() {
@@ -43,8 +44,9 @@ export default function Avisos() {
                                 <button type="button" value="Enviar">Enviar</button>
                             </form>
                         </section>
+                        <Footer_Adm/>
                     </div>
-
+                    
                 </section>
             </div>
         </>

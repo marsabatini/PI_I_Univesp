@@ -314,7 +314,7 @@
     font-family: 'calibri';
     font-weight: 500;
     cursor: pointer;
-    transition: background .3s;
+    transition: all .3s;
 
 }
 
@@ -322,9 +322,14 @@
 
     transform: scale(.95);
     background-color: #686869;
+
 }
 
+.tipo_cadastro_options button:hover:active {
 
+    transform: scale(.9);
+
+}
 
 
 .tipo_cadastro_options button.delete {
@@ -333,7 +338,7 @@
     height: 70px;
     font-size: 35px;
     text-transform: uppercase;
-    transition: background .3s;
+    transition: all .3s;
 
 }
 
@@ -341,4 +346,9 @@
 
     background-color: #A21500;
     transform: scale(.95);
+}
+
+.tipo_cadastro_options button.delete:hover:active {
+
+    transform: scale(.9);
 }

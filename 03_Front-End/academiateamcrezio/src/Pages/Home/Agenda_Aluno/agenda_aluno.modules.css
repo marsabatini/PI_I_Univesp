@@ -149,9 +149,9 @@ body {
     height: 300px;
     padding: 10px;
 }
-.caixa_agenda {
+.caixa_agenda_aluno {
     height: auto;
-    width: 100%;
+    width: auto;
     justify-content: center;
     align-self: center;
     display: flex;
@@ -720,13 +720,6 @@ body {
     text-align: center;
 }
 
-.inserir_nova_aula {
-
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-}
 
 .check_buttons p {
     color: #fff;

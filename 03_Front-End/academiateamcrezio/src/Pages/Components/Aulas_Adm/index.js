@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 
-export default function Aulas() {
+
+export default function Aulas_Adm() {
 
     return (
 
@@ -19,7 +20,6 @@ export default function Aulas() {
                         <td>08</td>
                         <td>00</td>
                         <td>00</td>
-                        <button className="inserir_aluno" type="submit">Agendar Aula</button>
                     </tr>
 
                 </table>

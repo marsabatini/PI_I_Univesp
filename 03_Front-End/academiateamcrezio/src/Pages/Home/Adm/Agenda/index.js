@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 
 import style_agenda from "./agenda.modules.css";
 
-import Aulas from "../../../Components/Aulas";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
 import Header from "../../../Components/Header";
+import Footer_Adm from "../../../Components/Footer_Adm";
+import Aulas_Adm from "../../../Components/Aulas_Adm";
 
 
 export default function Agenda() {
@@ -157,19 +158,10 @@ export default function Agenda() {
                                                 <li>Qtd Limite de Inscrições</li>
                                                 <li>Inscritos</li>
                                                 <li>Vagas</li>
-                                                <li>Status</li>
                                             </ul>
                                             <div className="lista_aulas">
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
+                                                <Aulas_Adm/>
+                                                
                                                
 
                                             </div>
@@ -205,20 +197,61 @@ export default function Agenda() {
                                     </div>
 
                                     <h2 className="titulos">Inserir nova aula</h2>
-                                        <div className="inserir_nova_aula">
-                                            <form>
-                                                <input/>
-                                            </form>
+                                        
+                                        <form action="" className="inserir_nova_aula">
+                                        <div>
+                                            <div>
+                                                <label for="iinput_data">Data</label>
+                                                <input type="text" name="input_data" id="iinput_data"></input>
+                                            </div>
+
+                                            <div>
+                                                <label for="iinput_hora">Horario</label>
+                                                <input type="text" name="input_hora" id="iinput_hora"></input>
+                                            </div>
+
+                                            <div>
+                                                <label for="iinput_modalidade">Modalidade</label>
+                                                <select type="text" name="input_modalidade" id="iinput_modalidade">
+                                                    <option value="Default" selected>Modalidade</option>
+                                                    <option value="Boxe">Boxe</option>
+                                                    <option value="Jiu-Jitsu">Jiu-Jitsu</option>
+                                                    <option value="Self-Defense">Self-Defense</option>
+                                                    <option value="Muay-Thay">Muay-Thay</option>
+                                                    <option value="Kids">Kids</option>
+                                                    <option value="Teen">Teen</option>
+                                                </select>
+                                            </div>
                                         </div>
+
+                                        <div>
+
+                                            <div>
+                                                <label for="iinput_professor">Professor</label>
+                                                <select type="text" name="input_professor" id="iinput_professor">
+                                                    <option value="Default" selected>Professor</option>
+                                                    <option value="Eduardo" selected>Eduardo</option>
+                                                    <option value="Everton" selected>Everton</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="iinput_qtd_limite">Qtd Limite</label>
+                                                <input type="text" name="input_qtd_limite" id="iinput_qtd_limite"></input>
+                                            </div>
+
+                                        </div>
+
+                                        </form>
                                 </div>
                             </div>
-
                         </section>
+                        <Footer_Adm/>
                     </div>
-
                 </section>
+                
             </div>
-
+            
         </>
 
 

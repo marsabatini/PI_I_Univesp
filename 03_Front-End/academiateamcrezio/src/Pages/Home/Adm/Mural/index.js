@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 import Header from "../../../Components/Header";
+import Footer_Adm from "../../../Components/Footer_Adm";
+import Gerenciador_ADM from "../../../Components/Gerenciador";
 
 import "./mural.modules.css";
-import Gerenciador_ADM from "../../../Components/Gerenciador";
 
 export default function Mural() {
 
@@ -43,9 +44,9 @@ export default function Mural() {
                                 <script src="jsteste.js"></script>
                             </div>
                         </section>
-
+                    <Footer_Adm/>
                     </div>
-
+                    
                         </section>
                     </div>
                 </>

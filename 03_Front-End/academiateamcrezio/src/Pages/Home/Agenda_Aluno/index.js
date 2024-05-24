@@ -17,7 +17,7 @@ export default function Agenda_Aluno() {
             <div>
                 <section>
 
-                    <div class="caixa_agenda">
+                    <div class="caixa_agenda_aluno">
                         <Header />
 
                         <section className="section_agenda_aluno">
