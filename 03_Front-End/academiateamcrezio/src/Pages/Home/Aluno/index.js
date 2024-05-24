@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import "./aluno.modules.css"
 import foto_perfil from "../../../Assets/fotoperfil.jpeg";
 
-import Header from "../../Components/Header";
+import Header from "../../Components/Header_Logado";
 import Footer from "../../Components/Footer";
 
 export default function Aluno() {

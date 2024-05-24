@@ -24,8 +24,8 @@ export default function Header() {
                                     <li> < Link to="/planos">Planos        </Link></li>
                                     <li> <a Link to="/">Contato       </a></li>
                                     <li> <a Link to="/">Loja+         </a></li>
-                                 <Link to="/login">  <button>Login</button > </Link>
-                                 <Link to="/cadastro"> <button>cadastrar</button></Link>
+                                 <Link to="/aluno">  <button>meu perfil</button > </Link>
+                                 <Link to="/#"> <button>sair</button></Link>
                                 </ul>
                             </div>
                         </div>

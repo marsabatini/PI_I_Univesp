@@ -15,7 +15,7 @@ import Nova_Senha from "./Pages/Home/Login/Nova_Senha";
 import Redefinir_Senha from "./Pages/Home/Login/Redefinir_Senha";
 import Planos from "./Pages/Home/Planos";
 import Agenda_Aluno from "./Pages/Home/Agenda_Aluno";
-import Cadastro_Professor from "./Pages/Home/Adm/CadastroGerais";
+import Cadastro_Geral from "./Pages/Home/Adm/CadastroGerais";
 
 
 export default function AppRoutes() {
@@ -34,9 +34,9 @@ export default function AppRoutes() {
                 <Route path="/Adm/avisos" element={<Avisos/>} />
                 <Route path="/Adm/perfis" element={<Perfis/>} />
                 <Route path="/Adm/mural" element={<Mural/>} />
-                <Route path="/Adm/cadastro_gerais" element={<Cadastro_Professor/>} />
+                <Route path="/Adm/cadastro_gerais" element={<Cadastro_Geral/>} />
                 <Route path="/aluno" element={<Aluno/>} />
-                <Route path="/aula_Experimental" element={<Aula_Experimental/>} />
+                <Route path="/aula_experimental" element={<Aula_Experimental/>} />
                 <Route path="/planos" element={<Planos/>} />
                 <Route path="/agenda_aluno" element={<Agenda_Aluno/>} />
 

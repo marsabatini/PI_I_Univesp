@@ -8,7 +8,7 @@ import Gerenciador_ADM from "../../../Components/Gerenciador";
 
 import style_cadastros_gerais from "./cadastrogerais.module.css"
 
-export default function Cadastro_Professor() {
+export default function Cadastro_Geral() {
 
     return (
 

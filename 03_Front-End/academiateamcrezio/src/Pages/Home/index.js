@@ -13,12 +13,13 @@ export default function Inicio() {
 
 
     return ( 
-        <>
+        
             <div>
                 <container>
                     <section>
                         <Header/>
-
+                                    
+        
                             <Link to="/login">login  </Link><br/>
                             <Link to="/Adm/agenda">Agenda</Link><br/>
                             <Link to="/Adm/alertas">Alertas</Link><br/>
@@ -33,11 +34,12 @@ export default function Inicio() {
                             <Link to="/agenda_Aluno">Agenda_Aluno</Link><br/>
                             <Link to="/cadastro">Cadastro</Link><br/>
 
+
                         <Footer/>
                     </section>
                 </container>
             </div>
-        </>
-    )
+      
+    );
 
 }
