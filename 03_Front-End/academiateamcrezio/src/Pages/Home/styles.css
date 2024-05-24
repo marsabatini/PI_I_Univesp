@@ -1,0 +1,452 @@
+.conteudo {
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.boas-vindas img {
+    margin-bottom: 80px;
+    width: 1730px;
+    height: auto;
+}
+
+.section2 {
+    margin-bottom: 80px;
+    background-color: #000000;
+    height: 300px;
+}
+
+.section2 button{
+    display: inline-block;
+    background-color: #A21500;
+    padding: 30px 30px;
+    margin-top: 70px;
+    margin-left: 600px;
+    color: #F0F0F0;
+    border-radius: 15px;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.section2 h4{
+    justify-content: center;
+    font-size: 42px;
+}
+
+.section3 {
+    margin-top: 80px;
+}
+
+.planoTeamCrezio{
+    margin: 50px;
+    justify-content: right;
+    color: #686869;
+    font-size: 56px;
+}
+
+/*começo slides*/
+
+.planos{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgPlanos{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.slide_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.slide_div img{
+    position: relative;
+    height: 370px;
+    width: 300px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button{
+    position: absolute;
+    width: 300px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slider1:target ~ .imgPlanos #img1,
+#slider1:target ~ .imgPlanos #button1{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider2:target ~ .imgPlanos #img2,
+#slider2:target ~ .imgPlanos #button2{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider3:target ~ .imgPlanos #img3,
+#slider3:target ~ .imgPlanos #button3{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider4:target ~ .imgPlanos #img4,
+#slider4:target ~ .imgPlanos #button4{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider5:target ~ .imgPlanos #img5,
+#slider5:target ~ .imgPlanos #button5{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider6:target ~ .imgPlanos #img6,
+#slider6:target ~ .imgPlanos #button6{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider7:target ~ .imgPlanos #img7,
+#slider7:target ~ .imgPlanos #button7{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider8:target ~ .imgPlanos #img8,
+#slider8:target ~ .imgPlanos #button8{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider9:target ~ .imgPlanos #img9,
+#slider9:target ~ .imgPlanos #button9{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider10:target ~ .imgPlanos #img10,
+#slider10:target ~ .imgPlanos #button10{
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+
+#slider1:target ~ .imgPlanos{
+    left: 90%;
+}
+#slider2:target ~ .imgPlanos{
+    left: 70%;
+}
+#slider3:target ~ .imgPlanos{
+    left: 50%;
+}
+#slider4:target ~ .imgPlanos{
+    left: 30%;
+}
+#slider5:target ~ .imgPlanos{
+    left: 10%;
+}
+#slider6:target ~ .imgPlanos{
+    left: -10%;
+}
+#slider7:target ~ .imgPlanos{
+    left: -30%;
+}
+#slider8:target ~ .imgPlanos{
+    left: -50%;
+}
+#slider9:target ~ .imgPlanos{
+    left: -70%;
+}
+#slider10:target ~ .imgPlanos{
+    left: -90%;
+}
+
+/*fim slides*/
+
+.bull img {
+    width: 1730px;
+    height: auto;
+    margin-top: 80px;
+}
+
+.section5 {
+    margin-top: 80px;
+}
+
+.mestres {
+    margin: 50px;
+    justify-content: right;
+    color: #686869;
+    font-size: 56px;
+}
+
+.foto-professores img {
+    margin-left: 70px;
+    width: 1600px;
+    height: auto;
+}
+
+.section6 {
+    margin-top: 80px;
+}
+
+.modalidades {
+    margin: 50px;
+    justify-content: right;
+    color: #686869;
+    font-size: 56px;
+}
+
+.fotos-modalidades {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 2vw;
+}
+.gallery-items{
+    width: 200px;
+    height: 340px;
+    border: 10px solid #FFF;
+    box-shadow: 5px 5px 5px #0006;
+    flex-grow: 1;
+    transition: transform .5s linear;
+}
+.gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-items:hover{
+    transform: scale(1.3);
+}
+
+.section7 {
+    margin-top: 80px;
+}
+
+.tabela {
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #686869;
+    font-size: 56px;
+}
+
+.agenda-Semanal img {
+    margin-bottom: 80;
+    width: 1300px;
+    height: auto;
+    margin-left: 220px;
+}
+
+.section8 {
+    margin-top: 80px;
+    background-color: #000000;
+    height: 300px;
+}
+
+.section8 button{
+    display: inline-block;
+    background-color: #A21500;
+    padding: 30px 30px;
+    margin-top: 95px;
+    margin-left: 600px;
+    color: #F0F0F0;
+    border-radius: 15px;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.section9 {
+    margin-top: 80px;
+}
+
+.loja {
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #686869;
+    font-size: 56px;
+}
+
+.carrosel {
+    margin: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.images {
+    display: flex;
+    width: 100%;
+}
+.images img {
+    height: 641px;
+    width: 100%;
+    transition: all 1s ease;
+    margin-left: 20px;
+    size-adjust: 30px;
+    background: rgb(255, 255, 255);
+}
+.images input {
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 60%;
+    border: solid #000000 3px;
+    cursor: pointer;
+    transition: all 0.15s linear;
+    margin: 5px;
+}
+.dots label:hover {background: #000000;}
+#imagem1:checked ~ .m1 {
+    margin-left: 0;
+}
+#imagem2:checked ~ .m2 {
+    margin-left: -100%;
+}
+
+.section10 {
+    margin-top: 80px;
+}
+
+.mural {
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #686869;
+    font-size: 56px;
+}
+
+.corpoMural {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+.slider-2 {
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+    
+}
+.images-2 {
+    display: flex;
+    width: 100%;
+}
+.images-2 img {
+    height: 600px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+.images-2 input {
+    display: none;
+}
+.dots-2 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots-2 label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #0f0707 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots-2 label:hover {background: #1a1313;}
+#img01:checked ~ .m01 {
+    margin-left: 0;
+}
+#img02:checked ~ .m02 {
+    margin-left: -100%;
+}
+#img03:checked ~ .m03 {
+    margin-left: -200%;
+}
+#img04:checked ~ .m04 {
+    margin-left: -300%;
+}
+
+
+.section11 {
+    margin-top: 80px;
+}
+.section11 {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: #4B4C4D;
+    height: 400px;  
+}
+
+.fotos-parceiros img {
+        margin-bottom: 0;
+        width: 1730px;
+        height: auto;
+}
