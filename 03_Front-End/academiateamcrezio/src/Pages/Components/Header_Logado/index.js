@@ -5,6 +5,11 @@ import logo_header from "../../../Assets/logoa.jpeg";
 
 export default function Header() {
 
+    const logout = () => {
+        localStorage.removeItem('token');
+    }
+
+
     return (
 
         <>
@@ -25,7 +30,7 @@ export default function Header() {
                                     <li> <a Link to="/">Contato       </a></li>
                                     <li> <a Link to="/">Loja+         </a></li>
                                     <Link to="/aluno">  <li><button>meu perfil</button ></li> </Link>
-                                    <Link to="/#"> <li><button>sair</button> </li></Link>
+                                    <Link onClick={() => logout()} to="/"> <li><button>sair</button> </li></Link>
                                 </ul>
                             </div>
                         </div>

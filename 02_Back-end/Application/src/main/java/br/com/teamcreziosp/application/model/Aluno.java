@@ -31,11 +31,9 @@ public class Aluno implements UserDetails {
     private Integer id;
 
     @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[A-Z]+(.)*")
     private String nome;
 
     @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[A-Z]+(.)*")
     private String sobrenome;
 
     @Column(name = "data_nasc")

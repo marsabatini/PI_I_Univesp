@@ -2,35 +2,72 @@ package br.com.teamcreziosp.application.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Data
 @Table(name = "aulas")
-public class Aula {
+public class Aula implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "id_professor")
-    private Professor professor;
+    @NotBlank(message = "Campo obrigatório.")
+    private String data;
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime data;
+    @NotBlank(message = "Campo obrigatório.")
+    private String horario;
 
-    @ManyToOne
-    @JoinColumn(name = "id_tipo")
-    private TiposAula id_tipo;
+    @NotBlank(message = "Campo obrigatório.")
+    private String modalidade;
 
-    private Integer qtddLimiteAlunos;
+    @NotBlank(message = "Campo obrigatório.")
+    private String Professor;
 
-    @ManyToMany
-    private List<Aluno> alunosInscritos = new ArrayList<>();
+    @NotBlank(message = "Campo obrigatório.")
+    private int qtdAludos;
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
+    @Override
+    public String getPassword() {
+        return "";
+    }
+
+    @Override
+    public String getUsername() {
+        return "";
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return false;
+    }
 }

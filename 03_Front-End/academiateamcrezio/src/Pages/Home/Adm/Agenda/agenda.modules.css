@@ -963,3 +963,20 @@ body {
     padding: 6rem 0;
 
 }
+
+.Inserir_Aula{
+    width: 200px;
+    height: 50px;
+    background-color: #3d3e40;
+    color: #fff;
+    font-family: 'Calibri'; 
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Inserir_Aula:hover{
+    font-size: 32px;
+}

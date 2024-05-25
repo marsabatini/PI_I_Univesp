@@ -15,7 +15,9 @@ export default function Login() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-
+    const [id, setId] = useState('');
+    const [nome, setNome] = useState('');
+    const [role, setRole] = useState('');
 
     const navigate = useNavigate();
 
@@ -29,7 +31,7 @@ export default function Login() {
         };
 
         try {
-            const response = await api.post('api/login', data);
+            const response = await api.post('/api/login', data);
 
             localStorage.setItem('email', email);
             localStorage.setItem('id', response.data.id);
@@ -39,18 +41,18 @@ export default function Login() {
             localStorage.setItem('role', response.data.role);
 
             // Precisaremos fazer a lógica para, caso seja funcionário ou aluno
-            if (response.data.role == "ALUNO") {
+            if (response.data.role === "ALUNO") {
                 navigate('/perfil')
-            } else if (response.data.role == "ADMIN") {
+            } else if (response.data.role === "ADMIN") {
                 navigate('/adm')
-            } else if (response.data.role == "PROFESSOR" || response.data.role == "TREINADOR") {
+            } else if (response.data.role === "PROFESSOR" || response.data.role === "TREINADOR") {
                 navigate('/funcionario')
             } else {
                 alert("Usuário não encontrado!!!!!!!");
             }
         } catch (err) {
             // mensagemErro('Usuário e/ou senha inválido(s).')
-            alert('Usuário e/ou senha inválido(s).');
+            alert("Usuário desconhecido")
         }
     };
 
@@ -58,7 +60,7 @@ export default function Login() {
     return (
         <div>
             <section className="login_section">
-                <Header/>
+                <Header />
                 <div class="container_login">
                     <div className="cadastro">
                         <div className="flexz">
@@ -96,14 +98,12 @@ export default function Login() {
                                 <Link className="esqueceu" to="/login/Redefinir_Senha"> Esqueci a senha </Link>
                             </div>
                             <div className="div_entrar_button">
-                                <Link to="/aluno" className="b-ent">
-                                    <button type="submit" className="l-bnt">Entrar</button>
-                                </Link>
+                                <button type="submit" className="l-bnt">Entrar</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </section >
         </div >
     );
