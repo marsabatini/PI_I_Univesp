@@ -25,6 +25,7 @@ body {
     width: auto;
     border-radius: 10px;
     background: #fff;
+    align-items: center;
 }
 .nova-s h1 { 
     margin: 30px;
@@ -39,7 +40,24 @@ body {
     border-radius: 5px;
     border: none;
     margin: 25px;
+    cursor: pointer;
+    transition: all .3s;
 }
+
+.nova-s button:hover {
+
+    background-color: #3D3E40;
+    transform: scale(.95);
+
+}
+
+.nova-s button:hover:active {
+
+    transform: scale(.90);
+    
+}
+
+
 .input-g {
     display: flex;
     flex-direction: column;

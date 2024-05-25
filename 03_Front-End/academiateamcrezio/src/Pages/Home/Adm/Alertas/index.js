@@ -34,6 +34,7 @@ export default function Alertas() {
                                     </h2>
                                     <ul>
                                         <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li>087 - Leonardo V. A. do carmo (Preta)</li>
                                     </ul>
                                 </div>
                                 <div className="avaliacao_fisica">
@@ -41,7 +42,7 @@ export default function Alertas() {
                                         AVALIAÇÃO FISICA
                                     </h2>
                                     <ul>
-                                        <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -52,7 +53,7 @@ export default function Alertas() {
                                         EXAME MÉDICO
                                     </h2>
                                     <ul>
-                                        <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -63,7 +64,7 @@ export default function Alertas() {
                                         PARCELA/MENSALIDADE ATRASADA
                                     </h2>
                                     <ul>
-                                        <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>

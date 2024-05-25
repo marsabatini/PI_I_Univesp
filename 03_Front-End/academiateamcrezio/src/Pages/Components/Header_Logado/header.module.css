@@ -65,14 +65,29 @@
 
 .menu button {
 
-    width: 74px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
     font-size: 19px;
     color: #fff;
     cursor: pointer;
     background-color: #3d3e40;
     border-radius: 5px;
-    
+    transition: background .3s;
+    transition: transform .3s;
+    border: none;
+
+}
+
+.menu button:hover {
+
+    background-color: #686869;
+    transform: scale(0.95);
+
+}
+
+.menu button:hover:active {
+
+    transform: scale(0.90);
 
 }
 

@@ -526,8 +526,25 @@ body {
     width: 110px;
     height: 40px;
     font-size: 20px;
+    cursor: pointer;
+    transition: all .3s;
 
 }
+
+.inserir_aluno:hover {
+
+    background-color: #86bd53;
+    border: 1px #5e813c solid;
+    transform: scale(0.95);
+}
+
+.inserir_aluno:hover:active {
+
+    transform: scale(0.90);
+
+}
+
+
 
 .remover_aluno {
 
@@ -567,7 +584,7 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 5px;
-    margin-left: 2px;
+    margin-left: 4px;
 
 }
 

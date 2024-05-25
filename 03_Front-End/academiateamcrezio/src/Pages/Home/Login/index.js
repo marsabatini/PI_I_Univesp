@@ -80,7 +80,7 @@ export default function Login() {
                                     onChange={e => setEmail(e.target.value)}
                                     required
                                 />
-                                <label>Usuario</label>
+                                <label>Usuário</label>
                             </div>
                             <div className="caixa-u">
                                 <input
@@ -93,7 +93,7 @@ export default function Login() {
                                 <label>Senha</label>
                             </div>
                             <div className="esquecerSenha">
-                                <Link className="esqueceu" to="/Redefinir_Senha"> Esqueci a senha </Link>
+                                <Link className="esqueceu" to="/login/Redefinir_Senha"> Esqueci a senha </Link>
                             </div>
                             <div className="div_entrar_button">
                                 <Link to="/aluno" className="b-ent">

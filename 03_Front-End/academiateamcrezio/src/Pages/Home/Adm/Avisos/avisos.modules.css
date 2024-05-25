@@ -321,12 +321,29 @@ body {
     color: #fff;
     background-color: #0b721c;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.inserção_avisos button:hover {
+
+    transform: scale(0.95);
+    background-color: #2a8b3a;
+
+}
+
+.inserção_avisos button:hover:active {
+
+    transform: scale(0.90);
+    
+
 }
 
 .trash {
     width: 20px;
     height: 20px;
     align-self: center;
+    cursor: pointer;
 }
 
 .avisos_section {

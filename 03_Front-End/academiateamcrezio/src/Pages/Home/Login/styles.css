@@ -85,8 +85,23 @@ body {
     color: #fff;
     background-color:#A21500;
     border-radius: 15px;
-    
+    cursor: pointer;
 }
+
+.l-bnt:hover {
+
+    background-color: #DD6457;
+    transform: scale(0.95);
+
+}
+
+
+.l-bnt:hover:active {
+
+    transform: scale(0.90);
+
+}
+
 .cadastro {
     width: 400px;
     font-size: 10px;
@@ -116,7 +131,25 @@ body {
     border-radius: 15px; 
     border: none;
     align-content: center;  
+    transition: all .3s;
+    cursor: pointer;
+
 }
+
+.c-bnt:hover {
+
+    background-color: #3D3E40;
+    transform: scale(0.95);
+
+}
+
+
+.c-bnt:hover:active {
+
+    transform: scale(0.90);
+
+}
+
 .flexz {
     margin-top: 55px;
     text-decoration: none;
