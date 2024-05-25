@@ -2,18 +2,60 @@
     margin-bottom: 0px;
     padding: 0;
     background-color: #ffffff;
+    width: 100%;
 }
 
-.boas-vindas img {
+.boas-vindas{
     margin-bottom: 80px;
-    width: 1730px;
-    height: auto;
+    width: 99%;
+    height: 90%;
+    
 }
 
-.section2 {
+.quadro_imagem_inicial {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.home_section {
+
+    width: 100%;
+}
+
+.aula_experimental_home, .botão-matriculese {
+    display: flex;
     margin-bottom: 80px;
     background-color: #000000;
     height: 300px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.aula_experimental_home button, .botão-matriculese button {
+
+    width: 400px;
+    height: 150px;
+    font-size: 40px;
+    border-radius: 20px;
+    background-color: #A21500;
+    transition: all .3s;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.aula_experimental_home button:hover, .botão-matriculese button:hover {
+
+    background-color: #DD6457;
+    transform: scale(0.98);
+}
+
+.aula_experimental_home button:hover:active, .botão-matriculese button:hover:active {
+
+    transform: scale(0.93);
 }
 
 .section2 button{
@@ -33,37 +75,46 @@
     font-size: 42px;
 }
 
-.section3 {
+.slide_plano {
     margin-top: 80px;
+    width: 100%;
+    background-color: #fff;
 }
 
-.planoTeamCrezio{
+.planoTeamCrezio , .mestres, .modalidades, .loja, .mural, .tabela{
     margin: 50px;
-    justify-content: right;
+    justify-content: left;
     color: #686869;
     font-size: 56px;
+    line-height: 1;
+    display: flex;
 }
 
 /*começo slides*/
 
 .planos{
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: hidden;
-}
-
-.imgPlanos{
-    width: 100%;
-    height: 500px;
-    position: relative;
-    left: 0;
+    width:auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s;
+    background-color: #d1d1d1;
+}
+
+.imgPlanos{
+    
+    display: flex;
+    overflow-x: auto;
+    width: 1850px;
+    padding: 20px;
+    
+}
+
+.imgPlanos img {
+
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #0006;
 }
 
 .slide_div{
@@ -79,7 +130,6 @@
     width: 300px;
     filter: saturate(10%);
     transition: 0.7s;
-    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
 }
 
@@ -96,152 +146,61 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#slider1:target ~ .imgPlanos #img1,
-#slider1:target ~ .imgPlanos #button1{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
 
-#slider2:target ~ .imgPlanos #img2,
-#slider2:target ~ .imgPlanos #button2{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
+.bull {
 
-#slider3:target ~ .imgPlanos #img3,
-#slider3:target ~ .imgPlanos #button3{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
-#slider4:target ~ .imgPlanos #img4,
-#slider4:target ~ .imgPlanos #button4{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
 }
-
-#slider5:target ~ .imgPlanos #img5,
-#slider5:target ~ .imgPlanos #button5{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider6:target ~ .imgPlanos #img6,
-#slider6:target ~ .imgPlanos #button6{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider7:target ~ .imgPlanos #img7,
-#slider7:target ~ .imgPlanos #button7{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider8:target ~ .imgPlanos #img8,
-#slider8:target ~ .imgPlanos #button8{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider9:target ~ .imgPlanos #img9,
-#slider9:target ~ .imgPlanos #button9{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider10:target ~ .imgPlanos #img10,
-#slider10:target ~ .imgPlanos #button10{
-    width: auto;
-    height: 500px;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-
-#slider1:target ~ .imgPlanos{
-    left: 90%;
-}
-#slider2:target ~ .imgPlanos{
-    left: 70%;
-}
-#slider3:target ~ .imgPlanos{
-    left: 50%;
-}
-#slider4:target ~ .imgPlanos{
-    left: 30%;
-}
-#slider5:target ~ .imgPlanos{
-    left: 10%;
-}
-#slider6:target ~ .imgPlanos{
-    left: -10%;
-}
-#slider7:target ~ .imgPlanos{
-    left: -30%;
-}
-#slider8:target ~ .imgPlanos{
-    left: -50%;
-}
-#slider9:target ~ .imgPlanos{
-    left: -70%;
-}
-#slider10:target ~ .imgPlanos{
-    left: -90%;
-}
-
-/*fim slides*/
 
 .bull img {
-    width: 1730px;
-    height: auto;
-    margin-top: 80px;
+    width: 100%;
+    height: 100%;
 }
 
 .section5 {
     margin-top: 80px;
 }
 
-.mestres {
-    margin: 50px;
-    justify-content: right;
-    color: #686869;
-    font-size: 56px;
+
+
+.professores {
+
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+
 }
+
+.foto-professores {
+
+    display: flex;
+    overflow-x: auto;
+    width: 1850px;
+    padding: 20px;
+    background-color: #d1d1d1;
+    
+
+} 
 
 .foto-professores img {
     margin-left: 70px;
-    width: 1600px;
+    width: 400px;
     height: auto;
+    border: 5px solid #FFF;
+    transition: transform .3s linear;
+    box-shadow: 5px 5px 5px #0006;
 }
 
-.section6 {
-    margin-top: 80px;
-}
+.foto-professores img:hover {
 
-.modalidades {
-    margin: 50px;
-    justify-content: right;
-    color: #686869;
-    font-size: 56px;
+    transform: scale(1.05);
+
 }
 
 .fotos-modalidades {
@@ -256,14 +215,16 @@
     justify-content: space-evenly;
     gap: 2vw;
     padding: 0 2vw;
+    background-color: #d1d1d1;
+    padding: 20px;
 }
 .gallery-items{
     width: 200px;
     height: 340px;
-    border: 10px solid #FFF;
+    border: 5px solid #FFF;
     box-shadow: 5px 5px 5px #0006;
     flex-grow: 1;
-    transition: transform .5s linear;
+    transition: transform .3s linear;
 }
 .gallery-items img {
     width: 100%;
@@ -272,84 +233,59 @@
 }
 
 .gallery-items:hover{
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
-.section7 {
-    margin-top: 80px;
-}
+.agenda-Semanal {
 
-.tabela {
-    margin: 50px;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    color: #686869;
-    font-size: 56px;
+    margin-bottom: 80px;
+
 }
 
 .agenda-Semanal img {
-    margin-bottom: 80;
     width: 1300px;
     height: auto;
-    margin-left: 220px;
+    box-shadow: 5px 5px 5px #0006;
 }
 
-.section8 {
-    margin-top: 80px;
-    background-color: #000000;
-    height: 300px;
-}
 
-.section8 button{
-    display: inline-block;
-    background-color: #A21500;
-    padding: 30px 30px;
-    margin-top: 95px;
-    margin-left: 600px;
-    color: #F0F0F0;
-    border-radius: 15px;
-    font-size: 35px;
-    line-height: 50px;
-}
-
-.section9 {
-    margin-top: 80px;
-}
-
-.loja {
-    margin: 50px;
+.foto-loja {
+    width:auto;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color: #686869;
-    font-size: 56px;
+    background-color: #d1d1d1;
+    padding: 20px;
+    overflow-x: auto;
 }
 
-.carrosel {
-    margin: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+.foto-loja img {
+
+    width: 400px;
+    height: auto;
+    border: 5px solid #FFF;
+    transition: transform .3s linear;
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #0006;
+
 }
-.images {
-    display: flex;
-    width: 100%;
+
+.foto-loja img:hover {
+
+    transform: scale(1.1);
+
 }
-.images img {
-    height: 641px;
-    width: 100%;
-    transition: all 1s ease;
-    margin-left: 20px;
-    size-adjust: 30px;
-    background: rgb(255, 255, 255);
-}
-.images input {
-    display: none;
-}
+
+
 .dots {
     display: flex;
     justify-content: center;
     margin: 5px;
 }
+
 .dots label {
     height: 20px;
     width: 20px;
@@ -359,7 +295,9 @@
     transition: all 0.15s linear;
     margin: 5px;
 }
+
 .dots label:hover {background: #000000;}
+
 #imagem1:checked ~ .m1 {
     margin-left: 0;
 }
@@ -367,41 +305,36 @@
     margin-left: -100%;
 }
 
-.section10 {
-    margin-top: 80px;
-}
-
-.mural {
-    margin: 50px;
-    justify-content: center;
-    align-items: center;
-    color: #686869;
-    font-size: 56px;
-}
 
 .corpoMural {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(255, 255, 255);
+    background-color: #d1d1d1;
+    padding: 20px;
+    height: 700px;
 }
 
 .slider-2 {
-    position: relative;
+    position: absolute;
     width: 60%;
-    overflow: hidden;
     
 }
 .images-2 {
     display: flex;
     width: 100%;
+    justify-content: center;
+    height: 600px;
 }
 .images-2 img {
     height: 600px;
-    width: 100%;
     transition: all 0.15s ease;
+    border: 5px solid #FFF;
+    position: absolute;
+    opacity: 0%;
+    box-shadow: 5px 5px 5px #0006;
 }
+
 .images-2 input {
     display: none;
 }
@@ -420,17 +353,22 @@
     margin: 5px;
 }
 .dots-2 label:hover {background: #1a1313;}
+
 #img01:checked ~ .m01 {
     margin-left: 0;
+    opacity: 100%;
 }
 #img02:checked ~ .m02 {
-    margin-left: -100%;
+    
+    opacity: 100%;
 }
 #img03:checked ~ .m03 {
-    margin-left: -200%;
+    
+    opacity: 100%;
 }
 #img04:checked ~ .m04 {
-    margin-left: -300%;
+    
+    opacity: 100%;
 }
 
 

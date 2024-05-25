@@ -328,3 +328,10 @@ body {
     height: 20px;
     align-self: center;
 }
+
+.avisos_section {
+
+    width: 100%;
+    padding: 6rem 0;
+
+}

@@ -14,7 +14,7 @@ export default function Cadastro_Geral() {
 
         <>
             <div>
-                <section>
+                <section className={style_cadastros_gerais.cadastros_gerais_section}>
 
 
                     <div class={style_cadastros_gerais.caixa_cadastro_professor}>
@@ -35,7 +35,7 @@ export default function Cadastro_Geral() {
 
                                     <label className={style_cadastros_gerais.trancar_destrancar}>
                                         <input type="checkbox" />
-                                        <span className="slider round"></span>
+                                        <span className="slider_perfis round"></span>
                                     </label>
 
 
@@ -144,6 +144,12 @@ export default function Cadastro_Geral() {
                                             <div className={style_cadastros_gerais.input_CEP}>
                                                 <label for="iusuario_CEP">CEP</label>
                                                 <input type="text" required name="usuario_CEP" id="iusuario_CEP"></input>
+                                              
+                                            </div>
+
+                                            <div className={style_cadastros_gerais.input_senha}>
+                                                <label for="iusuario_senha">Senha</label>
+                                                <input type="password" required name="usuario_senha" id="iusuario_senha"></input>
                                             </div>
 
                                         </div>
@@ -158,6 +164,11 @@ export default function Cadastro_Geral() {
                                             <div className={style_cadastros_gerais.input_tel_responsavel}>
                                                 <label for="iusuario_tel_responsavel">Tel. do Responsável</label>
                                                 <input type="text" required name="usuario_tel_responsavel" id="iusuario_tel_responsavel"></input>
+                                            </div>
+
+                                            <div className={style_cadastros_gerais.input_conf_senha}>
+                                                <label for="iusuario_conf_senha">Confirmar senha</label>
+                                                <input type="password" required name="usuario_conf_senha" id="iusuario_conf_senha"></input>
                                             </div>
 
                                         </div>

@@ -15,7 +15,7 @@ export default function Alertas() {
 
         <>
             <div>
-                <section>
+                <section className="alerta_section">
 
                     <div class="caixa_alerta">
                         <Header/>

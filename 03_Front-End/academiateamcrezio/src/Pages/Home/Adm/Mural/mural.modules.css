@@ -258,10 +258,19 @@ body {
     height: 20px;
     align-self: center;
 }
-.mural_section {
-    width: 1600px;
+.quadro_mural {
+    width: 100%;
     padding: 0;
 }
+
+.mural_section {
+
+    width: 100%;
+    padding: 6rem 0;
+
+}
+
+
 
 .preview-image img {
     width: 250px;
@@ -301,3 +310,4 @@ body {
     background-color: #0b721c;
     border-radius: 5px;
 }
+

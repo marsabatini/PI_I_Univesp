@@ -327,3 +327,10 @@ body {
     font-family:"Engravers";
     font-weight: bold;
 }
+
+.alerta_section {
+
+    width: 100%;
+    padding: 6rem 0;
+
+}

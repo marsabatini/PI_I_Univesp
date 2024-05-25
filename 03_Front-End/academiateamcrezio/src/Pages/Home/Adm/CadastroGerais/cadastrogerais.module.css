@@ -170,7 +170,7 @@
 .input_CPF, .input_data_nasc,.input_email,
 .input_tel, .input_endereco, .input_num,
 .input_cidade, .input_CEP, .input_reponsavel, 
-.input_tel_responsavel{
+.input_tel_responsavel, .input_senha, .input_conf_senha{
 
     display: flex;
     margin-bottom: 15px;
@@ -180,7 +180,7 @@
 .input_CPF input, .input_data_nasc input,.input_email input,
 .input_tel input, .input_endereco input, .input_num input,
 .input_cidade input, .input_CEP input, .input_reponsavel input, 
-.input_tel_responsavel input{
+.input_tel_responsavel input, .input_senha input, .input_conf_senha input{
 
     border: none;
     box-shadow: 0px 1px 2px 2px #acacac;
@@ -272,6 +272,7 @@
 
 }
 
+
 .input_reponsavel input{
 
     width: 400px;
@@ -287,6 +288,32 @@
 .input_tel_responsavel label{
 
     margin-left: 1.5em;
+}
+
+.input_senha input{
+
+    margin-left: 1em;
+    width: 250px;
+
+}
+
+.input_senha label {
+
+    margin-left: 10em;
+}
+
+.input_conf_senha input {
+
+    margin-left: 1em;
+    width: 250px;
+
+}
+
+
+.input_conf_senha label {
+
+    margin-left: 6.4em;
+
 }
 
 .tipo_cadastro_options {
@@ -351,4 +378,11 @@
 .tipo_cadastro_options button.delete:hover:active {
 
     transform: scale(.9);
+}
+
+.cadastros_gerais_section {
+
+    width: 100%;
+    padding: 6rem 0;
+
 }

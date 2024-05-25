@@ -15,7 +15,7 @@ export default function Avisos() {
         <>
         
             <div>
-                <section>
+                <section className="avisos_section">
                     <div class="caixa_avisos">
                         <Header/>
                         <Gerenciador_ADM/>

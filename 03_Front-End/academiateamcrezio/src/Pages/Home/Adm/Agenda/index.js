@@ -17,7 +17,7 @@ export default function Agenda() {
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"></link>
             <div>
-                <section>
+                <section className="agenda_section">
                     <div class="caixa_agenda">
                         <Header />
                         <Gerenciador_ADM />

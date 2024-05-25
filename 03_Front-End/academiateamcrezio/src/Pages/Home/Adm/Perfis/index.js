@@ -14,7 +14,7 @@ export default function Cadastros() {
 
         <>
             <div>
-                <section>
+                <section className="perfis_section">
 
                     <div class="caixa_perfis">
                         <Header/>
@@ -32,7 +32,7 @@ export default function Cadastros() {
 
                                     <label className="switch">
                                         <input type="checkbox"/>
-                                            <span className="slider round"></span>
+                                            <span className="slider_perfis round"></span>
                                     </label>
 
                                     <div className="search-box">

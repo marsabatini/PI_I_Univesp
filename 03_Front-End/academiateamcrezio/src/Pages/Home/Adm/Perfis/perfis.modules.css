@@ -344,7 +344,7 @@ body {
 }
 
 /* The slider */
-.slider {
+.slider_perfis {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -357,7 +357,7 @@ body {
     display: inline;
   }
   
-  .slider:before {
+  .slider_perfis:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -369,26 +369,26 @@ body {
     transition: .4s;
   }
   
-  input:checked + .slider {
+  input:checked + .slider_perfis {
     background-color: #A21500;
   }
   
-  input:focus + .slider {
+  input:focus + .slider_perfis {
     box-shadow: 0 0 1px #A21500;
   }
   
-  input:checked + .slider:before {
+  input:checked + .slider_perfis:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
   
   /* Rounded sliders */
-  .slider.round {
+  .slider_perfis.round {
     border-radius: 34px;
   }
   
-  .slider.round:before {
+  .slider_perfis.round:before {
     border-radius: 50%;
   }
 
@@ -666,4 +666,11 @@ body {
 
 .validate_medical_exam {
     display: none;
+}
+
+.perfis_section {
+
+    width: 100%;
+    padding: 6rem 0;
+
 }

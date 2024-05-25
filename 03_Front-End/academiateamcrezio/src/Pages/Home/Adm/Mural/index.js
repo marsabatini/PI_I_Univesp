@@ -14,12 +14,12 @@ export default function Mural() {
 
         <>
             <div>
-                <section>
+                <section className="mural_section">
 
                     <div class="caixa_mural">
                         <Header/>
                         <Gerenciador_ADM/>
-                        <section className="mural_section">
+                        <section className="quadro_mural">
                             
                             <h3 className="titulo_mural">
                                 Mural
