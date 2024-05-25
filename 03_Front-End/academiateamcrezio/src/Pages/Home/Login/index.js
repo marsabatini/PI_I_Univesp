@@ -42,9 +42,9 @@ export default function Login() {
 
             // Precisaremos fazer a lógica para, caso seja funcionário ou aluno
             if (response.data.role === "ALUNO") {
-                navigate('/perfil')
+                navigate('/aluno')
             } else if (response.data.role === "ADMIN") {
-                navigate('/adm')
+                navigate('/adm/agenda')
             } else if (response.data.role === "PROFESSOR" || response.data.role === "TREINADOR") {
                 navigate('/funcionario')
             } else {
