@@ -17,6 +17,10 @@ public class TiposAula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String nome;
+
+    private String modalidade;
+
     private String descricao;
 }

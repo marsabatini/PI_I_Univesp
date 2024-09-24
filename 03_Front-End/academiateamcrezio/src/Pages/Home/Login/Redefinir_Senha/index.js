@@ -23,7 +23,7 @@ export default function Redefinir_Senha() {
                                 <input type="email" name-="" required placeholder="Email do cadastro" />
                             </div>
                             <span>apos a redefinição de senha voce vai estar recebendo um email em sua caixa de entrada para verificação</span>
-                            <button>envie email para redefinição</button>
+                           <Link to="/Nova_Senha"> <button>envie email para redefinição</button> </Link>
                         </div>
                     </form>
                     <Footer/>

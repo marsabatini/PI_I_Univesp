@@ -3,7 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-    border: 0;
     outline: 0;
     text-decoration: none;
     list-style: none;
@@ -60,7 +59,7 @@ body{
 }
 
 section {
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 section h2{

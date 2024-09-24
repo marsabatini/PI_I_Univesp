@@ -1,0 +1,88 @@
+.footer {
+
+    display: flex;
+    width: 100%;
+    background-color:#A21500;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    padding: 10px 40px;  
+    position: absolute;
+    height: 110px;
+}
+
+.logo_footer_left {
+
+    width: 80px;
+    height: 80px;
+    justify-content: right;
+    align-self: center;
+
+}
+
+.logo_footer_right {
+
+    width: 80px;
+    height: 80px;
+    justify-content: left;
+    align-self: center;
+
+}
+
+.boxs {
+
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+
+   
+}   
+
+.area_icons {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+
+}
+
+.rsicon {
+
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+.areat {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    
+}
+
+.areat a{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.footer_titles {
+    
+    color: #fff;
+    font-size: 25px;
+    margin: 10px 0px 10px 0px;
+
+}
+
+
+

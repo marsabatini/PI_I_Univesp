@@ -2,8 +2,11 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
-import "./alerta.modules.css";
+import Header from "../../../Components/Header";
+import Footer_Adm from "../../../Components/Footer_Adm";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
+
+import "./alerta.modules.css";
 
 
 export default function Alertas() {
@@ -12,13 +15,14 @@ export default function Alertas() {
 
         <>
             <div>
-                <section>
+                <section className="alerta_section">
 
-                    <div class="caixa">
+                    <div class="caixa_alerta">
+                        <Header/>
                         <Gerenciador_ADM />
                         <section className="alert_section">
-                            <div className="h3">
-                                <h3>
+                            <div >
+                                <h3 className="titulo_alerta">
                                     ALERTAS
                                 </h3>
                             </div>
@@ -30,6 +34,7 @@ export default function Alertas() {
                                     </h2>
                                     <ul>
                                         <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li>087 - Leonardo V. A. do carmo (Preta)</li>
                                     </ul>
                                 </div>
                                 <div className="avaliacao_fisica">
@@ -37,7 +42,7 @@ export default function Alertas() {
                                         AVALIAÇÃO FISICA
                                     </h2>
                                     <ul>
-                                        <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -48,7 +53,7 @@ export default function Alertas() {
                                         EXAME MÉDICO
                                     </h2>
                                     <ul>
-                                        <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -59,7 +64,7 @@ export default function Alertas() {
                                         PARCELA/MENSALIDADE ATRASADA
                                     </h2>
                                     <ul>
-                                        <li>098 - Paulo V. Mentani (Azul)</li>
+                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -67,9 +72,9 @@ export default function Alertas() {
                                 </div>
                             </div>
 
+                        <Footer_Adm/>   
                         </section>
                     </div>
-
                 </section>
             </div>
         </>

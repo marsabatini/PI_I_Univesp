@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
-import "./avisos.modules.css";
+import Header from "../../../Components/Header";
+import Footer_Adm from "../../../Components/Footer_Adm";
 import Gerenciador_ADM from "../../../Components/Gerenciador";
+
+import "./avisos.modules.css";
 import lixo from "../../../../Assets/trash.png";
 
 export default function Avisos() {
@@ -12,16 +15,17 @@ export default function Avisos() {
         <>
         
             <div>
-                <section>
-                    <div class="caixa">
+                <section className="avisos_section">
+                    <div class="caixa_avisos">
+                        <Header/>
                         <Gerenciador_ADM/>
                         <section class="warning_section">
-                            <div className="h3">
-                                <h3>
+                            
+                                <h3 className="titulo_avisos">
                                     AVISOS E EVENTOS
                                 </h3>
-                            </div>
-                            <div className="avisos">
+                   
+                            <div className="quadro_avisos">
                                 <h2>
                                     Avisos e Eventos
                                 </h2>
@@ -40,8 +44,9 @@ export default function Avisos() {
                                 <button type="button" value="Enviar">Enviar</button>
                             </form>
                         </section>
+                        <Footer_Adm/>
                     </div>
-
+                    
                 </section>
             </div>
         </>

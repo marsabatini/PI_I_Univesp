@@ -7,59 +7,7 @@
     font-weight: 400;
     font-style: normal;
 }
-header {
-    width: 100%;
-    max-height: 150px;
-    background-color: #fff;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    
-}
-.img-logo {
-    width: 225px;
-    height: 120px;
-    padding: 10px;
-    margin: 30px 0px 0px 50px;   
-    cursor: pointer;
-}
 
-.container-logo {
-    display: flex;
-    align-items: center;
-}
-.logo-texto {
-    margin-left: 20px;
-}
-.menu li {
-    display: inline-block;
-    margin-right: 100px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 21px;
-}
-.menu li:hover {
-    color: #3d3e40;
-}
-
-.menu li a {
-    font-size: 80px;
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    
-}
-.menu button {
-    width: 70px;
-    height: 50px;
-    font-size: 19px;
-    color: #fff;
-    background-color: #3d3e40;
-    border-radius: 5px;
-    margin-right: 100px;
-}
 
 footer {
     display: flex;
@@ -209,14 +157,13 @@ body {
     height: 300px;
     padding: 10px;
 }
-.caixa {
+.caixa_perfis {
     height: auto;
-    width: 100%;
+    width: auto;
     justify-content: center;
     align-self: center;
     display: flex;
     margin: 10px;
-    padding-top: 140px;
 }
 .imagens:hover {
     cursor: pointer;
@@ -326,11 +273,14 @@ body {
     text-shadow: 1px 1px #acacac;
 }
 
-.h3{
+.titulo_perfis{
     background-color: #A21500;
-    color:white;
+    height: 50px;
     width: 1600px;
+    color:white;
     justify-content: center;
+    align-items: center;
+    display: flex;
     font-size: 30px;
     text-align: center;
     padding-top: 5px;
@@ -394,7 +344,7 @@ body {
 }
 
 /* The slider */
-.slider {
+.slider_perfis {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -407,7 +357,7 @@ body {
     display: inline;
   }
   
-  .slider:before {
+  .slider_perfis:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -419,26 +369,26 @@ body {
     transition: .4s;
   }
   
-  input:checked + .slider {
+  input:checked + .slider_perfis {
     background-color: #A21500;
   }
   
-  input:focus + .slider {
+  input:focus + .slider_perfis {
     box-shadow: 0 0 1px #A21500;
   }
   
-  input:checked + .slider:before {
+  input:checked + .slider_perfis:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
   
   /* Rounded sliders */
-  .slider.round {
+  .slider_perfis.round {
     border-radius: 34px;
   }
   
-  .slider.round:before {
+  .slider_perfis.round:before {
     border-radius: 50%;
   }
 
@@ -689,6 +639,7 @@ body {
 
 .profiles_section{
     width: 1600px;
+    padding: 0;
 }
 
 .lock_checkbox{
@@ -715,4 +666,11 @@ body {
 
 .validate_medical_exam {
     display: none;
+}
+
+.perfis_section {
+
+    width: 100%;
+    padding: 6rem 0;
+
 }

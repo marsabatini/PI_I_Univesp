@@ -1,28 +1,58 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 
-import "./agenda.modules.css";
+import style_agenda from "./agenda.modules.css";
+
 import Gerenciador_ADM from "../../../Components/Gerenciador";
 import Header from "../../../Components/Header";
+import Footer_Adm from "../../../Components/Footer_Adm";
+import Aulas_Adm from "../../../Components/Aulas_Adm";
+
+import api from "../../../../Services/Api";
 
 
-export default function Agenda() {
+export default function Agenda(props) {
+
+    const [modalidade, setModalidade] = useState('');
+
+
+    const navigate = useNavigate();
+
+    // POST: Cadastra Modalidades
+    async function cadastrarModalidade(e) {
+        e.preventDefault();
+
+        const data = {
+            modalidade
+        }
+
+        try {
+            await api.post('adm/tiposaulas', data);
+
+            alert('Modalidade cadastrada.');
+        } catch (err) {
+            alert('Houve um erro. Não foi possível cadastrar a modalidade');
+        }
+    }
+
 
 
     return (
 
         <>
-
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"></link>
             <div>
-                <section>
-                    <div class="caixa">
-                        <Gerenciador_ADM/>
+                <section className="agenda_section">
+                    <div class="caixa_agenda">
+                        <Header />
+                        <Gerenciador_ADM />
                         <section className="conteudo_gerenciado">
-                            <div className="h4">
-                                <h3>
-                                    AGENDA COMUM
-                                </h3>
-                            </div>
+
+                            <h4 className="titulo_agenda">
+                                AGENDA COMUM
+                            </h4>
+
 
                             <div className="agenda">
                                 <div className="consulta_modalidade">
@@ -46,7 +76,7 @@ export default function Agenda() {
 
                                         <div className="menu_calendario_data_atual">
                                             <span id="prev" className="material-symbols-rounded">chevron_left</span>
-                                            <h2 className="current-date"></h2>
+                                            <h2 className="current-date"> Maio 2024</h2>
                                             <span id="next" className="material-symbols-rounded">chevron_right</span>
                                         </div>
 
@@ -60,7 +90,44 @@ export default function Agenda() {
                                                 <li>Sexta</li>
                                                 <li>Sábado</li>
                                             </ul>
-                                            <ul className="days"></ul>
+                                            <ul className="days">
+                                                <li className="inactive">28</li>
+                                                <li className="inactive">29</li>
+                                                <li className="inactive">30</li>
+                                                <li>01</li>
+                                                <li>02</li>
+                                                <li>03</li>
+                                                <li>04</li>
+                                                <li>05</li>
+                                                <li>06</li>
+                                                <li>07</li>
+                                                <li>08</li>
+                                                <li>09</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                                <li>12</li>
+                                                <li>13</li>
+                                                <li>14</li>
+                                                <li>15</li>
+                                                <li>16</li>
+                                                <li>17</li>
+                                                <li>18</li>
+                                                <li>19</li>
+                                                <li>20</li>
+                                                <li>21</li>
+                                                <li>22</li>
+                                                <li>23</li>
+                                                <li>24</li>
+                                                <li>25</li>
+                                                <li>26</li>
+                                                <li>27</li>
+                                                <li>28</li>
+                                                <li>29</li>
+                                                <li>30</li>
+                                                <li>31</li>
+                                                <li className="inactive">01</li>
+
+                                            </ul>
                                         </div>
 
                                     </div>
@@ -98,140 +165,59 @@ export default function Agenda() {
                                 </div>
 
                                 <div className="Agendamento">
-                                    <div>
-                                        <h2 className="titulos">
-                                            AGENDA COMUM - PÚBLICA
-                                        </h2>
-                                    </div>
-                                    <div className="Titulo_Semana">
-                                        <div className="semana_anterior">
-                                            <span id="prevWeek" className="material-symbols-rounded">chevron_left</span>
-                                            <h2>Semana Anterior</h2>
-                                        </div>
-                                        <div className="semana_posterior">
-                                            <h2>Próxima Semana</h2>
-                                            <span id="nextWeek" className="material-symbols-rounded">chevron_right</span>
-                                        </div>
-                                    </div>
+
+                                    <h2 className="titulos">
+                                        AGENDA COMUM - PÚBLICA
+                                    </h2>
+
                                     <div className="Agenda_Publica">
-                                        <div className="horario">
-                                            <ul></ul>
-                                        </div>
 
-                                        <div className="Semana-Dia-Atual">
-                                            <ul className="dia_semana"></ul>
-                                            <ul className="aula"></ul>
-                                            <div className="alter_aula" id="alter_aula">
-                                                <div className="check_buttons">
-                                                    <div>
-                                                        <input type="checkbox" className="liga_desliga__checkbox" id="liga_desliga"/>
-                                                            <label for="liga_desliga" className="liga_desliga__botao"></label>
-                                                            <p>Trancado</p>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" className="liga_desliga__checkbox" id="once"/>
-                                                            <label for="once" className="once_all_button"></label>
-                                                            <p>Só desta vez</p>
-                                                    </div>
-                                                    <div>
-                                                        <input type="checkbox" className="liga_desliga__checkbox" id="all"/>
-                                                            <label for="all" className="once_all_button"></label>
-                                                            <p>Sempre</p>
-                                                    </div>
-                                                </div>
 
-                                                <h2 id="nome_aula"></h2>
+                                        <div>
 
-                                                <div>
-                                                    <form action="" className="modalidade">
-                                                        <select className="modalidade" id="modalidade_aula">
-                                                            <option value="Vazio">Vazio</option>
-                                                            <option value="Boxe">Boxe</option>
-                                                            <option value="Jiu-Jitsu">Jiu-Jitsu</option>
-                                                            <option value="Self-Defense">Self-Defense</option>
-                                                            <option value="Muay-Thay">Muay-Thay</option>
-                                                            <option value="Kids">Kids</option>
-                                                            <option value="Teen">Teen</option>
-                                                        </select>
-                                                        <p className="inscritos">0 INSCRITOS DE 8 VAGAS</p>
-                                                        <div className="alter_professor">
-                                                            <p>Responsável:</p>
-                                                            <select>
-                                                                <option value="Professor">Professor</option>
-                                                                <option value="Eduardo">Eduardo</option>
-                                                                <option value="Everton">Everton</option>
-                                                            </select>
-                                                        </div>
-                                                        <div className="alter_participantes">
 
-                                                            <div id="aluno_1">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                            <div id="aluno_2">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                            <div id="aluno_3">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                            <div id="aluno_4">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                            <div id="aluno_5">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                            <div id="aluno_6">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                            <div id="aluno_7">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                            <div id="aluno_8">
-                                                                <label>Aluno:</label>
-                                                                <input placeholder="Pesquisa"></input>
-                                                                <button type="submit">Adicionar</button>
-                                                            </div>
-
-                                                        </div>
-                                                    </form>
-                                                    <div className="salvar_fechar">
-                                                        <button type="submit" className="cancelar_button" id="Cancelar" onclick="handlePopup(false)">CANCELAR</button>
-                                                        <button type="submit" className="salvar_button" id="Salvar">SALVAR</button>
-                                                    </div>
-                                                </div>
+                                            <ul className="header_agenda">
+                                                <li>Data</li>
+                                                <li>Horario</li>
+                                                <li>Modalidade</li>
+                                                <li>Professor</li>
+                                                <li>Qtd Limite de Inscrições</li>
+                                                <li>Inscritos</li>
+                                                <li>Vagas</li>
+                                            </ul>
+                                            <div className="lista_aulas">
                                             </div>
                                         </div>
                                     </div>
                                     <div className="alter_modalidade">
                                         <div>
-                                            <form >
-                                                <input id="cor_modalidade" name="cor_modalidade" type="text" placeholder="digite uma nova modalidade"></input>
-                                                <button className="Inserir_Excluir" type="submit" id="inserir" name="inserir">Inserir</button>
+                                            <form onSubmit={cadastrarModalidade}>
+                                                <input
+                                                    id="cor_modalidade"
+                                                    className="modalidade"
+                                                    title="Digite uma modalidade"
+                                                    name="cor_modalidade"
+                                                    type="text"
+                                                    value={modalidade}
+                                                    onChange={e => setModalidade(e.target.value)}
+                                                    placeholder="Cadastrar nova modalidade"
+                                                    required
+                                                />
+                                                <button className="Inserir_Excluir" type="submit" id="inserir_modalidade" name="inserir_modalidade">Inserir</button>
                                             </form>
                                         </div>
+
                                         <div>
                                             <form >
+
                                                 <select className="modalidade" id="excluir_modalidade">
+                                                    {/* {modalidades.map(modalidade => (
+                                                        <option key={modalidade.id} value={modalidade.id}>
+                                                            {modalidade.nome}
+                                                        </option>
+                                                    ))} */}
+                                                </select>
+                                                {/* <select className="modalidade" id="excluir_modalidade">
                                                     <option value="Todas as Modalidades" >Todas as Modalidades</option>
                                                     <option value="Boxe">Boxe</option>
                                                     <option value="Jiu-Jitsu">Jiu-Jitsu</option>
@@ -239,29 +225,76 @@ export default function Agenda() {
                                                     <option value="Muay-Thay">Muay-Thay</option>
                                                     <option value="Kids">Kids</option>
                                                     <option value="Teen">Teen</option>
-                                                </select>
+                                                </select> */}
                                                 <button className="Inserir_Excluir" type="submit" id="excluir" name="excluir">Excluir</button>
                                             </form>
                                         </div>
+
                                     </div>
+
+                                    <h2 className="titulos">Inserir nova aula</h2>
+
+                                    <form action="" className="inserir_nova_aula">
+                                        <div>
+                                            <div>
+                                                <label for="iinput_data">Data</label>
+                                                <input type="text" name="input_data" id="iinput_data"></input>
+                                            </div>
+
+                                            <div>
+                                                <label for="iinput_hora">Horario</label>
+                                                <input type="text" name="input_hora" id="iinput_hora"></input>
+                                            </div>
+
+                                            <div>
+                                                <label for="iinput_modalidade">Modalidade</label>
+                                                <select type="text" name="input_modalidade" id="iinput_modalidade">
+                                                    <option value="Default" selected>Modalidade</option>
+                                                    <option value="Boxe">Boxe</option>
+                                                    <option value="Jiu-Jitsu">Jiu-Jitsu</option>
+                                                    <option value="Self-Defense">Self-Defense</option>
+                                                    <option value="Muay-Thay">Muay-Thay</option>
+                                                    <option value="Kids">Kids</option>
+                                                    <option value="Teen">Teen</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div>
+
+                                            <div>
+                                                <label for="iinput_professor">Professor</label>
+                                                <select type="text" name="input_professor" id="iinput_professor">
+                                                    <option value="Default" selected>Professor</option>
+                                                    <option value="Eduardo" selected>Eduardo</option>
+                                                    <option value="Everton" selected>Everton</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="iinput_qtd_limite">Qtd Limite</label>
+                                                <input type="text" name="input_qtd_limite" id="iinput_qtd_limite"></input>
+                                            </div>
+                                            <div>
+                                                <button className="Inserir_Aula" type="submit" name="inserir_aula">Cadastrar</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-
                         </section>
+                        <Footer_Adm />
                     </div>
-                     
                 </section>
+
             </div>
-            
+
         </>
 
-        
+
 
     );
 
-    
+
 
 }
-
-
-

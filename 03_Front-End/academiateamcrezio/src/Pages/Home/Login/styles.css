@@ -1,42 +1,15 @@
-
-
-.boxs h2 {
-    color: #fff ;
-    margin-bottom: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
-}
-.boxs ul li {
-    margin: 10px;
-    list-style: none;
-    color: #fff;
-    font-weight: 400;
-    font-style: normal;
-}
-.boxs ul li a {
-    text-decoration: none;
-}
-.imgb {
-    width: 100px;
-    height: 100px;
-    margin: 24px 0px 0px 65px;
-}
-.rsicon {
-    width: 30px;
-    height: 30px;
-}
-.boxs a {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-}
-.boxs a:hover {
-    color: #6b6b6b;
 }
 body { 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -60,10 +33,11 @@ body {
 .login .caixa-u {
     position: relative;
     margin-bottom: 15px;
+    text-align: start;
 }
 .login .caixa-u input{
     width: 100%;
-    padding: 10px 0px;
+    padding: 10px 0px 0px;
     outline: none;
     border: 0;
     background:transparent;
@@ -76,19 +50,20 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 0; 
+    padding: 10px 0px 0px; 
     color:#000000;
     font-size: 25px ;
     pointer-events: none;
     transition: .5s;
+    line-height: 0.8;
 }
 .login .caixa-u input:focus~label,
 .login .caixa-u input:valid~label
 {
-    top: -20px;
+    top: -28px;
     left: 0;
-    color: white;
-    font-size: 20px;
+    color: rgb(212, 212, 212);
+    font-size: 15px;
 }
 .forget {
     font-size: 20px;
@@ -99,10 +74,8 @@ body {
     margin-top: -30px;
 }
 .b-ent{
-    align-items: center;
-    display: flex;
-    justify-content: center;
     margin-top: 45px;
+
 }
 .l-bnt  {
     border: none;
@@ -112,8 +85,23 @@ body {
     color: #fff;
     background-color:#A21500;
     border-radius: 15px;
-    
+    cursor: pointer;
 }
+
+.l-bnt:hover {
+
+    background-color: #DD6457;
+    transform: scale(0.95);
+
+}
+
+
+.l-bnt:hover:active {
+
+    transform: scale(0.90);
+
+}
+
 .cadastro {
     width: 400px;
     font-size: 10px;
@@ -121,7 +109,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .cadastro p {
@@ -129,6 +118,10 @@ body {
     font-size: 20px; 
     color: #f0f0f0;
     margin-bottom: 50px;
+}
+
+.container_login { 
+    display: flex;
 }
 .c-bnt {
     width: 111px;
@@ -139,7 +132,25 @@ body {
     border-radius: 15px; 
     border: none;
     align-content: center;  
+    transition: all .3s;
+    cursor: pointer;
+
 }
+
+.c-bnt:hover {
+
+    background-color: #3D3E40;
+    transform: scale(0.95);
+
+}
+
+
+.c-bnt:hover:active {
+
+    transform: scale(0.90);
+
+}
+
 .flexz {
     margin-top: 55px;
     text-decoration: none;
@@ -154,4 +165,21 @@ body {
     height: 150px;
     margin-bottom: 50px; 
 }   
+.all {
+    display: flex;
+    justify-content: center;
+}
 
+.login_section {
+
+    display: flex;
+
+}
+
+.div_entrar_button {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}

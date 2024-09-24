@@ -17,11 +17,9 @@ import org.hibernate.validator.constraints.br.CPF;
 public class RegisterRequestAluno {
 
     @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[A-Z]+(.)*")
     private String nome;
 
     @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[A-Z]+(.)*")
     private String sobrenome;
 
     @Column(name = "data_nasc")
@@ -60,6 +58,16 @@ public class RegisterRequestAluno {
 
     private String statusPlano;
 
-//    private String endereco;
+    @NotBlank(message = "Campo obrigatório.")
+    private String endereco;
+
+    @NotBlank(message = "Campo obrigatório.")
+    private String numEndereco;
+
+    @NotBlank(message = "Campo obrigatório.")
+    private String cidade;
+
+    @NotBlank(message = "Campo obrigatório.")
+    private String cep;
 
 }

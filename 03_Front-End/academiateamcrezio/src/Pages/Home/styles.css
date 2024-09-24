@@ -1,0 +1,390 @@
+.conteudo {
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.boas-vindas{
+    margin-bottom: 80px;
+    width: 99%;
+    height: 90%;
+    
+}
+
+.quadro_imagem_inicial {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.home_section {
+
+    width: 100%;
+}
+
+.aula_experimental_home, .botão-matriculese {
+    display: flex;
+    margin-bottom: 80px;
+    background-color: #000000;
+    height: 300px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.aula_experimental_home button, .botão-matriculese button {
+
+    width: 400px;
+    height: 150px;
+    font-size: 40px;
+    border-radius: 20px;
+    background-color: #A21500;
+    transition: all .3s;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.aula_experimental_home button:hover, .botão-matriculese button:hover {
+
+    background-color: #DD6457;
+    transform: scale(0.98);
+}
+
+.aula_experimental_home button:hover:active, .botão-matriculese button:hover:active {
+
+    transform: scale(0.93);
+}
+
+.section2 button{
+    display: inline-block;
+    background-color: #A21500;
+    padding: 30px 30px;
+    margin-top: 70px;
+    margin-left: 600px;
+    color: #F0F0F0;
+    border-radius: 15px;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.section2 h4{
+    justify-content: center;
+    font-size: 42px;
+}
+
+.slide_plano {
+    margin-top: 80px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.planoTeamCrezio , .mestres, .modalidades, .loja, .mural, .tabela{
+    margin: 50px;
+    justify-content: left;
+    color: #686869;
+    font-size: 56px;
+    line-height: 1;
+    display: flex;
+}
+
+/*começo slides*/
+
+.planos{
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+}
+
+.imgPlanos{
+    
+    display: flex;
+    overflow-x: auto;
+    width: 1850px;
+    padding: 20px;
+    
+}
+
+.imgPlanos img {
+
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #0006;
+}
+
+.slide_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.slide_div img{
+    position: relative;
+    height: 370px;
+    width: 300px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    border-radius: 20px;
+}
+
+.button{
+    position: absolute;
+    width: 300px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.bull {
+
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.bull img {
+    width: 100%;
+    height: 100%;
+}
+
+.section5 {
+    margin-top: 80px;
+}
+
+
+
+.professores {
+
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+
+}
+
+.foto-professores {
+
+    display: flex;
+    overflow-x: auto;
+    width: 1850px;
+    padding: 20px;
+    background-color: #d1d1d1;
+    
+
+} 
+
+.foto-professores img {
+    margin-left: 70px;
+    width: 400px;
+    height: auto;
+    border: 5px solid #FFF;
+    transition: transform .3s linear;
+    box-shadow: 5px 5px 5px #0006;
+}
+
+.foto-professores img:hover {
+
+    transform: scale(1.05);
+
+}
+
+.fotos-modalidades {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 2vw;
+    background-color: #d1d1d1;
+    padding: 20px;
+}
+.gallery-items{
+    width: 200px;
+    height: 340px;
+    border: 5px solid #FFF;
+    box-shadow: 5px 5px 5px #0006;
+    flex-grow: 1;
+    transition: transform .3s linear;
+}
+.gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-items:hover{
+    transform: scale(1.1);
+}
+
+.agenda-Semanal {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+}
+
+.agenda-Semanal img {
+    width: 1300px;
+    height: auto;
+    box-shadow: 5px 5px 5px #0006;
+}
+
+
+.foto-loja {
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.foto-loja img {
+
+    width: 400px;
+    height: auto;
+    border: 5px solid #FFF;
+    transition: transform .3s linear;
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #0006;
+
+}
+
+.foto-loja img:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 60%;
+    border: solid #000000 3px;
+    cursor: pointer;
+    transition: all 0.15s linear;
+    margin: 5px;
+}
+
+.dots label:hover {background: #000000;}
+
+#imagem1:checked ~ .m1 {
+    margin-left: 0;
+}
+#imagem2:checked ~ .m2 {
+    margin-left: -100%;
+}
+
+
+.corpoMural {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+    padding: 20px;
+    height: 700px;
+}
+
+.slider-2 {
+    position: absolute;
+    width: 60%;
+    
+}
+.images-2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 600px;
+}
+.images-2 img {
+    height: 600px;
+    transition: all 0.15s ease;
+    border: 5px solid #FFF;
+    position: absolute;
+    opacity: 0%;
+    box-shadow: 5px 5px 5px #0006;
+}
+
+.images-2 input {
+    display: none;
+}
+.dots-2 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots-2 label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #0f0707 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots-2 label:hover {background: #1a1313;}
+
+#img01:checked ~ .m01 {
+    margin-left: 0;
+    opacity: 100%;
+}
+#img02:checked ~ .m02 {
+    
+    opacity: 100%;
+}
+#img03:checked ~ .m03 {
+    
+    opacity: 100%;
+}
+#img04:checked ~ .m04 {
+    
+    opacity: 100%;
+}
+
+
+.section11 {
+    margin-top: 80px;
+}
+.section11 {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: #4B4C4D;
+    height: 400px;  
+}
+
+.fotos-parceiros img {
+        margin-bottom: 0;
+        width: 1730px;
+        height: auto;
+}

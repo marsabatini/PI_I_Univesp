@@ -15,9 +15,9 @@ export default function Login() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const [id, setId]       = useState('');
-    const [nome, setNome]   = useState('');
-    const [role, setRole]   = useState('');
+    const [id, setId] = useState('');
+    const [nome, setNome] = useState('');
+    const [role, setRole] = useState('');
 
     const navigate = useNavigate();
 
@@ -31,7 +31,7 @@ export default function Login() {
         };
 
         try {
-            const response = await api.post('api/login', data);
+            const response = await api.post('/api/login', data);
 
             localStorage.setItem('email', email);
             localStorage.setItem('id', response.data.id);
@@ -41,11 +41,11 @@ export default function Login() {
             localStorage.setItem('role', response.data.role);
 
             // Precisaremos fazer a lógica para, caso seja funcionário ou aluno
-            if (response.data.role == "ALUNO") {
-                navigate('/perfil')
-            } else if (response.data.role == "ADM") {
-                navigate('/adm')
-            } else if (response.data.role == "PROFESSOR" || response.data.role == "TREINADOR") {
+            if (response.data.role === "ALUNO") {
+                navigate('/aluno')
+            } else if (response.data.role === "ADMIN") {
+                navigate('/adm/agenda')
+            } else if (response.data.role === "PROFESSOR" || response.data.role === "TREINADOR") {
                 navigate('/funcionario')
             } else {
                 alert("Usuário não encontrado!!!!!!!");
@@ -59,16 +59,16 @@ export default function Login() {
 
     return (
         <div>
-            <section>
-                <Header/>
-                <div class="container">
+            <section className="login_section">
+                <Header />
+                <div class="container_login">
                     <div className="cadastro">
                         <div className="flexz">
                             <img src={logo} alt="logo tc" />
                             <p> Caso não seja cadastrado ainda, crie sua conta!</p>
-                            <a href="">
-                                <button class="c-bnt">cadastrar</button>
-                            </a>
+                            <Link to="/cadastro">
+                                <button className="c-bnt">Cadastrar</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="login-column">
@@ -80,10 +80,9 @@ export default function Login() {
                                     type="text"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
-                                    placeholder="E-mail"
                                     required
                                 />
-                                <label>Usuario</label>
+                                <label>Usuário</label>
                             </div>
                             <div className="caixa-u">
                                 <input
@@ -91,21 +90,20 @@ export default function Login() {
                                     type="password"
                                     value={senha}
                                     onChange={e => setSenha(e.target.value)}
-                                    placeholder="Senha"
                                     required
                                 />
                                 <label>Senha</label>
                             </div>
                             <div className="esquecerSenha">
-                                <Link className="esqueceu" to="/Redefinir_Senha"> Esqueci a senha </Link>
+                                <Link className="esqueceu" to="/login/Redefinir_Senha"> Esqueci a senha </Link>
                             </div>
-                            <a href="" className="b-ent">
+                            <div className="div_entrar_button">
                                 <button type="submit" className="l-bnt">Entrar</button>
-                            </a>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </section >
         </div >
     );

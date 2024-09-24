@@ -7,59 +7,7 @@
     font-weight: 400;
     font-style: normal;
 }
-header {
-    width: 100%;
-    max-height: 150px;
-    background-color: #fff;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    
-}
-.img-logo {
-    width: 225px;
-    height: 120px;
-    padding: 10px;
-    margin: 30px 0px 0px 50px;   
-    cursor: pointer;
-}
 
-.container-logo {
-    display: flex;
-    align-items: center;
-}
-.logo-texto {
-    margin-left: 20px;
-}
-.menu li {
-    display: inline-block;
-    margin-right: 100px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 21px;
-}
-.menu li:hover {
-    color: #3d3e40;
-}
-
-.menu li a {
-    font-size: 80px;
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    
-}
-.menu button {
-    width: 70px;
-    height: 50px;
-    font-size: 19px;
-    color: #fff;
-    background-color: #3d3e40;
-    border-radius: 5px;
-    margin-right: 100px;
-}
 
 footer {
     display: flex;
@@ -208,14 +156,14 @@ body {
     height: 300px;
     padding: 10px;
 }
-.caixa {
+.caixa_avisos {
     height: auto;
-    width: 100%;
+    width: auto;
     justify-content: center;
     align-self: center;
     display: flex;
     margin: 10px;
-    padding-top: 140px;
+    
 }
 .imagens:hover {
     cursor: pointer;
@@ -297,9 +245,10 @@ body {
 
 .warning_section {
     width: 1600px;
+    padding: 0;
 }
 
-.avisos {
+.quadro_avisos {
     height: 600px;
     width: 1400px;
     background-color: #d1d1d1;
@@ -312,7 +261,7 @@ body {
     overflow-y: auto;
 }
 
-.avisos li{
+.quadro_avisos li{
     display:flex;
     justify-content: space-between;
     margin-block-start:25px ;
@@ -321,7 +270,7 @@ body {
     gap: 15px;
 }
 
-.avisos h2 {
+.quadro_avisos h2 {
     color:#A21500;
     justify-content: left;
     font-size: 20px;
@@ -329,11 +278,14 @@ body {
     text-shadow: 1px 1px #acacac;
 }
 
-.h3{
+.titulo_avisos{
     background-color: #A21500;
-    color:white;
+    height: 50px;
     width: 1600px;
+    color:white;
     justify-content: center;
+    align-items: center;
+    display: flex;
     font-size: 30px;
     text-align: center;
     padding-top: 5px;
@@ -369,10 +321,34 @@ body {
     color: #fff;
     background-color: #0b721c;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.inserção_avisos button:hover {
+
+    transform: scale(0.95);
+    background-color: #2a8b3a;
+
+}
+
+.inserção_avisos button:hover:active {
+
+    transform: scale(0.90);
+    
+
 }
 
 .trash {
     width: 20px;
     height: 20px;
     align-self: center;
+    cursor: pointer;
+}
+
+.avisos_section {
+
+    width: 100%;
+    padding: 6rem 0;
+
 }

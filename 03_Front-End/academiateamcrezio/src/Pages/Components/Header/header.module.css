@@ -5,10 +5,11 @@
     left: 0;
     max-height: 150px;
     position: fixed;
+    display: flex;
     top: 0;
     background-color: #fff;
     border-bottom: 2px #3D3E40 solid;
-
+    z-index: 1000;
 }
 
 .header_options{
@@ -40,7 +41,7 @@
 
 .menu li {
     
-    margin-inline-end: 40px;
+    margin-inline-end: 35px;
     font-size: 20px;
     display: inline-block;
     justify-content: right;
@@ -65,14 +66,29 @@
 
 .menu button {
 
-    width: 70px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
     font-size: 19px;
     color: #fff;
     cursor: pointer;
     background-color: #3d3e40;
     border-radius: 5px;
-    
+    transition: background .3s;
+    transition: transform .3s;
+    border: none;
+
+}
+
+.menu button:hover {
+
+    background-color: #686869;
+    transform: scale(0.95);
+
+}
+
+.menu button:hover:active {
+
+    transform: scale(0.90);
 
 }
 

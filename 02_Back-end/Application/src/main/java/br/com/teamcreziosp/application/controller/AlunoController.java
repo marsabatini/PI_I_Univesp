@@ -1,6 +1,9 @@
 package br.com.teamcreziosp.application.controller;
 
+import br.com.teamcreziosp.application.model.Aluno;
 import br.com.teamcreziosp.application.model.Aula;
+import br.com.teamcreziosp.application.model.TiposAula;
+import br.com.teamcreziosp.application.repository.AlunoRepository;
 import br.com.teamcreziosp.application.repository.AulaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +18,9 @@ public class AlunoController {
 
     @Autowired
     private AulaRepository aulaRepository;
+
+    @Autowired
+    private AlunoRepository alunoRepository;
 
     @GetMapping("/aulas")
     public List<Aula> findAll() {
@@ -40,4 +46,5 @@ public class AlunoController {
     public Aula update(@RequestBody Aula aula) {
         return aulaRepository.save(aula);
     }
+
 }
