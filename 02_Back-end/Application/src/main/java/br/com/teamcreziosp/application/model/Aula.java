@@ -1,7 +1,10 @@
 package br.com.teamcreziosp.application.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -14,6 +17,8 @@ import java.util.List;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "aulas")
 public class Aula implements UserDetails {
 
@@ -21,17 +26,31 @@ public class Aula implements UserDetails {
     @GeneratedValue
     private Integer id;
 
+    @ManyToOne
+    @JoinColumn(name = "id_funcionario")
+    @JsonIdentityReference(alwaysAsId = true)
+    private Funcionario funcionario;
+  
     @NotBlank(message = "Campo obrigatório.")
     private String data;
 
     @NotBlank(message = "Campo obrigatório.")
     private String horario;
 
+    @ManyToOne
+    @JoinColumn(name = "id_tipo")
+    @JsonIdentityReference(alwaysAsId = true)
+    private TiposAula tipo;
+
     @NotBlank(message = "Campo obrigatório.")
     private String modalidade;
 
     @NotBlank(message = "Campo obrigatório.")
     private String Professor;
+
+    @ManyToMany
+    @JsonIgnore
+    private List<Aluno> alunosInscritos = new ArrayList<>();
 
     @NotBlank(message = "Campo obrigatório.")
     private int qtdAludos;
