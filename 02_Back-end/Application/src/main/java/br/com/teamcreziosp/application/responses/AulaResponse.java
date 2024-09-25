@@ -13,6 +13,6 @@ public record AulaResponse(
         Integer qtddLimiteAlunos
 ) {
     public AulaResponse(Aula aula) {
-        this(aula.getFuncionario(), aula.getData(), aula.getTipo(), aula.getQtddLimiteAlunos());
+        this(aula.getProfessor(), aula.getDataHora(), aula.getTipo(), aula.getQtddLimiteAlunos());
     }
 }

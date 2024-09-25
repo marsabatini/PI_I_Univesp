@@ -2,9 +2,10 @@ package br.com.teamcreziosp.application.controller;
 
 import br.com.teamcreziosp.application.model.Aula;
 import br.com.teamcreziosp.application.model.Funcionario;
+import br.com.teamcreziosp.application.model.Professor;
 import br.com.teamcreziosp.application.model.TiposAula;
 import br.com.teamcreziosp.application.repository.AulaRepository;
-import br.com.teamcreziosp.application.repository.FuncionarioRepository;
+import br.com.teamcreziosp.application.repository.ProfessorRepository;
 import br.com.teamcreziosp.application.repository.TiposAulaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,8 +26,7 @@ public class AulaController {
     private TiposAulaRepository tiposAulaRepository;
 
     @Autowired
-    private FuncionarioRepository funcionarioRepository;
-
+    private ProfessorRepository professorRepository;
 
     @GetMapping("/aulas")
     public List<Aula> findAll() {
@@ -37,11 +37,11 @@ public class AulaController {
     @ResponseStatus(HttpStatus.CREATED)
     public void save(@RequestBody Aula aula) {
         Optional<TiposAula> tiposAula = tiposAulaRepository.findById(aula.getTipo().getId());
-        Optional<Funcionario> funcionario = funcionarioRepository.findById(aula.getFuncionario().getId());
+        Optional<Professor> professor = professorRepository.findById(aula.getProfessor().getId());
 
-        if (tiposAula.isPresent() && funcionario.isPresent()) {
+        if (tiposAula.isPresent() && professor.isPresent()) {
             aula.setTipo(tiposAula.get());
-            aula.setFuncionario(funcionario.get());
+            aula.setProfessor(professor.get());
             aulaRepository.save(aula);
         } else {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "TiposAula não encontrado");
