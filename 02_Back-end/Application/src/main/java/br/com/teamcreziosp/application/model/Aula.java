@@ -1,5 +1,6 @@
 package br.com.teamcreziosp.application.model;
 
+import br.com.teamcreziosp.application.enums.Modalidade;
 import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,36 +18,31 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "aulas")
 public class Aula implements UserDetails {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
   
     @NotBlank(message = "Campo obrigatório.")
     private LocalDateTime dataHora;
 
-    @ManyToOne
-    @JoinColumn(name = "id_tipo")
-    @JsonIdentityReference(alwaysAsId = true)
-    private TiposAula tipo;
-
+    @Enumerated(EnumType.ORDINAL)
     @NotBlank(message = "Campo obrigatório.")
-    private String modalidade;
+    private Modalidade modalidade;
 
-    @NotBlank(message = "Campo obrigatório.")
     @ManyToOne
-    @JoinColumn(name = "id_professor")
+    @JoinColumn(name = "professor_id")
     @JsonIdentityReference(alwaysAsId = true)
+    @NotBlank(message = "Campo obrigatório.")
     private Professor professor;
+
+    @NotBlank(message = "Campo obrigatório.")
+    private Integer qtddLimiteAlunos;
 
     @ManyToMany
     @JsonIgnore
     private List<Aluno> alunosInscritos = new ArrayList<>();
-
-    @NotBlank(message = "Campo obrigatório.")
-    private Integer qtddLimiteAlunos;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

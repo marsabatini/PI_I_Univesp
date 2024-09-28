@@ -28,6 +28,8 @@ import java.util.List;
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Table(name = "Funcionario", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo", discriminatorType = DiscriminatorType.STRING)
 public class Funcionario implements UserDetails {
 
     @Id

@@ -1,12 +1,9 @@
 package br.com.teamcreziosp.application.controller;
 
 import br.com.teamcreziosp.application.model.Aula;
-import br.com.teamcreziosp.application.model.Funcionario;
 import br.com.teamcreziosp.application.model.Professor;
-import br.com.teamcreziosp.application.model.TiposAula;
 import br.com.teamcreziosp.application.repository.AulaRepository;
 import br.com.teamcreziosp.application.repository.ProfessorRepository;
-import br.com.teamcreziosp.application.repository.TiposAulaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -23,9 +20,6 @@ public class AulaController {
     private AulaRepository aulaRepository;
 
     @Autowired
-    private TiposAulaRepository tiposAulaRepository;
-
-    @Autowired
     private ProfessorRepository professorRepository;
 
     @GetMapping("/aulas")
@@ -36,11 +30,9 @@ public class AulaController {
     @PostMapping("/aulas")
     @ResponseStatus(HttpStatus.CREATED)
     public void save(@RequestBody Aula aula) {
-        Optional<TiposAula> tiposAula = tiposAulaRepository.findById(aula.getTipo().getId());
         Optional<Professor> professor = professorRepository.findById(aula.getProfessor().getId());
 
-        if (tiposAula.isPresent() && professor.isPresent()) {
-            aula.setTipo(tiposAula.get());
+        if (professor.isPresent()) {
             aula.setProfessor(professor.get());
             aulaRepository.save(aula);
         } else {

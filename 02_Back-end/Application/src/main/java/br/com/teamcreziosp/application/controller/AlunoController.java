@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/adm")
@@ -24,12 +25,11 @@ public class AlunoController {
         alunoRepository.save(aluno);
     }
 
-    /*
-    @GetMapping("/aulas/{id}")
-    public Optional<Aula> findById(@PathVariable(value = "id") Integer id) {
-        return aulaRepository.findById(id);
+
+    @GetMapping("/alunos/{id}")
+    public Optional<Aluno> findById(@PathVariable(value = "id") Integer id) {
+        return alunoRepository.findById(id);
     }
-     */
 
     @DeleteMapping("/alunos")
     public void delete(@RequestBody Aluno aluno) {
