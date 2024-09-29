@@ -17,11 +17,9 @@ import org.hibernate.validator.constraints.br.CPF;
 public class RegisterRequestAluno {
 
     @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[A-Z]+(.)*")
     private String nome;
 
     @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[A-Z]+(.)*")
     private String sobrenome;
 
     @Column(name = "data_nasc")

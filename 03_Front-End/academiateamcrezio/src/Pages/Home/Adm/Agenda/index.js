@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 
 import style_agenda from "./agenda.modules.css";
 
@@ -8,8 +9,33 @@ import Header from "../../../Components/Header";
 import Footer_Adm from "../../../Components/Footer_Adm";
 import Aulas_Adm from "../../../Components/Aulas_Adm";
 
+import api from "../../../../Services/Api";
 
-export default function Agenda() {
+
+export default function Agenda(props) {
+
+    const [modalidade, setModalidade] = useState('');
+
+
+    const navigate = useNavigate();
+
+    // POST: Cadastra Modalidades
+    async function cadastrarModalidade(e) {
+        e.preventDefault();
+
+        const data = {
+            modalidade
+        }
+
+        try {
+            await api.post('adm/tiposaulas', data);
+
+            alert('Modalidade cadastrada.');
+        } catch (err) {
+            alert('Houve um erro. Não foi possível cadastrar a modalidade');
+        }
+    }
+
 
 
     return (
@@ -160,28 +186,38 @@ export default function Agenda() {
                                                 <li>Vagas</li>
                                             </ul>
                                             <div className="lista_aulas">
-                                                <Aulas_Adm/>
-                                                
-                                               
-
                                             </div>
-
                                         </div>
-
-
-
                                     </div>
                                     <div className="alter_modalidade">
                                         <div>
-                                            <form >
-                                                <input id="cor_modalidade" name="cor_modalidade" type="text" placeholder="digite uma nova modalidade"></input>
+                                            <form onSubmit={cadastrarModalidade}>
+                                                <input
+                                                    id="cor_modalidade"
+                                                    className="modalidade"
+                                                    title="Digite uma modalidade"
+                                                    name="cor_modalidade"
+                                                    type="text"
+                                                    value={modalidade}
+                                                    onChange={e => setModalidade(e.target.value)}
+                                                    placeholder="Cadastrar nova modalidade"
+                                                    required
+                                                />
                                                 <button className="Inserir_Excluir" type="submit" id="inserir_modalidade" name="inserir_modalidade">Inserir</button>
                                             </form>
                                         </div>
 
                                         <div>
                                             <form >
+
                                                 <select className="modalidade" id="excluir_modalidade">
+                                                    {/* {modalidades.map(modalidade => (
+                                                        <option key={modalidade.id} value={modalidade.id}>
+                                                            {modalidade.nome}
+                                                        </option>
+                                                    ))} */}
+                                                </select>
+                                                {/* <select className="modalidade" id="excluir_modalidade">
                                                     <option value="Todas as Modalidades" >Todas as Modalidades</option>
                                                     <option value="Boxe">Boxe</option>
                                                     <option value="Jiu-Jitsu">Jiu-Jitsu</option>
@@ -189,7 +225,7 @@ export default function Agenda() {
                                                     <option value="Muay-Thay">Muay-Thay</option>
                                                     <option value="Kids">Kids</option>
                                                     <option value="Teen">Teen</option>
-                                                </select>
+                                                </select> */}
                                                 <button className="Inserir_Excluir" type="submit" id="excluir" name="excluir">Excluir</button>
                                             </form>
                                         </div>
@@ -197,8 +233,8 @@ export default function Agenda() {
                                     </div>
 
                                     <h2 className="titulos">Inserir nova aula</h2>
-                                        
-                                        <form action="" className="inserir_nova_aula">
+
+                                    <form action="" className="inserir_nova_aula">
                                         <div>
                                             <div>
                                                 <label for="iinput_data">Data</label>
@@ -239,19 +275,20 @@ export default function Agenda() {
                                                 <label for="iinput_qtd_limite">Qtd Limite</label>
                                                 <input type="text" name="input_qtd_limite" id="iinput_qtd_limite"></input>
                                             </div>
-
+                                            <div>
+                                                <button className="Inserir_Aula" type="submit" name="inserir_aula">Cadastrar</button>
+                                            </div>
                                         </div>
-
-                                        </form>
+                                    </form>
                                 </div>
                             </div>
                         </section>
-                        <Footer_Adm/>
+                        <Footer_Adm />
                     </div>
                 </section>
-                
+
             </div>
-            
+
         </>
 
 
@@ -261,6 +298,3 @@ export default function Agenda() {
 
 
 }
-
-
-

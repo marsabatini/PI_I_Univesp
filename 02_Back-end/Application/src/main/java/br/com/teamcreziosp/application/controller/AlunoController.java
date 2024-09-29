@@ -1,9 +1,8 @@
 package br.com.teamcreziosp.application.controller;
 
-import br.com.teamcreziosp.application.model.Aula;
-import br.com.teamcreziosp.application.repository.AulaRepository;
+import br.com.teamcreziosp.application.model.Aluno;
+import br.com.teamcreziosp.application.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,30 +13,32 @@ import java.util.Optional;
 public class AlunoController {
 
     @Autowired
-    private AulaRepository aulaRepository;
+    private AlunoRepository alunoRepository;
 
-    @GetMapping("/aulas")
-    public List<Aula> findAll() {
-        return aulaRepository.findAll();
+    @GetMapping("/alunos")
+    public List<Aluno> findAll() {
+        return alunoRepository.findAll();
     }
 
-    @PostMapping("/aulas")
-    public void save(@RequestBody Aula aula) {
-        aulaRepository.save(aula);
+    @PostMapping("/alunos")
+    public void save(@RequestBody Aluno aluno) {
+        alunoRepository.save(aluno);
     }
 
-    @GetMapping("/aulas/{id}")
-    public Optional<Aula> findById(@PathVariable(value = "id") Integer id) {
-        return aulaRepository.findById(id);
+
+    @GetMapping("/alunos/{id}")
+    public Optional<Aluno> findById(@PathVariable(value = "id") Integer id) {
+        return alunoRepository.findById(id);
     }
 
-    @DeleteMapping("/aulas")
-    public void delete(@RequestBody Aula aula) {
-        aulaRepository.delete(aula);
+    @DeleteMapping("/alunos")
+    public void delete(@RequestBody Aluno aluno) {
+        alunoRepository.delete(aluno);
     }
 
-    @PutMapping("/aulas")
-    public Aula update(@RequestBody Aula aula) {
-        return aulaRepository.save(aula);
+    @PutMapping("/alunos")
+    public Aluno update(@RequestBody Aluno aluno) {
+        return alunoRepository.save(aluno);
     }
+
 }

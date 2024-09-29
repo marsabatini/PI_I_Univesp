@@ -4,18 +4,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../src/Pages/Home/index";
 import Cadastro from "../src/Pages/Home/Cadastro/";
 import Login from "./Pages/Home/Login";
-import Agenda from "./Pages/Home/Adm/Agenda";
-import Alertas from "./Pages/Home/Adm/Alertas";
-import Avisos from "./Pages/Home/Adm/Avisos";
-import Perfis from "./Pages/Home/Adm/Perfis";
-import Mural from "./Pages/Home/Adm/Mural";
-import Aluno from "./Pages/Home/Aluno";
 import Aula_Experimental from "./Pages/Home/Aulaexperimental";
 import Nova_Senha from "./Pages/Home/Login/Nova_Senha";
 import Redefinir_Senha from "./Pages/Home/Login/Redefinir_Senha";
 import Planos from "./Pages/Home/Planos";
 import Agenda_Aluno from "./Pages/Home/Agenda_Aluno";
+
+import Agenda from "./Pages/Home/Adm/Agenda";
+import Alertas from "./Pages/Home/Adm/Alertas";
+import Avisos from "./Pages/Home/Adm/Avisos";
+import Perfis from "./Pages/Home/Adm/Perfis";
+import Mural from "./Pages/Home/Adm/Mural";
 import Cadastro_Geral from "./Pages/Home/Adm/CadastroGerais";
+
+import Aluno from "./Pages/Home/Aluno";
+
 
 
 export default function AppRoutes() {
