@@ -207,28 +207,10 @@ export default function Inicio() {
                         </div>
 
                     </main>
-
-
-
-
-                    {/* <Link to="/login">login</Link><br/>
-                            <Link to="/Adm/agenda">Agenda</Link><br/>
-                            <Link to="/Adm/alertas">Alertas</Link><br/>
-                            <Link to="/Adm/avisos">Avisos</Link><br/>
-                            <Link to="/Adm/perfis">Perfis</Link><br/>
-                            <Link to="/Adm/mural">Mural</Link><br/>
-                            <Link to="/Adm/cadastro_gerais">Cadastro_Gerais</Link><br/>
-                            <Link to="/aluno">Aluno</Link><br/>
-                            <Link to="/aula_Experimental">Aula_Experimental</Link><br/>
-                            <Link to="/planos">Planos</Link><br/>
-                            <Link to="/nova_Senha">Nova_Senha</Link><br/>
-                            <Link to="/agenda_Aluno">Agenda_Aluno</Link><br/>
-                            <Link to="/cadastro">Cadastro</Link><br/> */}
+                <Footer />
 
 
                 </section>
-                
-                <Footer />
                 
             </container>
         </div>

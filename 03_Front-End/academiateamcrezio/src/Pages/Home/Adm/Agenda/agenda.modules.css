@@ -11,32 +11,7 @@
 }
 
 
-footer {
-    display: flex;
-    width: 100%;
-    background-color:#A21500;
-    bottom: 0;
-    
-}
-footer .boxs {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding: 20px;
-   flex:1;
-}
-footer .area--icons {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    gap: 25px;
-}
-footer .areat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-}
+
 .boxs h2 {
     color: #fff ;
     margin-bottom: 15px;

@@ -3,9 +3,8 @@
     display: flex;
     width: 100%;
     background-color: #A21500;
-    bottom: 0;
     left: 0;
-    align-items: center baseline;
+    align-items: baseline;
     padding: 10px;
     position: absolute;
     border-top: 2px #262729 solid ;
