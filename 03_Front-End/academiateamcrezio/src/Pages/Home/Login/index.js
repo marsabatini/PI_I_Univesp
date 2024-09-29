@@ -103,8 +103,8 @@ export default function Login() {
                         </form>
                     </div>
                 </div>
-                <Footer/>
             </section >
+            <Footer/>
         </div >
     );
 }

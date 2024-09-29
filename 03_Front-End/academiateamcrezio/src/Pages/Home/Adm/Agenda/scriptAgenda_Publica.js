@@ -10,7 +10,7 @@ const alter_aula       = document.getElementById("alter_aula"),
       cab_data_aula    = document.getElementsByClassName("Titulo_Semana"),
       menu_agenda      = document.getElementsByClassName("Agendamento"),
       data_aula        = document.getElementById("nome_aula");
- 
+
 const dia_semana = ["Domingo","Segunda","Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
       horarios   = ["6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00"];
 
