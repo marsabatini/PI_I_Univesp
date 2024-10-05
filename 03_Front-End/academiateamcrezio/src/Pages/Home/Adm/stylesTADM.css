@@ -213,19 +213,6 @@ body {
     cursor: pointer;
 }
 
-.button {
-    width: 300px;
-    height: 70px;
-    font-size: 20px;
-    background: #A21500;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-}
-.button:hover {
-    width: 320px;
-    height: 80px;
-}
 
 .gerenciador{
     display: block;

@@ -15,32 +15,39 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
-.box {
-    width: 500px;
+.box-input {
     background: #f0f0f0;
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
+    height: 476px;
 }
-.box .box-u {
+.box-input .box-u {
     position:relative;
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
-.box .box-u label {
+.box-input .box-u label {
     position: relative;
     font-size: 25px;
 }
-.box .box-u input {
+.box-input .box-u input {
     padding: 10px;
     border: 1px solid ;
     border-radius: 8px;
     width: 380px;
 }
 
-.button {
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 135px;
+}
+
+.button-container button {
 
     background: #a21500;
     border-radius: 20px;
@@ -51,22 +58,57 @@ body {
     color: white;
     margin: 15px 0;
     transition: all .3s;
+    cursor: pointer;
 
 }
 
-.button:hover {
+.button-container button:hover {
 
     background-color: #DD6457;
+    transform: scale(.95);
 
 }
 
-
-
-h1{ 
-    text-align: center;
-    padding-bottom: 20px;
-}
-.button-container{
+.aula_experimental_title {
+    width: 100%;
+    height: 70px;
+    background-color: #a21500;
     display: flex;
+    align-items: center;
     justify-content: center;
+
+}
+
+.aula_experimental_title h1{ 
+    
+    line-height: 3rem;
+    color: #fff;
+
+}
+
+.box-aula-experimental {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 500px;
+
+}
+
+@media (max-width: 780px) {
+
+
+    .aula_experimental_title h1{
+        font-size: 25px;
+
+    }
+
+    .box-aula-experimental {
+        width: 380px;
+
+    }
+
+    .box-input .box-u input {
+        width: 330px;
+
+    }
+
+
 }
