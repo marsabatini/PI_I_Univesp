@@ -1,14 +1,14 @@
 .footer {
-
+    
     display: flex;
     width: 100%;
-    background-color:#A21500;
-    bottom: 0;
+    background-color: #A21500;
     left: 0;
-    align-items: center;
-    max-height: 130px;
+    align-items: baseline;
     padding: 10px;
     position: absolute;
+    border-top: 2px #262729 solid ;
+    
 }
 
 .logo_footer {
@@ -27,33 +27,36 @@
    height: 100%;
    display: flex;
    flex-direction: column;
-   
+   text-align: center;
+
 }   
 
 .area_icons {
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 41px;
-
+    padding-top: 40px;
+    
 }
 
 .rsicon {
-
-    width: 30px;
-    height: 30px;
+    
+    max-height: 30px;
+    max-width: 30px;
     cursor: pointer;
-
+    
 }
 
 .areat {
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
+    
+    
     
 }
 
@@ -68,12 +71,42 @@
 }
 
 .footer_titles {
+    align-items: start;
+    justify-content: center;
+}
+
+.footer_titles h2{
     
     color: #fff;
     font-size: 20px;
-    margin: 10px 0px 10px 0px;
+    
+    
 
 }
 
 
+@media (max-width:780px){
+    .logo_footer{
+        max-width: 0px;
+        margin-left: 0px;
+    }
 
+    .footer_titles h2{
+        font-size: 15px;
+    }
+    .areat {
+        font-size: 10px;
+    }
+
+    .rsicon {
+        max-height: 20px;
+        max-width: 20px;
+
+    }
+
+    .area_icons{
+        padding-top: 0px;
+
+    }
+
+}

@@ -42,6 +42,7 @@
 
     --box-shadow: 0 2rem 3rem var(--color-light); /* css do Dashboard */
 
+    
 }
 
 
@@ -51,6 +52,7 @@ body{
     line-height: 1.7;
     color: var(--color-cinza-escuro);
     background: var(--color-fundo-claro);
+    width: 100%;
 }
 
 .container{
@@ -59,12 +61,11 @@ body{
 }
 
 section {
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 section h2{
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 h1, h2, h3, h4, h5{
@@ -90,3 +91,4 @@ h4{
 a{
     color: var(--color-cinza-escuro);
 }
+

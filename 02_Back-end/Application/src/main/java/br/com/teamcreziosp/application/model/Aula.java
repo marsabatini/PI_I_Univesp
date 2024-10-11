@@ -1,7 +1,9 @@
 package br.com.teamcreziosp.application.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import br.com.teamcreziosp.application.enums.Modalidade;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
+import lombok.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -14,27 +16,33 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name = "aulas")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Aula implements UserDetails {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+  
+    @NotBlank(message = "Campo obrigatório.")
+    private LocalDateTime dataHora;
+
+    @Enumerated(EnumType.ORDINAL)
+    @NotBlank(message = "Campo obrigatório.")
+    private Modalidade modalidade;
+
+    @ManyToOne
+    @JoinColumn(name = "professor_id")
+    @JsonIdentityReference(alwaysAsId = true)
+    @NotBlank(message = "Campo obrigatório.")
+    private Professor professor;
 
     @NotBlank(message = "Campo obrigatório.")
-    private String data;
+    private Integer qtddLimiteAlunos;
 
-    @NotBlank(message = "Campo obrigatório.")
-    private String horario;
-
-    @NotBlank(message = "Campo obrigatório.")
-    private String modalidade;
-
-    @NotBlank(message = "Campo obrigatório.")
-    private String Professor;
-
-    @NotBlank(message = "Campo obrigatório.")
-    private int qtdAludos;
+    @ManyToMany
+    @JsonIgnore
+    private List<Aluno> alunosInscritos = new ArrayList<>();
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

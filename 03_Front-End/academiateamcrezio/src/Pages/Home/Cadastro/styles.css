@@ -208,4 +208,16 @@ body{
         width: 300px;
         padding: 2rem;
     }
+
+    .cadastro-card {
+        width: 385px;
+        padding: 3rem;
+    }
+
+    .cadastro-card::before{
+        transform: rotate(-1deg);
+
+    }
+    
 }
+

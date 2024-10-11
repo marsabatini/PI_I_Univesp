@@ -3,6 +3,8 @@ package br.com.teamcreziosp.application.model;
 
 import br.com.teamcreziosp.application.security.Role;
 import br.com.teamcreziosp.application.security.config.ValidPassword;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import jakarta.persistence.GeneratedValue;
 import jakarta.validation.constraints.Email;
@@ -24,7 +26,10 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Table(name = "Funcionario", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo", discriminatorType = DiscriminatorType.STRING)
 public class Funcionario implements UserDetails {
 
     @Id

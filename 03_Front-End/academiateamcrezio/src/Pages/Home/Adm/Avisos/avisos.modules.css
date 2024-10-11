@@ -9,32 +9,7 @@
 }
 
 
-footer {
-    display: flex;
-    width: 100%;
-    background-color:#A21500;
-    bottom: 0;
-    
-}
-footer .boxs {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding: 20px;
-   flex:1;
-}
-footer .area--icons {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    gap: 25px;
-}
-footer .areat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-}
+
 .boxs h2 {
     color: #fff ;
     margin-bottom: 15px;
@@ -169,19 +144,6 @@ body {
     cursor: pointer;
 }
 
-.button {
-    width: 300px;
-    height: 70px;
-    font-size: 20px;
-    background: #A21500;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-}
-.button:hover {
-    width: 320px;
-    height: 80px;
-}
 
 .menu_gerenciador { 
     margin-block-start: 10px;

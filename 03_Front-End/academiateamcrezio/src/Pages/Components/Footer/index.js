@@ -13,11 +13,14 @@ function Footer() {
 
     return (
         <>
-            <section>
+          
                 <footer className={Footer_styles.footer}>
+                    
                     <img src={logo_footer} alt="logobaixo" className={Footer_styles.logo_footer} />
                     <div className={Footer_styles.boxs}>
-                        <h2 className={Footer_styles.footer_titles}>Onde nos encontrar</h2>
+                        <div className={Footer_styles.footer_titles}>
+                            <h2>Onde nos encontrar</h2>
+                        </div>
                         <div className={Footer_styles.area_icons}>
                             <a Link className=""> <img src={tiktok} alt="N/A" className={Footer_styles.rsicon} /></a>
                             <a Link className=""> <img src={instagram} alt="N/A" className={Footer_styles.rsicon} /></a>
@@ -25,7 +28,9 @@ function Footer() {
                         </div>
                     </div>
                     <div className={Footer_styles.boxs}>
-                        <h2 className={Footer_styles.footer_titles}>Nossos Contatos</h2>
+                        <div className={Footer_styles.footer_titles}>
+                            <h2>Nossos Contatos</h2>
+                        </div>
                         <div className={Footer_styles.areat}>
                             <span Link className="">(11)98973-2215</span>
                             <span Link className="">contato@teamcrezio.com.br</span>
@@ -33,16 +38,19 @@ function Footer() {
                         </div>
                     </div>
                     <div className={Footer_styles.boxs}>
-                        <h2 className={Footer_styles.footer_titles}>+ Academia Team Crezio</h2>
+                        <div className={Footer_styles.footer_titles}>
+                            <h2>+ Academia Team Crezio</h2>
+                        </div>
                         <div className={Footer_styles.areat}>
                             <a Link className="">Atendimento</a>
                             <a Link className="">Aulas</a>
                             <a Link className="">Team Crezio Petropolis</a>
                         </div>
                     </div>
+                    
                 </footer>
 
-            </section>
+        
         </>
 
     );

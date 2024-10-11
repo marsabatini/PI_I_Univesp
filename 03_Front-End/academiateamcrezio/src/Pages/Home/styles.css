@@ -1,41 +1,41 @@
 .conteudo {
-    margin-bottom: 0px;
+
     padding: 0;
     background-color: #ffffff;
-    width: 100%;
+    max-width: 1897px;
+
 }
 
 .boas-vindas{
+
     margin-bottom: 80px;
-    width: 99%;
-    height: 90%;
+    max-width: 100%;
     
+    
+   
 }
+
 
 .quadro_imagem_inicial {
     display: flex;
-    width: 100%;
+    width: auto;
     justify-content: center;
-
+    
 }
 
-.home_section {
 
-    width: 100%;
-}
 
 .aula_experimental_home, .botão-matriculese {
     display: flex;
     margin-bottom: 80px;
     background-color: #000000;
     height: 300px;
-    width: auto;
     justify-content: center;
     align-items: center;
 }
 
 .aula_experimental_home button, .botão-matriculese button {
-
+    
     width: 400px;
     height: 150px;
     font-size: 40px;
@@ -44,31 +44,21 @@
     transition: all .3s;
     color: #fff;
     cursor: pointer;
-
+    
 }
 
 .aula_experimental_home button:hover, .botão-matriculese button:hover {
-
+    
     background-color: #DD6457;
     transform: scale(0.98);
 }
 
 .aula_experimental_home button:hover:active, .botão-matriculese button:hover:active {
-
+    
     transform: scale(0.93);
 }
 
-.section2 button{
-    display: inline-block;
-    background-color: #A21500;
-    padding: 30px 30px;
-    margin-top: 70px;
-    margin-left: 600px;
-    color: #F0F0F0;
-    border-radius: 15px;
-    font-size: 35px;
-    line-height: 50px;
-}
+
 
 .section2 h4{
     justify-content: center;
@@ -104,18 +94,20 @@
 .imgPlanos{
     
     display: flex;
-    overflow-x: auto;
-    width: 1850px;
+    overflow-x: hidden ;
+    overflow-x: scroll;
+    width: auto;
     padding: 20px;
     
 }
 
 .imgPlanos img {
-
+    
     margin: 20px;
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #0006;
+
 }
 
 .slide_div{
@@ -149,12 +141,12 @@
 
 
 .bull {
-
+    
     margin-top: 80px;
     display: flex;
     justify-content: center;
     width: 100%;
-
+    
 }
 
 .bull img {
@@ -175,22 +167,22 @@
     justify-content: center;
     align-items: center;
     background-color: #d1d1d1;
-
+    gap: 20px;
 }
 
 .foto-professores {
-
+    
     display: flex;
     overflow-x: auto;
-    width: 1850px;
+    width: auto;
     padding: 20px;
     background-color: #d1d1d1;
+    gap: 30px;
     
-
 } 
 
 .foto-professores img {
-    margin-left: 70px;
+    
     width: 400px;
     height: auto;
     border: 5px solid #FFF;
@@ -199,9 +191,9 @@
 }
 
 .foto-professores img:hover {
-
+    
     transform: scale(1.05);
-
+    
 }
 
 .fotos-modalidades {
@@ -213,9 +205,8 @@
 .gallery-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2vw;
-    padding: 0 2vw;
+    gap: 20px;
+    justify-content: center;
     background-color: #d1d1d1;
     padding: 20px;
 }
@@ -238,16 +229,16 @@
 }
 
 .agenda-Semanal {
-
+    
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 80px;
-
+    
 }
 
 .agenda-Semanal img {
-    width: 1300px;
-    height: auto;
+    width: auto;
     box-shadow: 5px 5px 5px #0006;
 }
 
@@ -263,7 +254,7 @@
 }
 
 .foto-loja img {
-
+    
     width: 400px;
     height: auto;
     border: 5px solid #FFF;
@@ -271,13 +262,13 @@
     margin: 15px;
     cursor: pointer;
     box-shadow: 5px 5px 5px #0006;
-
+    
 }
 
 .foto-loja img:hover {
 
     transform: scale(1.1);
-
+    
 }
 
 
@@ -308,17 +299,17 @@
 
 
 .corpoMural {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     background-color: #d1d1d1;
     padding: 20px;
-    height: 700px;
+    height: auto;
 }
 
 .slider-2 {
-    position: absolute;
-    width: 60%;
+    position: relative;
+    width: 100%;
     
 }
 .images-2 {
@@ -326,6 +317,9 @@
     width: 100%;
     justify-content: center;
     height: 600px;
+    align-items: center;
+
+
 }
 .images-2 img {
     height: 600px;
@@ -334,6 +328,7 @@
     position: absolute;
     opacity: 0%;
     box-shadow: 5px 5px 5px #0006;
+
 }
 
 .images-2 input {
@@ -373,19 +368,62 @@
 }
 
 
-.section11 {
-    margin-top: 80px;
-}
-.section11 {
-    margin-bottom: 80px;
+
+.parceiros {
     display: flex;
     justify-content: center;
     background-color: #4B4C4D;
-    height: 400px;  
+    width: auto;
 }
 
-.fotos-parceiros img {
-        margin-bottom: 0;
-        width: 1730px;
-        height: auto;
+.parceiros img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============ RESPONSIVIDADE ============*/
+@media (max-width: 780px) {
+
+    .boas-vindas {
+        max-width: 412px;
+    }
+    .aula_experimental_home {
+        max-width: 412px;
+    }
+
+    .conteudo {
+        max-width: 412px;
+    }
+
+    .aula_experimental_home button, .botão-matriculese button {
+        max-width: 250px;
+        max-height: 100px;
+        font-size: 30px;
+    }
+
+    .imgPlanos img {
+        max-width: 300px;
+    }
+
+    .foto-professores img {
+        max-width: 350px;
+    }
+
+    .gallery-items {
+        max-width: 350px;
+    }
+
+    .foto-loja img {
+        max-width: 350px
+    }
+
+    .images-2 img {
+        max-width: 380px;
+        max-height: 220px;
+    }
+    
+    .agenda-Semanal img {
+        max-width: 412px;
+    }
 }
