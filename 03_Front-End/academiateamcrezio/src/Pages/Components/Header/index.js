@@ -19,12 +19,12 @@ export default function Header() {
 
                             <div className={header_style.menu}>
                                 <ul>
-                                    <li> <a Link to="/">Academia+     </a></li>
-                                    <li> <a Link to="/">Nossa historia</a></li>
-                                    <li> < Link to="/planos">Planos        </Link></li>
-                                    <li> <a Link to="/">Contato       </a></li>
-                                    <li> <a Link to="/">Loja+         </a></li>
-                                    <Link to="/login">  <li><button>Login</button ></li> </Link>
+                                    <li> <a Link to="/">academia+     </a></li>
+                                    <li> <a Link to="/">nossa historia</a></li>
+                                    <li> < Link to="/planos">planos        </Link></li>
+                                    <li> <a Link to="/">contato       </a></li>
+                                    <li> <a Link to="/">loja+         </a></li>
+                                    <Link to="/login">  <li><button>login</button ></li> </Link>
                                     <Link to="/cadastro"> <li><button>cadastrar</button> </li></Link>
                                 </ul>
                             </div>

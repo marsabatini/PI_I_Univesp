@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import foto_inicial from "../../Assets/fotoInicial.png";
 import white_belt from "../../Assets/whiteBelt.jpeg";
 import blue_belt from "../../Assets/blueBelt.jpeg";
@@ -68,54 +69,54 @@ export default function Inicio() {
                     <main className="conteudo">
                         <div className="quadro_imagem_inicial"><br />
 
-                            <img src={foto_inicial} className="boas-vindas" />
+                            <img src={foto_inicial} alt="foto com uma luta de judo com frase motivacional" className="boas-vindas" />
 
                         </div>
 
                         <div className="aula_experimental_home">
-                           <Link to="/aula_experimental"> <button >Marque Agora uma <br /> Aula Experimental</button></Link>
+                           <Link to="/aula_experimental"> <button > marque agora uma aula  <br /> aula experimental</button></Link>
                         </div>
 
                         <div>
                             <div>
-                                <span className="planoTeamCrezio">PLANOS<br /> TEAM CREZIO</span>
+                                <span className="planoTeamCrezio">planos<br /> team crezio</span>
                             </div>
 
                             <div className="planos">
                                 <div className="imgPlanos">
-                                    <img src={white_belt}/>
-                                    <img src={blue_belt}/>
-                                    <img src={purple_belt}/>
+                                    <img src={white_belt} alt=""/>
+                                    <img src={blue_belt} alt=""/>
+                                    <img src={purple_belt} alt=""/>
                                     <img src={kids}/>
-                                    <img src={black_belt}/>
-                                    <img src={single}/>
-                                    <img src={single_plus}/>
-                                    <img src={triple}/>
-                                    <img src={triple_plus}/>
+                                    <img src={black_belt} alt=""/>
+                                    <img src={single} alt=""/>
+                                    <img src={single_plus} alt=""/>
+                                    <img src={triple} alt=""/>
+                                    <img src={triple_plus} alt=""/>
 
                                 </div>
                             </div>
                         </div>
 
                         <div className="bull">
-                            <img src={bull} />
+                            <img src={bull} alt=""/>
                         </div>
                 
 
                         <div>
-                            <span className="mestres">TREINE COM NOSSO MESTRES</span>
+                            <span className="mestres"> treine com nossos mestres</span>
                         </div>
 
                         <div className="professores">
                             <div className="foto-professores">
-                                <img src={gabr_carv_pic} />
-                                <img src={eli_braz_pic} />
-                                <img src={eduardo_pic} />
+                                <img src={gabr_carv_pic} alt="" />
+                                <img src={eli_braz_pic} alt=""/>
+                                <img src={eduardo_pic} alt="" />
                             </div>
                         </div>
                         
                         
-                            <span className="modalidades">MAIS MODALIDADES</span>
+                            <span className="modalidades"> mais modalidades</span>
                             <div className="fotos-modalidades">
                                 <div className="gallery-container">
                                     <a href="" className="gallery-items">
@@ -142,18 +143,18 @@ export default function Inicio() {
                        
 
                         
-                        <span className="tabela">AGENDA SEMANAL</span>
+                        <span className="tabela">agenda semanal</span>
                             <div className="agenda-Semanal">
-                                <img src={tabela_horarios} />
+                                <img src={tabela_horarios} alt="tabela do horario das aulas"/>
                             </div>
                         
                         <div className="botão-matriculese">
-                            <Link to="/cadastro"><button>Matricule-se Agora</button></Link>
+                            <Link to="/cadastro"><button> matricule-se agora</button></Link>
                         </div>
                         
 
                         
-                        <span className="loja">CONHEÇA NOSSA LOJA</span>
+                        <span className="loja">conheça nossa loja</span>
 
                             <div className="foto-loja">
                                 <div className="images">
@@ -166,7 +167,7 @@ export default function Inicio() {
                             </div>
                
                         
-                            <span className="mural">MURAL</span>
+                            <span className="mural">mural</span>
 
                             <div className="corpoMural">
                                 <div className="slider-2">

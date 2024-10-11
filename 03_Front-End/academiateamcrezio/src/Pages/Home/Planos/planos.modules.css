@@ -9,6 +9,7 @@
 }
 
 body {
+    margin-top: 50px;
     position: relative;
     display: flex;
     align-items: center;
@@ -23,14 +24,16 @@ body {
     justify-content: center;
 }
 .caixas {
-    width: 52% ;
-    height: 450px;
+    width: 75% ;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 0px;
-    align-items: center;
     margin-bottom: 90px;
+}
+.imagens1 {
+    margin: 10px;
+}
+.imagens2 {
+    margin-bottom: 50px;
 }
 .imagens1 a{
     text-decoration: none;
@@ -40,7 +43,7 @@ body {
     text-decoration: none;
 }
 .caixa {
-    width: 1250px;
+    width: auto;
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -104,13 +107,12 @@ body {
 .col3 {
     display: flex;
     width: 80%;
-    justify-content: space-evenly;
-    align-items: center;
     background: #A21500;
     padding: 6px;
     border-radius: 3px 0 0 3px;
     margin-left: 60px;
     margin-bottom: 5px;
+    justify-content:space-around;
 }
 .col1 span {
     font-size: 12px;
@@ -131,8 +133,8 @@ body {
     font-size: 22px;
 }
 .plan2 {
-    width: 305px;
-    height: 360px ;
+    width: 325px;
+    height: 400px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,6 +142,7 @@ body {
     color: #fff;
     border-radius: 5px  ;
     text-decoration: none;
+    margin: 5px;
 }
 .col4 {
     display: flex;
@@ -156,11 +159,13 @@ body {
     font-size: 12px ;
 }
 .plan2 h1 {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .plan2 h3 {
-    background: #A21500;
-    width: 80%;
+    background: #A21500; 
+    width: 90%;
+    padding: 12px;
+    font-size: 25px;
     text-align: center;
     border-radius: 5px;
     margin: 7px 0;

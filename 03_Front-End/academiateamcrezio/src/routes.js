@@ -16,6 +16,8 @@ import Avisos from "./Pages/Home/Adm/Avisos";
 import Perfis from "./Pages/Home/Adm/Perfis";
 import Mural from "./Pages/Home/Adm/Mural";
 import Cadastro_Geral from "./Pages/Home/Adm/CadastroGerais";
+import Planos_Adm from "./Pages/Home/Adm/Planosadm"
+import Pef_adm from "./Pages/Home/Adm/PeF"
 
 import Aluno from "./Pages/Home/Aluno";
 
@@ -42,6 +44,8 @@ export default function AppRoutes() {
                 <Route path="/aula_experimental" element={<Aula_Experimental/>} />
                 <Route path="/planos" element={<Planos/>} />
                 <Route path="/agenda_aluno" element={<Agenda_Aluno/>} />
+                <Route path="/Adm/planosadm" element={<Planos_Adm/>} />
+                <Route path="/Adm/pef"  element={<Pef_adm/>} />
 
                 {/* <Route path="/perfil" element={<Perfil/>} /> */}
             </Routes>

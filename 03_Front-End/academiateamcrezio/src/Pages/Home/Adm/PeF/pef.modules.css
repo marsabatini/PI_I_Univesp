@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pef_section {
+    height: 103vh;
+}
+
+.pef {
+    margin-top: -32px;
+}
+.pef_caixa {
+    display: flex;
+    margin-top: 35px;
+}
+
+.pef_1   {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+
+}
+
+.pef_img {
+    display: flex;
+}
+
+.pef_3 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.pef_3 input{
+    border: none;
+    padding: 3px;
+}
+.titulo_pef  {
+    background-color: #A21500;
+    height: 50px;
+    width: 1600px;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-block-start: 10px;
+}
+
+.list_pef {
+    height: 325px;
+    width: 395px  ;
+    align-items: flex-start;
+    background: #d1d1d1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.pef_img img {
+    width: 180px;
+    height: 180px;
+}
+
+.button_pef button{
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    background-color: #0b721c;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+

@@ -88,6 +88,7 @@
     font-size: 56px;
     line-height: 1;
     display: flex;
+    text-transform: capitalize;
 }
 
 /*começo slides*/

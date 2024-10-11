@@ -24,11 +24,11 @@ function Gerenciador_ADM() {
                             <Link >                         <li>Agenda Personal          </li></Link> 
                             <Link >                         <li>Presença                 </li></Link> 
                             <Link to="/Adm/cadastro_gerais"><li>Cadastros                </li></Link> 
-                            <Link >                         <li>Planos                   </li></Link> 
+                            <Link to="/Adm/planosadm">      <li>Planos                   </li></Link> 
                             <Link to="/Adm/perfis">         <li>Perfis                   </li></Link>
                             <Link to="/Adm/mural">          <li>Mural                    </li></Link> 
                             <Link >                         <li>Loja Física              </li></Link> 
-                            <Link >                         <li>Professores e Treinadores</li></Link> 
+                            <Link to="/Adm/pef">            <li>Professores e Treinadores</li></Link> 
                         </ul>
                     </div>
                 </div>

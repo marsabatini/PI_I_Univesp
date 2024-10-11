@@ -17,7 +17,7 @@ export default function Planos() {
                     <Header/>
                     
                     <div class="container">
-                        <h1>Planos</h1>
+                        <h1>planos</h1>
                         <div className="caixas">
                             <div className="imagens1">
                                 <a Link=""> <div className="plan1">
