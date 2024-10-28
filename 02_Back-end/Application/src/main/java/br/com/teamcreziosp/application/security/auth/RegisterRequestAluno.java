@@ -44,7 +44,7 @@ public class RegisterRequestAluno {
     @NotBlank(message = "Campo obrigatório.")
     private String rg;
 
-    @CPF(message = "CPF inválido.")
+//    @CPF(message = "CPF inválido.")
     @NotBlank(message = "Campo obrigatório.")
     private String cpf;
 
@@ -58,16 +58,16 @@ public class RegisterRequestAluno {
 
     private String statusPlano;
 
-    @NotBlank(message = "Campo obrigatório.")
-    private String endereco;
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String endereco;
+//
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String numEndereco;
+//
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String cidade;
 
-    @NotBlank(message = "Campo obrigatório.")
-    private String numEndereco;
-
-    @NotBlank(message = "Campo obrigatório.")
-    private String cidade;
-
-    @NotBlank(message = "Campo obrigatório.")
-    private String cep;
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String cep;
 
 }
