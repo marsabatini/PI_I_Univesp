@@ -18,7 +18,7 @@ export default function Nova_Senha() {
             <div>
                 <section>
                     <Header/>
-                    <form action="">
+                    <form className="form-novasenha" action="">
                         <div className="nova-s">
                             <h1>escolha sua nova senha</h1>
                             <div className="input-g">

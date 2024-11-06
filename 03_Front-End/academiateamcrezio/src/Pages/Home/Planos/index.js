@@ -16,9 +16,9 @@ export default function Planos() {
                 <section>
                     <Header/>
                     
-                    <div class="container">
+                    <div class="containerp">
                         <h1>planos</h1>
-                        <div className="caixas">
+                        <div className="caixa3">
                             <div className="imagens1">
                                 <a Link=""> <div className="plan1">
                                     <h1>white belt</h1>
@@ -190,10 +190,10 @@ export default function Planos() {
                             </div>
                         </div>
                     </div>
-                    <br /> <br /> <br /> <br /> <br /><br />
-                    <div class="container">
+
+                    <div class="containerp">
                         <h1>planos promocionais</h1>
-                        <div className="caixa">
+                        <div className="caixa2">
                             <div className="imagens2">
                                 <a Link=""> <div className="plan2">
                                     <h1>Black belt</h1>
@@ -259,8 +259,7 @@ export default function Planos() {
                             </div>
                             <div className="imagens2">
                                 <a Link=""><div className="plan2">
-                                    <h1>triple +
-                                    </h1>
+                                    <h1>triple +</h1>
                                     <div className="col4">
                                         <h2>R$ 399,00</h2>
                                         <span>media mensal</span>
@@ -276,12 +275,14 @@ export default function Planos() {
                                     <span>kimono vouk de presente</span>
                                     <span>1x na semana (diminui 25%)</span>
                                     <span>3x por semana (aumenta 50%)</span>
-
+                                    
                                 </div></a>
+                                
                             </div>
                         </div>
+                        <button className="button_p">marque gratuitamente uma aula experimental</button>
                     </div>
-                    <button className="button">marque gratuitamente uma aula experimental</button>
+                    
                     <br />
 
                 <Footer/>
