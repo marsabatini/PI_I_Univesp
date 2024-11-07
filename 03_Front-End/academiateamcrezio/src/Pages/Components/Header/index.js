@@ -5,21 +5,21 @@ import logo_header from "../../../Assets/logoa.jpeg";
 
 export default function Header() {
 
-    async function OpenMenu() {
+    function OpenMenu() {
 
         let hidden_menu = document.getElementById('hidden_menu'),
             list = document.getElementById('hidden_links'),
             icon = document.getElementById('list_icon');
         
     
-        if( hidden_menu.className == "header_show_menu__f-sd1" ){
+        if( hidden_menu.className == header_style.show_menu ){
             hidden_menu.className = "";
-            list.className = "header_hide__xvLEo";
+            list.className = header_style.hide;
             icon.className = "bi bi-list";
     
         }else{
     
-            hidden_menu.className = "header_show_menu__f-sd1";
+            hidden_menu.className = header_style.show_menu;
             list.className = "";
             icon.className = "bi bi-x-lg";
 

@@ -311,51 +311,31 @@ body {
     padding: 10px;
 }
 
-.open_dados_aluno{
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-    align-items: start;
-    padding: 15px;
-    font-size: 20px;
-    display: flex;
-    background-color: #dbdbdb;
-}
-
-.open_aulas {
-    height: 100%;
-
-}
-
-.open_avisos{
-    height: 450px;
-}
 
 
 
 @media (max-width: 780px) {
-
+    
     .section_perfil_aluno {
         max-width: 412px;
         min-width: 400px;
-
+        
     }
-
+    
     .container_aluno {
         flex-direction: column;
-
+        
     }
-
+    
     .notificação_aluno_ft {
         display: flex;
         font-size: 18px;
         padding-top: 10px;
     }
-
+    
     .notificação_aluno {
         display: none;
-
+        
     }
 
     .containerb {
@@ -363,19 +343,19 @@ body {
         align-items: center;
         padding: 15px;
     }
-
+    
     .avisos_aluno{
         max-width: 100%;
         height: 80px;
         overflow: hidden;
         margin-top: 30px;
-
+        
     }
 
     .avisos_aluno_title i {
         display: flex;
     }
-
+    
     .info {
         display: none;
 
@@ -387,22 +367,61 @@ body {
         overflow: hidden;
         margin-bottom: 20px;
     }
-
+    
     .info_responsivo {
         display: flex;
         height: 66px;
         overflow: hidden;
-
+        
     }
 
     .marcadas_title {
         background-color: #3d3e40;
-
+        
     }
 
     .marcadas_title i {
         display: flex;
         color: #fff;
     }
+    
+    .open_dados_aluno{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        align-items: start;
+        padding: 15px;
+        font-size: 20px;
+        display: flex;
+        background-color: #dbdbdb;
+    }
+    
+    .open_aulas {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        align-items: start;
+        font-size: 20px;
+        display: flex;
+        color: #fff;
+    }
+    
+    .open_avisos{
+        height: 450px;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+        display: flex;
+        background-color: #d1d1d1;
+        margin-top: 30px;
+    }
 
+    .open_avisos li {
+        list-style:inside;
+        text-align: start;
+        padding-left: 10px;
+    }
 }

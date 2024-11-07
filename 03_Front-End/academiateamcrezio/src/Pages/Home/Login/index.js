@@ -32,13 +32,15 @@ export default function Login() {
 
         try {
             const response = await api.post('/api/login', data);
+            const userData = response.data;
 
-            localStorage.setItem('email', email);
-            localStorage.setItem('id', response.data.id);
-            localStorage.setItem('nome', response.data.nome);
-            localStorage.setItem('acessToken', response.data.token);
-            localStorage.setItem('refreshToken', response.data.refreshToken);
-            localStorage.setItem('role', response.data.role);
+            localStorage.setItem('userData',JSON.stringify(userData));
+            // localStorage.setItem('email', email);
+            // localStorage.setItem('id', response.data.id);
+            // localStorage.setItem('nome', response.data.nome);
+            // localStorage.setItem('acessToken', response.data.token);
+            // localStorage.setItem('refreshToken', response.data.refreshToken);
+            // localStorage.setItem('role', response.data.role);
 
             // Precisaremos fazer a lógica para, caso seja funcionário ou aluno
             if (response.data.role === "ALUNO") {
