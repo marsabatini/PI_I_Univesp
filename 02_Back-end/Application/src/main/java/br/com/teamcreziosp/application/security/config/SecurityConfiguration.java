@@ -42,7 +42,10 @@ public class SecurityConfiguration{
                                         "/api/files/upload",
                                         "api/aulaexperimental/atualiza={email}",
                                         "/adm/aulas",
-                                        "/adm/aulas/{id}")               //===> REFATORAR: permitir apenas Roles EXPERIMENTAL
+                                        "/adm/aulas/{id}",
+                                        "/adm/aulas/adicionaraluno/{idAula}/{idAluno}",
+                                        "/adm/aulas/removeraluno/{idAula}/{idAluno}"
+                                        )               //===> REFATORAR: permitir apenas Roles EXPERIMENTAL
                                         .permitAll()
                         .requestMatchers("/api/agenda").hasAuthority("EXPERIMENTAL")
                         .requestMatchers("/api/funcionarios").authenticated()

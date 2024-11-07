@@ -1,11 +1,14 @@
 package br.com.teamcreziosp.application.controller;
 
+import br.com.teamcreziosp.application.model.Aluno;
 import br.com.teamcreziosp.application.model.Aula;
 import br.com.teamcreziosp.application.model.Professor;
+import br.com.teamcreziosp.application.repository.AlunoRepository;
 import br.com.teamcreziosp.application.repository.AulaRepository;
 import br.com.teamcreziosp.application.repository.ProfessorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -22,6 +25,9 @@ public class AulaController {
     @Autowired
     private ProfessorRepository professorRepository;
 
+    @Autowired
+    private AlunoRepository alunoRepository;
+
     @GetMapping("/aulas")
     public List<Aula> findAll() {
         return aulaRepository.findAll();
@@ -36,7 +42,7 @@ public class AulaController {
             aula.setProfessor(professor.get());
             aulaRepository.save(aula);
         } else {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "TiposAula não encontrado");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Professor não encontrado");
         }
     }
 
@@ -46,6 +52,7 @@ public class AulaController {
     }
 
     @DeleteMapping("/aulas")
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public void delete(@RequestBody Aula aula) {
         aulaRepository.delete(aula);
     }
@@ -54,5 +61,59 @@ public class AulaController {
     public Aula update(@RequestBody Aula aula) {
         return aulaRepository.save(aula);
     }
+
+    //adicionar restricao de quantidade de alunos
+    @PostMapping("/aulas/adicionaraluno/{idAula}/{idAluno}")
+    public ResponseEntity<String> adicionarAluno(@PathVariable(value = "idAula") Integer idAula, @PathVariable(value = "idAluno") Integer idAluno) {
+
+        Optional<Aula> buscarAula = aulaRepository.findById(idAula);
+        if (buscarAula.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aula não encontrada.");
+        }
+
+        Optional<Aluno> buscarAluno = alunoRepository.findById(idAluno);
+        if (buscarAluno.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aluno não encontrado.");
+        }
+
+        Aula aula = buscarAula.get();
+        Aluno aluno = buscarAluno.get();
+
+        if (!aula.getAlunosInscritos().contains(aluno)) {
+            aula.getAlunosInscritos().add(aluno);
+            aulaRepository.save(aula);
+            return ResponseEntity.ok("Aluno inscrito com sucesso.");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Aluno já está inscrito nesta aula.");
+        }
+    }
+    
+    @DeleteMapping("/aulas/removeraluno/{idAula}/{idAluno}")
+    public ResponseEntity<String> removerAluno(@PathVariable(value = "idAula") Integer idAula, @PathVariable(value = "idAluno") Integer idAluno) {
+        Optional<Aula> buscarAula = aulaRepository.findById(idAula);
+        if (buscarAula.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aula não encontrada.");
+        }
+
+        Optional<Aluno> buscarAluno = alunoRepository.findById(idAluno);
+        if (buscarAluno.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aluno não encontrado.");
+        }
+
+        Aula aula = buscarAula.get();
+        Aluno aluno = buscarAluno.get();
+
+        if (aula.getAlunosInscritos().contains(aluno)) {
+            aula.getAlunosInscritos().remove(aluno);
+            aulaRepository.save(aula);
+            return ResponseEntity.ok("Aluno removido com sucesso.");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Aluno não está inscrito nesta aula.");
+        }
+    }
+
+    //buscar alunos inscritos na aula
+    //buscar quais aulas o aluno está inscrito
+
 
 }

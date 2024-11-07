@@ -1,81 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    background: #d9d9d9;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: #d9d9d9;
 }
 .nova-s {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 50px;
-    height: auto;
-    width: auto;
-    border-radius: 10px;
-    background: #fff;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 50px;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  background: #fff;
+  align-items: center;
 }
-.nova-s h1 { 
-    margin: 30px;
-    font-size: 50px;
+.nova-s h1 {
+  margin: 30px;
+  font-size: 50px;
 }
 .nova-s button {
-    width: 200px;
-    height: 52px;
-    font-size: 19px;
-    color: #fff;
-    background: #1d1d1d;
-    border-radius: 5px;
-    border: none;
-    margin: 25px;
-    cursor: pointer;
-    transition: all .3s;
+  width: 200px;
+  height: 52px;
+  font-size: 19px;
+  color: #fff;
+  background: #1d1d1d;
+  border-radius: 5px;
+  border: none;
+  margin: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .nova-s button:hover {
-
-    background-color: #3D3E40;
-    transform: scale(.95);
-
+  background-color: #3d3e40;
+  transform: scale(0.95);
 }
 
 .nova-s button:hover:active {
-
-    transform: scale(.90);
-    
+  transform: scale(0.9);
 }
-
 
 .input-g {
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    margin: 10px 25px;
-    color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  margin: 10px 25px;
+  color: #1d1d1d;
 }
-.input-g input { 
-    width: 525px;
+.input-g input {
+  width: 525px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 19px;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  border: 2 px solid;
+}
+
+@media (max-width: 780px) {
+  .nova-s h1 {
+    margin: 10px;
+    font-size: 29px;
+  }
+
+  .nova-s {
+    padding: 0; 
+  }
+  .input-g input {
+    width: 100%;
+    height: 38px;
+    border-radius: 7px;
+    border: 1.75px solid;
+  }
+  .input-g label {
+    font-size: 22.5px;
+  }
+  .nova-s button {
+    width: 150px;
     height: 50px;
-    border-radius: 10px;
-    font-size: 19px;
-    padding: 10px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-    "slnt" 0;
-    border: 2 px solid
+  }
 }

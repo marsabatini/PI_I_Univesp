@@ -24,8 +24,7 @@ public class AlunoController {
     public void save(@RequestBody Aluno aluno) {
         alunoRepository.save(aluno);
     }
-
-
+    
     @GetMapping("/alunos/{id}")
     public Optional<Aluno> findById(@PathVariable(value = "id") Integer id) {
         return alunoRepository.findById(id);

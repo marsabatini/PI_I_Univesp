@@ -22,13 +22,13 @@ export default function Cadastros() {
                         <section className="profiles_section">
                             
                                 <h3 className="titulo_perfis">
-                                    PERFIS
+                                    perfis
                                 </h3>
     
                             <div className="Gerencia_perfis">
 
                                 <div id="Aluno_situacao">
-                                    <div className="lock_checkbox">Trancado</div>
+                                    <div className="lock_checkbox">trancado</div>
 
                                     <label className="switch">
                                         <input type="checkbox"/>
@@ -54,48 +54,48 @@ export default function Cadastros() {
 
                                             <form class="input_dados_forms" id="Aluno_input_dados_forms">
                                                 <div className="form-row">
-                                                    <label for="nome">NOME:</label>
+                                                    <label for="nome">nome</label>
                                                     <input type="text" id="nome" name="nome" placeholder="nome"/>
                                                 </div>
 
                                                 <div className="form-row">
-                                                    <label for="status">STATUS:</label>
+                                                    <label for="status">status</label>
                                                     <select id="status" name="status">
-                                                        <option value="active">Ativo</option>
-                                                        <option value="inactive">Inativo</option>
+                                                        <option value="active">ativo</option>
+                                                        <option value="inactive">inativo</option>
                                                     </select>
                                                 </div>
 
                                                 <div className="form-row">
-                                                    <label for="matricula">MATRÍCULA:</label>
+                                                    <label for="matricula">matricula</label>
                                                     <input type="text" id="matricula" name="matricula" placeholder="insira matricula"/>
                                                 </div>
 
                                                 <div className="form-row">
-                                                    <label for="graduacao">GRADUAÇÃO:</label>
+                                                    <label for="graduacao">graduação</label>
                                                     <select id="graduacao" name="graduacao" placeholder="faixa">
-                                                        <option value="Branca">Branca</option>
-                                                        <option value="Preta">Preta</option>
+                                                        <option value="Branca">branca</option>
+                                                        <option value="Preta">preta</option>
                                                     </select>
                                                 </div>
 
                                                 <div className="form-row">
-                                                    <label for="plano">PLANO:</label>
+                                                    <label for="plano">plano:</label>
                                                     <input type="text" id="plano" name="plano" placeholder="plano"/>
                                                 </div>
 
                                                 <div className="form-row">
-                                                    <label for="validade_plano">VALIDADE DO PLANO:</label>
+                                                    <label for="validade_plano">validade do plano:</label>
                                                     <input type="date" id="validade_plano" name="validade_plano"/>
                                                 </div>
 
                                                 <div className="form-row">
-                                                    <label for="prox_vencimento">PRÓXIMO VENCIMENTO:</label>
+                                                    <label for="prox_vencimento">proximo vencimento</label>
                                                     <input type="date" id="prox_vencimento" name="prox_vencimento"/>
                                                 </div>
 
                                                 <div className="form-row">
-                                                    <label for="validade_exame_medico">VALIDADE EXAME MÉDICO:</label>
+                                                    <label for="validade_exame_medico">validade exame medico</label>
                                                     <input type="date" id="validade_exame_medico" name="validade_exame_medico"/>
                                                 </div>
 
@@ -106,7 +106,7 @@ export default function Cadastros() {
 
                                         <div id="notificacoes_para_aluno">
 
-                                            <div className="notifications">NOTIFICAÇÕES:</div>
+                                            <div className="notifications">notificações</div>
 
                                             <div className="select_notifications">
 
@@ -141,28 +141,28 @@ export default function Cadastros() {
                                         <div id="Exame_medico">
 
                                             <div id="upload_btn">
-                                                <label for="file-upload" class="file-upload-btn">Anexar Arquivo Médico
+                                                <label for="file-upload" class="file-upload-btn">anexar arquivo medico
                                                     {/* <img src={} alt="logotipo" className="img_medical_exam"/> */}
                                                 </label>
                                                 <input className="validate_medical_exam" type="file" id="file-upload" onchange="updateLabel()"/>
                                             </div>
 
                                             <div id="envia_btn">
-                                                <button className="enviar-button" type="button">Enviar!</button>
+                                                <button className="enviar-button" type="button">enviar!</button>
                                             </div>
 
                                             <div id="ver_arquivo">
-                                                <button className="view-button" type="button">Ver Exame Médico!</button>
+                                                <button className="view-button" type="button">ver exame medico</button>
                                             </div>
 
                                         </div>
 
                                         <div id="Validar_exame_medico_area">
                                             <div id="data_exame">
-                                                Realizado dia 13/12/2023
+                                                realizado dia 13/12/2023
                                             </div>
                                             <div >
-                                                <button id="validar_exame_medico_btn" type="button">Validar Exame Médico</button>
+                                                <button id="validar_exame_medico_btn" type="button">validar exame medico</button>
                                             </div>
                                         </div>
 

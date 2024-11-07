@@ -1,6 +1,5 @@
 package br.com.teamcreziosp.application.model;
 
-
 import br.com.teamcreziosp.application.security.Role;
 import br.com.teamcreziosp.application.security.config.ValidPassword;
 import jakarta.persistence.*;
@@ -65,8 +64,6 @@ public class Aluno implements UserDetails {
     private String graduacao;
 
     private String exameMedico;
-
-    private String aulas_prox_grad;
 
     private String plano;
 

@@ -71,3 +71,51 @@ body {
     "slnt" 0;
     border: 1px solid
 }
+
+@media (max-width: 780px) {
+    .recuperação {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        width: 300px;
+        background: #fff;
+    }
+
+    .recuperação h1 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .recuperação h3 {
+        font-size: 18px;
+        text-align: start;
+        margin: 10px 0px;
+        width: 95%;
+        color: #6b6b6b;
+    }
+
+    .recuperação span {
+        font-size: 16px;
+        text-align: center;
+        margin: 10px 0px ;
+        width: auto;
+        color: #6b6b6b;
+    }
+
+    .emailveri input {
+        width: 300px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 15px;
+        padding: 5px;
+        border: 1px solid
+    }
+
+    .recuperação button {
+        width: 185px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+}
+
