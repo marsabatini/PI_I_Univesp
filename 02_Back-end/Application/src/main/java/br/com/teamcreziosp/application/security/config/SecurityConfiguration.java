@@ -44,8 +44,10 @@ public class SecurityConfiguration{
                                         "/adm/aulas",
                                         "/adm/aulas/{id}",
                                         "/adm/aulas/adicionaraluno/{idAula}/{idAluno}",
-                                        "/adm/aulas/removeraluno/{idAula}/{idAluno}"
-                                        )               //===> REFATORAR: permitir apenas Roles EXPERIMENTAL
+                                        "/adm/aulas/removeraluno/{idAula}/{idAluno}",
+                                        "/adm/aulas/alunosinscritosnaaula/{idAula}",
+                                        "/adm/aulas/aulasdoaluno/{idAluno}"
+                                        ) //===> REFATORAR: permitir apenas Roles EXPERIMENTAL
                                         .permitAll()
                         .requestMatchers("/api/agenda").hasAuthority("EXPERIMENTAL")
                         .requestMatchers("/api/funcionarios").authenticated()

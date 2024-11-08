@@ -2,6 +2,8 @@ package br.com.teamcreziosp.application.model;
 
 import br.com.teamcreziosp.application.security.Role;
 import br.com.teamcreziosp.application.security.config.ValidPassword;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -11,6 +13,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,6 +74,15 @@ public class Aluno implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(
+            name = "aluno_aula",
+            joinColumns = @JoinColumn(name = "aluno_id"),
+            inverseJoinColumns = @JoinColumn(name = "aula_id")
+    )
+    private List<Aula> aulasInscritas = new ArrayList<>();
 
 //    @NotBlank(message = "Campo obrigatório.")
 //    private String endereco;

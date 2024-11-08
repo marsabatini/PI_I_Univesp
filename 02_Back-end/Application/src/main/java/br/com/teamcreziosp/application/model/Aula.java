@@ -40,8 +40,8 @@ public class Aula implements UserDetails {
     @NotNull(message = "Campo obrigatório.")
     private Integer qtddLimiteAlunos;
 
-    @ManyToMany
     @JsonIgnore
+    @ManyToMany(mappedBy = "aulasInscritas")
     private List<Aluno> alunosInscritos = new ArrayList<>();
 
     @Override
