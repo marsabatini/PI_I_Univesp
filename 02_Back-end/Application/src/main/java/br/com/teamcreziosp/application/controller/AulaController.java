@@ -16,7 +16,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/adm")
@@ -54,10 +53,18 @@ public class AulaController {
         return aulaRepository.findById(id);
     }
 
-    @DeleteMapping("/aulas")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public void delete(@RequestBody Aula aula) {
+    @DeleteMapping("/aulas/{id}")
+    //@ResponseStatus(HttpStatus.ACCEPTED)
+    public ResponseEntity<String> delete(@PathVariable(value = "id") Integer id) {
+        Optional<Aula> buscarAula = aulaRepository.findById(id);
+
+        if (buscarAula.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aula não encontrada.");
+        }
+
+        Aula aula = buscarAula.get();
         aulaRepository.delete(aula);
+        return ResponseEntity.status(HttpStatus.OK).body("Aula excluída com sucesso.");
     }
 
     @PutMapping("/aulas")
