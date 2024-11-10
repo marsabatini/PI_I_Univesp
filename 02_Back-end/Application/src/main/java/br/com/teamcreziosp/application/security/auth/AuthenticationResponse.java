@@ -16,7 +16,27 @@ public class AuthenticationResponse {
 
     Integer id;
 
-    String nome;
+    String nomeSobrenome;
+
+    String telefone;
+
+    String email;
+
+    String dataNascimento;
+
+    String graduacao;
+
+    String aulas_prox_graduacao;
+
+    String sexo;
+
+    String plano;
+
+    String statusPlano;
+
+    String exameMedico;
+
+    String cargo;
 
     Role role;
 

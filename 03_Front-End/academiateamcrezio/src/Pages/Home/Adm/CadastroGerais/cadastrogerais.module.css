@@ -41,6 +41,7 @@
     width: 100%;
     height: 80px;
     padding: 20px;
+    gap: 10px;
 
 }
 
@@ -56,20 +57,55 @@
 
 }
 
+.consultar_aluno{
+    width: 100px; 
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #3D3E40;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.consultar_aluno:hover {
+    transform: scale(.95);
+    background-color: #686869;
+}
+
+.delete {
+
+    background-color: #700809;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 100px;
+    text-transform: uppercase;
+    transition: all .3s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.delete:hover {
+
+    background-color: #A21500;
+    transform: scale(.95);
+}
+
+.delete:hover:active {
+
+    transform: scale(.9);
+}
+
 .input_aluno input[type="text"] {
     border: none;
     outline: none;
     flex-grow: 1;
-    padding-left: 30px;
+    padding-left: 40px;
     font-size: 16px;
 }
 
-.input_aluno button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
 
 .input_aluno input::placeholder {
     font-size: 16px;
@@ -109,6 +145,7 @@
     padding: 20px;
 
 }
+
 
 .tipo_cadastro {
 
@@ -166,21 +203,23 @@
 
 }
 
-.input_nome, .input_sobrenome, 
+.input_nome, .input_sobrenome, .input_RG,
 .input_CPF, .input_data_nasc,.input_email,
 .input_tel, .input_endereco, .input_num,
 .input_cidade, .input_CEP, .input_reponsavel, 
-.input_tel_responsavel, .input_senha, .input_conf_senha{
+.input_tel_responsavel, .input_senha, .input_conf_senha,
+.input_sexo{
 
     display: flex;
     margin-bottom: 15px;
 }
 
-.input_nome input, .input_sobrenome input, 
+.input_nome input, .input_sobrenome input, .input_RG input,
 .input_CPF input, .input_data_nasc input,.input_email input,
 .input_tel input, .input_endereco input, .input_num input,
 .input_cidade input, .input_CEP input, .input_reponsavel input, 
-.input_tel_responsavel input, .input_senha input, .input_conf_senha input{
+.input_tel_responsavel input, .input_senha input, .input_conf_senha input,
+.input_sexo input{
 
     border: none;
     box-shadow: 0px 1px 2px 2px #acacac;
@@ -207,6 +246,17 @@
     margin-left: 4.5em;
 
 }
+
+.input_RG input {
+    width: 300px;
+    margin-left: 2.5em;
+}
+
+.input_RG label {
+    margin-left: 2.5em;
+
+} 
+
 .input_data_nasc input {
 
     width: 250px;
@@ -232,6 +282,15 @@
     width: 300px;
     margin-left: 2.2em;
 
+}
+
+.input_sexo input{
+    width: 200px;
+    margin-left: 2em;
+}
+
+.input_sexo label {
+    margin-left: 2.5em;
 }
 
 .input_endereco input {
@@ -323,6 +382,10 @@
     align-items: center;
     width: 100%;
     margin-top: 30px;
+    box-shadow: inset 0.1px 3px 3px 3px #acacac;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
 
 }
 
@@ -359,26 +422,7 @@
 }
 
 
-.tipo_cadastro_options button.delete {
 
-    background-color: #700809;
-    height: 70px;
-    font-size: 35px;
-    text-transform: uppercase;
-    transition: all .3s;
-
-}
-
-.tipo_cadastro_options button.delete:hover {
-
-    background-color: #A21500;
-    transform: scale(.95);
-}
-
-.tipo_cadastro_options button.delete:hover:active {
-
-    transform: scale(.9);
-}
 
 .cadastros_gerais_section {
 

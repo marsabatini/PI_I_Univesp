@@ -173,17 +173,25 @@ body {
 }
 
 .button_p {
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 90px;
     font-size: 20px;
     color: #fff;
     cursor: pointer;
     background-color: #a21500;
     border-radius: 5px;
-    transition: background .3s;
-    transition: transform .3s;
+    transition: all .3s;
     border: none; 
     margin-bottom: 50px;
+}
+
+.button_p:hover {
+    background-color: #DD6457;
+    transform: scale(0.98);
+}
+
+.button_p:active {
+    transform: scale(0.93);
 }
 
 @media (max-width: 780px) {

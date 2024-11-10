@@ -53,7 +53,7 @@ export default function Cadastro() {
         try {
             await api.post('api/cadastro', data);
 
-            alert('Usuário cadastrado com mensagemSucesso.');
+            alert('Usuário cadastrado com Sucesso.');
 
             navigate('/login');
 

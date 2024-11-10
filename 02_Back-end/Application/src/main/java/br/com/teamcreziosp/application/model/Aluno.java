@@ -66,6 +66,8 @@ public class Aluno implements UserDetails {
 
     private String graduacao;
 
+    private String aulas_prox_grad;
+
     private String exameMedico;
 
     private String plano;
