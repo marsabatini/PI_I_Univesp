@@ -444,13 +444,18 @@ body {
     color: #313133;
 }
 
-.lista_aulas {
+.lista_aulas_aluno {
     height: 400px;
     overflow-y:auto;
     border: 2px solid black;
+    width: 1293px;
 }
 
-
+.Semana-Dia-Atual {
+    padding: 10px;
+    display: flex;
+    
+}
 
 .Semana-Dia-Atual tr{
     display: flex;
@@ -459,6 +464,7 @@ body {
     list-style: none;
     margin-bottom: 10px;
     align-items: center;
+    gap: 10px;
 }
 
 .Semana-Dia-Atual th{
@@ -475,11 +481,9 @@ body {
 }
 
 
-.Semana-Dia-Atual .info_aula td:hover{
-    font-size: 30px;
-}
 
-.Semana-Dia-Atual .aula td{
+
+.atributo_aula{
     width: 150px;
     height: 50px;
     background-color: #d1d1d1;
@@ -487,18 +491,12 @@ body {
     color: black;
     font-size: 20px;
     align-content: center;
-    margin-inline-end: 10px;
-    cursor: pointer;
+
 }
 
-.Semana-Dia-Atual .aula td:hover{
+.atributo_aula:hover{
     background: #777777;
     color: #fff;
-}
-
-.Semana-Dia-Atual .aula li:active,
-.alter_aula, .inserir_aluno:active{
-    transform: scale(.9);
 }
 
 
@@ -510,8 +508,22 @@ body {
     width: 110px;
     height: 40px;
     font-size: 20px;
-    margin-right: 10px;
     cursor: pointer;
+    transition: all .3s;
+    margin-left: 18px;
+
+}
+
+.inserir_aluno:hover {
+
+    background-color: #86bd53;
+    border: 1px #5e813c solid;
+    transform: scale(0.95);
+}
+
+.inserir_aluno:active {
+
+    transform: scale(0.90);
 
 }
 
@@ -520,9 +532,24 @@ body {
     background-color: #aa2f2f;
     border: 2px #612725 solid;
     color: #fff;
-    width: 110px;
+    width: 118px;
     height: 40px;
     font-size: 20px;
+    margin-left: 10px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.remover_aluno:hover {
+
+    background-color: #ce5454;
+    border: 1px #612725 solid;
+    transform: scale(0.95);
+}
+
+.remover_aluno:active {
+
+    transform: scale(0.90);
 
 }
 
@@ -535,13 +562,11 @@ body {
 
 }
 
-.Agendamento {
-    width: 1400px;
-}
+
 
 .Agenda_Publica {
     display: flex;
-    width: 100%;
+    width: 1285px;
     margin-bottom: 45px;
     padding: 5px;
     justify-content: center;
@@ -553,8 +578,8 @@ body {
     width: 100%;
     display: flex;
     gap: 10px;
-    margin-bottom: 5px;
-    margin-left: 2px;
+    padding: 10px;
+    justify-content: center;
 }
 
 
@@ -623,22 +648,6 @@ body {
     gap: 10px;
 }
 
-.Inserir_Excluir{
-    width: 120px;
-    height: 50px;
-    background-color: #3d3e40;
-    color: #fff;
-    font-family: 'Calibri'; 
-    font-weight: 500;
-    border-radius: 10px;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.Inserir_Excluir:hover{
-    font-size: 32px;
-}
 
 .alter_aula{
     background-color: #18191a;

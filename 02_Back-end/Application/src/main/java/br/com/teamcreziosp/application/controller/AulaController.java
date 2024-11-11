@@ -2,9 +2,11 @@ package br.com.teamcreziosp.application.controller;
 
 import br.com.teamcreziosp.application.model.Aluno;
 import br.com.teamcreziosp.application.model.Aula;
+import br.com.teamcreziosp.application.model.Funcionario;
 import br.com.teamcreziosp.application.model.Professor;
 import br.com.teamcreziosp.application.repository.AlunoRepository;
 import br.com.teamcreziosp.application.repository.AulaRepository;
+import br.com.teamcreziosp.application.repository.FuncionarioRepository;
 import br.com.teamcreziosp.application.repository.ProfessorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,9 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 @RequestMapping(value = "/adm")
@@ -24,8 +24,11 @@ public class AulaController {
     @Autowired
     private AulaRepository aulaRepository;
 
+    //@Autowired
+    // private ProfessorRepository professorRepository;
+
     @Autowired
-    private ProfessorRepository professorRepository;
+    private FuncionarioRepository funcionarioRepository;
 
     @Autowired
     private AlunoRepository alunoRepository;
@@ -38,10 +41,10 @@ public class AulaController {
     @PostMapping("/aulas")
     @ResponseStatus(HttpStatus.CREATED)
     public void save(@RequestBody Aula aula) {
-        Optional<Professor> professor = professorRepository.findById(aula.getProfessor().getId());
+        Optional<Funcionario> funcionario = funcionarioRepository.findById(aula.getFuncionario().getId());
 
-        if (professor.isPresent()) {
-            aula.setProfessor(professor.get());
+        if (funcionario.isPresent()) {
+            aula.setFuncionario(funcionario.get());
             aulaRepository.save(aula);
         } else {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Professor não encontrado");
@@ -90,8 +93,8 @@ public class AulaController {
         Aluno aluno = buscarAluno.get();
 
         if (!aula.getAlunosInscritos().contains(aluno)) {
-            //aula.getAlunosInscritos().add(aluno);
-            //aulaRepository.save(aula);
+            aula.getAlunosInscritos().add(aluno);
+            aulaRepository.save(aula);
 
             aluno.getAulasInscritas().add(aula);
             alunoRepository.save(aluno);
@@ -151,7 +154,7 @@ public class AulaController {
 
     //buscar quais aulas o aluno está inscrito: retorna uma lista com ID das aulas
     @GetMapping("/aulas/aulasdoaluno/{idAluno}")
-    public ResponseEntity<List<String>> aulasDoAluno(@PathVariable(value = "idAluno") Integer idAluno) {
+    public ResponseEntity<List<Map<String, Object>>> aulasDoAluno(@PathVariable(value = "idAluno") Integer idAluno) {
         Optional<Aluno> buscarAluno = alunoRepository.findById(idAluno);
         if (buscarAluno.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
@@ -160,9 +163,15 @@ public class AulaController {
         Aluno aluno = buscarAluno.get();
         List<Aula> aulasInscritas = aluno.getAulasInscritas();
 
-        List<String> aulasComDataHora = aulasInscritas
+        List<Map<String, Object>> aulasComDataHora = aulasInscritas
                 .stream()
-                .map(aula -> aula.getModalidade() + " " + aula.getDataHora().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")))
+                .map(aula -> {
+                    Map<String, Object> aulaDetalhes = new HashMap<>();
+                    aulaDetalhes.put("id",aula.getId());
+                    aulaDetalhes.put("modalidade",aula.getModalidade());
+                    aulaDetalhes.put("dataHora", aula.getDataHora().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+                    return aulaDetalhes;
+                })
                 .toList();
 
         return ResponseEntity.status(HttpStatus.OK).body(aulasComDataHora);

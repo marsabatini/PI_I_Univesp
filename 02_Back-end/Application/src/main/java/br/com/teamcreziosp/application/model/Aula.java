@@ -25,7 +25,7 @@ public class Aula implements UserDetails {
     private Integer id;
 
     @NotNull(message = "Campo obrigatório.")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime dataHora;
 
     @Enumerated(EnumType.ORDINAL)
@@ -33,9 +33,9 @@ public class Aula implements UserDetails {
     private Modalidade modalidade;
 
     @ManyToOne
-    @JoinColumn(name = "professor_id")
+    @JoinColumn(name = "funcionario_id")
     @JsonIdentityReference(alwaysAsId = true)
-    private Professor professor;
+    private Funcionario funcionario;
 
     @NotNull(message = "Campo obrigatório.")
     private Integer qtddLimiteAlunos;

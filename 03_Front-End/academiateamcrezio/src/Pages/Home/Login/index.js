@@ -36,7 +36,7 @@ export default function Login() {
 
             
             // localStorage.setItem('email', email);
-            // localStorage.setItem('id', response.data.id);
+            localStorage.setItem('id', response.data.id);
             // localStorage.setItem('nome', response.data.nome);
             // localStorage.setItem('refreshToken', response.data.refreshToken);
             localStorage.setItem('acessToken', JSON.stringify(response.data.token));

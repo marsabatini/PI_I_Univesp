@@ -7,8 +7,69 @@ import Aulas from "../../Components/Aulas";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 
+
+import api from "../../../Services/Api";
+
 export default function Agenda_Aluno() {
 
+    const [classData, setClassData] = useState([]);
+    const [aulasMarcadas, setAulasMarcadas] = useState([])
+
+    async function retornarAgendaAluno() {
+        
+        
+        try {
+            const response = await api.get('adm/aulas');
+            const classData = response.data;
+            
+            setClassData(classData);
+            
+            
+            localStorage.setItem('classData', response.data.classData)
+            
+            //carregar as aulas quando carregar a página
+        
+        } catch (error) {
+            alert('Não foi possível carregar a agenda')
+            
+        }
+
+        
+    }
+
+    async function carregarAulasAluno() {
+        const idAluno = JSON.parse(localStorage.getItem('id'));
+
+        try {
+            const response = await api.get(`adm/aulas/aulasdoaluno/${idAluno}`);
+            setAulasMarcadas(response.data.map(aula => aula.id));
+
+        } catch (error) {
+            alert('Não foi possível carregar as aulas do Aluno');
+        }
+        
+    }
+
+    async function marcarAula(idAula) {
+        
+        const idAluno = JSON.parse(localStorage.getItem('id'));
+
+
+        try {
+            await api.post(`adm/aulas/adicionaraluno/${idAluno}/${idAula}`);
+            carregarAulasAluno();
+            alert('Aula marcada.')
+            
+        } catch (err) {
+            alert('Falha ao marcar a aula.')
+        }
+
+    }
+
+    useEffect(() =>{
+        retornarAgendaAluno();
+        carregarAulasAluno();
+    },[]);
 
     return (
 
@@ -108,9 +169,18 @@ export default function Agenda_Aluno() {
                                     </div>
 
                                     <div className="agenda_alunos">
-                                        <ul>
-                                            <li>Agenda do Aluno...</li>
-                                        </ul>
+                                        {aulasMarcadas.length > 0 ? (
+                                            aulasMarcadas.map(aula => (
+                                                <div key={aula.id}>
+                                                    <span>{aula.dataHora}</span>
+                                                    <span>{aula.modalidade}</span>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <p>Nenhuma aula marcada...</p>
+                                        )}
+
+                                        
                                     </div>
 
                                 </div>
@@ -136,22 +206,43 @@ export default function Agenda_Aluno() {
                                                 <li>Vagas</li>
                                                 <li>Status</li>
                                             </ul>
-                                            <div className="lista_aulas">
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
-                                                <Aulas />
+                                            <div id="lista_aulas" className="lista_aulas_aluno">
+                                                <table id="Semana-Dia-Atual" className="Semana-Dia-Atual">
+
+                                                    <tbody>
+                                                        {classData.map(aula => {
+                                                            const isMarcada = aulasMarcadas.includes(aula.id);
+                                                            const [dia, hora] = aula.dataHora.split('T');
+                                                            return (
+                                                                <tr key={aula.id} className="aula">
+                                                                    <td className="atributo_aula">{dia}</td>
+                                                                    <td className="atributo_aula">{hora}</td>
+                                                                    <td className="atributo_aula">{aula.modalidade}</td>
+                                                                    <td className="atributo_aula">{aula.funcionario}</td>
+                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos}</td>
+                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos}</td>
+                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos}</td>
+                                                                    <td>
+                                                                        <button
+                                                                            className={isMarcada ? 'remover_aluno' : 'inserir_aluno'}
+                                                                            type="button"
+                                                                            onClick={() => {
+                                                                                if (isMarcada) {
+                                                                                    alert('Aula já está marcada')
+                                                                                } else {
+                                                                                    marcarAula(aula.id)
+                                                                                }
+                                                                            }}
+                                                                        >
+                                                                            {isMarcada ? 'Desmarcar Aula' : 'Agendar Aula'}
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            );
+                                                        })}
+                                                    </tbody>
+
+                                                </table>
                                                
                                             </div>
                                         </div>
