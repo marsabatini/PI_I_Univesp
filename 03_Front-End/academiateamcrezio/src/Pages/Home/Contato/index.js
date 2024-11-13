@@ -56,9 +56,9 @@ export default function Contato () {
                                         Visite nossas redes sociais
                                         <span class="posicao_icones">
                                         <a tabindex="0" Link className=""> <img src={YoutubeColor} alt="N/A" className="icones_contato" /></a>
-                                        <a tabindex="0" Link className="https://www.instagram.com/teamcreziosp/"> <img src={InstagramColor} alt="N/A" className="icones_contato" /></a>
+                                        <a tabindex="0" Link href="https://www.instagram.com/teamcreziosp/"> <img src={InstagramColor} alt="N/A" className="icones_contato" /></a>
                                         <a tabindex="0" Link className=""> <img src={FacebookColor} alt="N/A" className="icones_contato" /></a>
-                                        <a tabindex="0" Link className="https://www.tiktok.com/@team.crezio"> <img src={TiktokColor} alt="N/A" className="icones_contato" /></a>
+                                        <a tabindex="0" Link href="https://www.tiktok.com/@team.crezio"> <img src={TiktokColor} alt="N/A" className="icones_contato" /></a>
                                         </span>
                                     </p>
                                 </div>

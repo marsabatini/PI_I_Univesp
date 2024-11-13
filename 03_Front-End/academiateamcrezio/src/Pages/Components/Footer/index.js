@@ -22,9 +22,9 @@ function Footer() {
                             <h2>Onde nos encontrar</h2>
                         </div>
                         <div className={Footer_styles.area_icons}>
-                            <a Link className=""> <img src={tiktok} alt="N/A" className={Footer_styles.rsicon} /></a>
-                            <a Link className=""> <img src={instagram} alt="N/A" className={Footer_styles.rsicon} /></a>
-                            <a Link className=""> <img src={whatsapp} alt="N/A" className={Footer_styles.rsicon} /></a>
+                            <a Link href="https://www.tiktok.com/@team.crezio"> <img src={tiktok} alt="N/A" className={Footer_styles.rsicon} /></a>
+                            <a Link href="https://www.instagram.com/teamcreziosp/"> <img src={instagram} alt="N/A" className={Footer_styles.rsicon} /></a>
+                            <a Link href=""> <img src={whatsapp} alt="N/A" className={Footer_styles.rsicon} /></a>
                         </div>
                     </div>
                     <div className={Footer_styles.boxs}>

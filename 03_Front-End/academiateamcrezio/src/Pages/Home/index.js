@@ -13,7 +13,7 @@ import triple from "../../Assets/triple.jpeg";
 import single_plus from "../../Assets/single+.jpeg";
 import triple_plus from "../../Assets/triple+.jpeg";
 import bull from "../../Assets/fight_like_a_bull.png";
-import tabela_horarios from "../../Assets/tabelaHorários.png";
+import tabela_horarios from "../../Assets/Agenda.jpg";
 import professores from "../../Assets/professores.png";
 import black_belt from "../../Assets/blackBelt.jpeg";
 
