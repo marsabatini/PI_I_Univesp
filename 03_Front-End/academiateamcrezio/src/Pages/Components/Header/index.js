@@ -42,11 +42,11 @@ export default function Header() {
                     <i onClick={OpenMenu} class="bi bi-list" id="list_icon"></i>   
   
                     <ul id="hidden_links" className={header_style.hide}>
-                         <li> <a Link to="/">Academia+     </a></li>
-                         <li> <a Link to="/">Nossa historia</a></li>
-                         <li> < Link to="/planos">Planos   </Link></li>
-                         <li> <a Link to="/">Contato       </a></li>
-                         <li> <a Link to="/">Loja+         </a></li>
+                         <li> < Link to="/modalidades">Modalidades </Link></li>
+                         <li> < Link to="/nossaHistoria">Nossa historia </Link></li>
+                         <li> < Link to="/planos">Planos </Link></li>
+                         <li> < Link to="/contatos">Contato </Link></li>
+                         <li> < Link to="https://voukbrasil.com/">Loja </Link></li>
                     </ul>
 
                 </div>
@@ -55,11 +55,11 @@ export default function Header() {
                 <div className={header_style.header_options}>
 
                     <ul>
-                         <li> <a Link to="/">Academia+     </a></li>
-                         <li> <a Link to="/">Nossa historia</a></li>
-                         <li> < Link to="/planos">Planos   </Link></li>
-                         <li> <a Link to="/">Contato       </a></li>
-                         <li> <a Link to="/">Loja+         </a></li>
+                         <li> < Link to="/modalidades">Modalidades </Link></li>
+                         <li> < Link to="/nossaHistoria">Nossa historia</Link></li>
+                         <li> < Link to="/planos">Planos </Link></li>
+                         <li> < Link to="/contatos">Contato </Link></li>
+                         <li> < Link to="https://voukbrasil.com/">Loja </Link></li>
                     </ul>
 
 

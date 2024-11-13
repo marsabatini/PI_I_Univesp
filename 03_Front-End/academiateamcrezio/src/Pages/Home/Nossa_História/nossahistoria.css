@@ -1,0 +1,118 @@
+
+
+
+.principal {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.eduardo {
+    background-color: #f0f0f0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    border-bottom: 20px solid #A21500
+    }
+  
+.texto {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    font-size: 21px;
+}  
+.eduardo img {
+    max-width: 300px;
+  }
+
+.eduardo h1 {
+    font-size: 45px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify
+}
+.eduardo p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify    
+}
+
+.crezio {
+    background-color: #f0f0f0;
+    margin-top: 50px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    border-bottom: 20px solid #A21500    
+  }
+
+.crezio img {
+    max-width: 300px;
+}
+
+.crezio h1 {
+    font-size: 45px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify
+    
+}
+.crezio p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify    
+}  
+
+.botão {
+    margin-top: 70px;
+    padding: 0;
+    background-color: #000;
+    width: 100%;
+    height:10em ;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 140px;
+}
+
+.botão button {
+    width: 250px;
+    height: 90px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #A21500;
+    transition: all .3s;
+    color: #fff;
+  }
+
+.botão button:hover {
+    background-color: #DD6457;
+    transform: scale(0.98);
+}
+
+.botão button:active {
+    transform: scale(0.93);
+}
+
+.paragrafo li {
+    line-height: 2.2;
+}
+
+
+.botão button:focus {
+    outline: 3px solid #007ACC;
+    }
+    
+
+

@@ -172,7 +172,7 @@ body {
     width: 550px;
     border-radius: 2px;
     overflow-y: auto;
-    height: 450px;
+    height: auto;
     padding: 15px;
 }
 

@@ -1,0 +1,82 @@
+
+
+
+.fundoTela {
+    background-color: #222121;
+    width: 1730px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tituloMeuPlano{
+    height: 180px;
+    font-size: 2.7em;
+    color: whitesmoke;
+    text-shadow: 3px 3px 10px #808292;
+    -webkit-text-stroke: #000;
+    -webkit-text-stroke: 1.7px #000;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.conteúdo_meuPlano{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 300px;
+    margin-top: 0px;
+
+}
+
+.elemento_meuPlano {
+    padding-top: 60px;
+    font-size: 0.9em;
+    color: rgb(229, 229, 229);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 80px;
+    padding-block: 20px;
+ }
+
+.elemento_meuPlano h2 {
+    font-size: 21px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify;
+    -webkit-text-stroke: 0.2px #000000;
+}
+
+.elemento_meuPlano p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify;
+    -webkit-text-stroke: 0.2px #000000;
+}
+
+.elemento_meuPlano button {
+    width: 200px;
+    height: 75px;
+    font-size: 23px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #A21500;
+    transition: all .3s;
+    color: #fff;
+}
+
+  .elemento_meuPlano button:hover {
+    background-color: #DD6457;
+    transform: scale(0.98);
+}
+
+.elemento_meuPlano button:active {
+    transform: scale(0.93);
+}
+
+.info_ {
+    padding: 10px;
+}

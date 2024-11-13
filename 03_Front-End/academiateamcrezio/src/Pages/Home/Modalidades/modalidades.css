@@ -1,0 +1,189 @@
+
+
+
+.jiu_jitsu {
+    background-color: #3d3d45; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    margin: 50px;
+    border-bottom: 20px solid #A21500;
+}
+
+.jiu_jitsu img {
+    max-width: 220px;
+  }
+
+.jiu_jitsu h1 {
+    font-size: 45px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify
+}
+ 
+.jiu_jitsu p {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #ffffff;
+    text-align: justify;
+    padding-inline: 20px;   
+}
+
+.boxe {
+    margin-top: 50px;
+    background-color: #3d3d45; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    margin: 50px;
+    border-bottom: 20px solid #A21500;
+  }
+
+.boxe img {
+    max-width: 220px;
+}
+
+.boxe h1 {
+    font-size: 45px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.boxe p {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #ffffff;
+    text-align: justify;
+    padding-inline: 20px;    
+}  
+
+.cross_training {
+    margin-top: 50px;
+    background-color: #3d3d45; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    margin: 50px;
+    border-bottom: 20px solid #A21500;    
+  }
+
+.cross_training img {
+    max-width: 220px;
+}
+
+.cross_training h1 {
+    font-size: 45px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify
+}
+
+.cross_training p {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #ffffff;
+    text-align: justify;
+    padding-inline: 20px;
+}
+
+.jiu-jitsu-kidsTeens {
+    margin-top: 50px;
+    background-color: #3d3d45; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    margin: 50px;
+    border-bottom: 20px solid #A21500;
+  }
+
+.jiu-jitsu-kidsTeens img {
+    max-width: 220px;
+}
+
+.jiu-jitsu-kidsTeens h1 {
+    font-size: 45px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify
+}
+
+.jiu-jitsu-kidsTeens p {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #ffffff;
+    text-align: justify;
+    padding-inline: 20px;   
+}
+
+.defesa_pessoal-feminina {
+    margin-top: 50px;
+    background-color: #3d3d45; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    margin: 50px;
+    border-bottom: 20px solid #A21500;
+  }
+
+.defesa_pessoal-feminina img {
+    max-width: 220px;
+}
+
+.defesa_pessoal-feminina h1{
+    font-size: 45px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify
+}
+
+.defesa_pessoal-feminina p {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #ffffff;
+    text-align: justify;
+    padding-inline: 20px;   
+}
+
+.personal_trainer {
+    margin-top: 50px;
+    background-color: #3d3d45; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+    margin: 50px;
+    margin-bottom: 115px;
+    border-bottom: 20px solid #A21500;
+  }
+
+.personal_trainer img {
+    max-width: 220px;
+}
+
+.personal_trainer h1{
+    font-size: 45px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify
+}
+
+.personal_trainer p {
+    font-size: 20px;
+    line-height: 2.2;
+    color: #ffffff;
+    text-align: justify;
+    padding-inline: 20px;     
+}
+
+
+
+
+
+
+

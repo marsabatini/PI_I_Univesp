@@ -99,9 +99,10 @@ export default function Aluno() {
                                 </div>
 
                                 <div className="doc_buttons">
-                                    <a Link=""><button>avaliação fisica</button></a>
-                                    <a Link=""><button>exame medico</button></a>
-                                    <a Link=""><button>graduação</button></a>
+                                    <Link to=""><button>avaliação fisica</button></Link>
+                                    <Link to="/aluno/meuplano"><button>meu plano</button></Link>
+                                    <Link to=""><button>exame medico</button></Link>
+                                    <Link to=""><button>graduação</button></Link>
                                 </div>
                             </div>
                             <div id="avisos" className="avisos_aluno">

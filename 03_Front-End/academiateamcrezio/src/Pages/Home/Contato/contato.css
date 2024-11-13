@@ -1,0 +1,81 @@
+
+
+.fotoDeFundo {
+    background-image: url(../../../Assets/salao.png);
+    justify-content: center;
+    height: 800px;
+    width: 1730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+}
+
+.titulo_principal h1 {
+    height: 180px;
+    font-size: 2.7em;
+    color: whitesmoke;
+    text-shadow: 3px 3px 10px #3a3c4f;
+    -webkit-text-stroke: #000;
+    -webkit-text-stroke: 1.7px #000;
+    border-radius: 0.5em;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.conteúdoContato {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 250px;
+    margin-bottom: 300px;
+    margin-top: 0px;
+}
+
+.elemento {
+    width: 500px;
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+}
+
+.elemento h2 {
+    font-size: 30px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    -webkit-text-stroke: 0.2px #ffffff;
+}
+
+.elemento p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    -webkit-text-stroke: 0.1px #ffffff;
+}
+
+.icones_contato {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-bottom: -10px;
+}
+
+.icones_contato:hover {
+    transform: scale(1.5);
+    transition: all .3s;
+}
+
+a:focus {
+    outline: 3px solid #007ACC;
+    }
+
+.elemento a:focus {
+    outline: 3px solid #007ACC;
+}
+
+
+

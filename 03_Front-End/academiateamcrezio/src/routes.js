@@ -20,6 +20,12 @@ import Planos_Adm from "./Pages/Home/Adm/Planosadm"
 import Pef_adm from "./Pages/Home/Adm/PeF"
 
 import Aluno from "./Pages/Home/Aluno";
+import MeuPlano from "./Pages/Home/Aluno/Meu_Plano";
+import Nossa_Historia from "./Pages/Home/Nossa_História";
+import Contato from "./Pages/Home/Contato";
+import Modalidades from "./Pages/Home/Modalidades"
+
+
 
 
 
@@ -30,6 +36,9 @@ export default function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
+                <Route path="/contatos" element={<Contato />} />
+                <Route path="/nossaHistoria" element={<Nossa_Historia />} />
+                <Route path="/modalidades" element={<Modalidades />} />
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/login/Redefinir_Senha" element={<Redefinir_Senha />} />
@@ -41,6 +50,7 @@ export default function AppRoutes() {
                 <Route path="/Adm/mural" element={<Mural/>} />
                 <Route path="/Adm/cadastro_gerais" element={<Cadastro_Geral/>} />
                 <Route path="/aluno" element={<Aluno/>} />
+                <Route path="/aluno/meuplano" element={<MeuPlano/>} />                
                 <Route path="/aula_experimental" element={<Aula_Experimental/>} />
                 <Route path="/planos" element={<Planos/>} />
                 <Route path="/agenda_aluno" element={<Agenda_Aluno/>} />
