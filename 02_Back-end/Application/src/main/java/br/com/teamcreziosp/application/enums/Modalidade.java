@@ -1,5 +1,8 @@
 package br.com.teamcreziosp.application.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum Modalidade {
     //Nao mudar a ordem
     JIU_JITSU(0, "Jiu-jítsu"),
@@ -17,11 +20,4 @@ public enum Modalidade {
         this.nome = nome;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
 }

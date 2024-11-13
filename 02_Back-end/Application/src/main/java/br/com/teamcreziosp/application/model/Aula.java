@@ -3,8 +3,8 @@ package br.com.teamcreziosp.application.model;
 import br.com.teamcreziosp.application.enums.Modalidade;
 import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,25 +23,25 @@ public class Aula implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-  
-    @NotBlank(message = "Campo obrigatório.")
+
+    @NotNull(message = "Campo obrigatório.")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime dataHora;
 
     @Enumerated(EnumType.ORDINAL)
-    @NotBlank(message = "Campo obrigatório.")
+    @NotNull(message = "Campo obrigatório.")
     private Modalidade modalidade;
 
     @ManyToOne
-    @JoinColumn(name = "professor_id")
+    @JoinColumn(name = "funcionario_id")
     @JsonIdentityReference(alwaysAsId = true)
-    @NotBlank(message = "Campo obrigatório.")
-    private Professor professor;
+    private Funcionario funcionario;
 
-    @NotBlank(message = "Campo obrigatório.")
+    @NotNull(message = "Campo obrigatório.")
     private Integer qtddLimiteAlunos;
 
-    @ManyToMany
     @JsonIgnore
+    @ManyToMany(mappedBy = "aulasInscritas")
     private List<Aluno> alunosInscritos = new ArrayList<>();
 
     @Override

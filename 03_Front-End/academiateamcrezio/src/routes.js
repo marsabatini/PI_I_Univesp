@@ -42,6 +42,7 @@ export default function AppRoutes() {
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/login/Redefinir_Senha" element={<Redefinir_Senha />} />
+                <Route path="/Adm/Redefinir_Senha" element={<Redefinir_Senha />} />
                 <Route path="/login/Nova_Senha" element={<Nova_Senha />} />
                 <Route path="/Adm/agenda" element={<Agenda/>} />
                 <Route path="/Adm/alertas" element={<Alertas/>} />

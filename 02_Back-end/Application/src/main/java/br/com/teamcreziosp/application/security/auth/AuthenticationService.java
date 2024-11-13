@@ -45,10 +45,10 @@ public class AuthenticationService implements UserDetails {
                 .telefone(request.getTelefone())
                 .rg(request.getRg())
                 .cpf(request.getCpf())
-                .endereco(request.getEndereco())
-                .numEndereco(request.getNumEndereco())
-                .cidade(request.getCidade())
-                .cep(request.getCep())
+//                .endereco(request.getEndereco())
+//                .numEndereco(request.getNumEndereco())
+//                .cidade(request.getCidade())
+//                .cep(request.getCep())
                 .role(Role.ALUNO)
                 .build();
 
@@ -88,6 +88,9 @@ public class AuthenticationService implements UserDetails {
     // implementar um método que permita o administrar criar outros cargos e,
     // consequentemente, instaciar novos tipos de funcionários.
     public AuthenticationResponse cadastroFuncionario(RegisterRequestFuncionario request){
+
+
+
 
         Funcionario funcionario = switch (request.getCargo()) {
             case "Administrador" -> Adm.builder()
@@ -136,8 +139,12 @@ public class AuthenticationService implements UserDetails {
 
         var jwtToken = jwtService.generateToken(funcionario);
 
+        //precisava definir a variável cargo para voltar quando realizava o cadastro para usar no front
+        String cargo = funcionario.getCargo();
+
         return AuthenticationResponse.builder()
                 .token(jwtToken)
+                .cargo(cargo)
                 .build();
     }
 
@@ -151,9 +158,18 @@ public class AuthenticationService implements UserDetails {
                 request.getSenha())
         );
 
-
+        // quando a pessoa fazer login vai retornar o JSON com esses dados, para retornar na tela de perfil
         Integer id;
-        String nome;
+        String nomeSobrenome;
+        String telefone;
+        String statusPlano;
+        String dataNascimento;
+        String sexo;
+        String plano;
+        String email;
+        String graduacao;
+        String aulasProxGrad;
+        String exameMedico;
         String role;
         UserDetails userEmail;
 
@@ -163,12 +179,30 @@ public class AuthenticationService implements UserDetails {
 
         if(funcionario.isPresent()){
             id = funcionario.get().getId();
-            nome = funcionario.get().getNome();
+            nomeSobrenome = funcionario.get().getNome() + " " +funcionario.get().getSobrenome();
+            telefone = funcionario.get().getTelefone();
+            statusPlano = null;
+            dataNascimento = funcionario.get().getDataNascimento();
+            sexo = funcionario.get().getSexo();
+            plano = null;
+            email = funcionario.get().getEmail();
+            exameMedico = null;
+            graduacao = null;
+            aulasProxGrad = null;
             role = funcionario.get().getRole().toString();
             userEmail = funcionario.get();
         } else if(aluno.isPresent()){
             id = aluno.get().getId();
-            nome = aluno.get().getNome();
+            nomeSobrenome = aluno.get().getNome() + " " + aluno.get().getSobrenome();
+            telefone = aluno.get().getTelefone();
+            dataNascimento = aluno.get().getDataNascimento();
+            sexo = aluno.get().getSexo();
+            plano = aluno.get().getPlano();
+            email = aluno.get().getEmail();
+            exameMedico = aluno.get().getExameMedico();
+            graduacao = aluno.get().getGraduacao();
+            aulasProxGrad = aluno.get().getAulas_prox_grad();
+            statusPlano = aluno.get().getStatusPlano();
             role = aluno.get().getRole().toString();
             userEmail = aluno.get();
         } else {
@@ -182,7 +216,16 @@ public class AuthenticationService implements UserDetails {
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .id(id)
-                .nome(nome)
+                .nomeSobrenome(nomeSobrenome)
+                .telefone(telefone)
+                .email(email)
+                .dataNascimento(dataNascimento)
+                .sexo(sexo)
+                .plano(plano)
+                .statusPlano(statusPlano)
+                .graduacao(graduacao)
+                .aulas_prox_graduacao(aulasProxGrad)
+                .exameMedico(exameMedico)
                 .role(Role.valueOf(role))
                 .build();
     }

@@ -1,8 +1,9 @@
 package br.com.teamcreziosp.application.model;
 
-
 import br.com.teamcreziosp.application.security.Role;
 import br.com.teamcreziosp.application.security.config.ValidPassword;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -12,6 +13,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -58,15 +60,15 @@ public class Aluno implements UserDetails {
     @NotBlank(message = "Campo obrigatório.")
     private String rg;
 
-    @CPF(message = "CPF inválido.")
+//    @CPF(message = "CPF inválido.")
     @NotBlank(message = "Campo obrigatório.")
     private String cpf;
 
     private String graduacao;
 
-    private String exameMedico;
-
     private String aulas_prox_grad;
+
+    private String exameMedico;
 
     private String plano;
 
@@ -75,17 +77,26 @@ public class Aluno implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @NotBlank(message = "Campo obrigatório.")
-    private String endereco;
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(
+            name = "aluno_aula",
+            joinColumns = @JoinColumn(name = "aluno_id"),
+            inverseJoinColumns = @JoinColumn(name = "aula_id")
+    )
+    private List<Aula> aulasInscritas = new ArrayList<>();
 
-    @NotBlank(message = "Campo obrigatório.")
-    private String numEndereco;
-
-    @NotBlank(message = "Campo obrigatório.")
-    private String cidade;
-
-    @NotBlank(message = "Campo obrigatório.")
-    private String cep;
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String endereco;
+//
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String numEndereco;
+//
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String cidade;
+//
+//    @NotBlank(message = "Campo obrigatório.")
+//    private String cep;
 
 //###################################################################################################################
 //    ====> Criar CLASSE ENDERECO: falta Estado, CEP e Complemento

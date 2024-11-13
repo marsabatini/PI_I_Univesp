@@ -43,12 +43,12 @@ export default function Aula_Experimental() {
                     <Header />
                     <div className="box-aula-experimental">
                         <div className="aula_experimental_title">
-                            <h1>Faça uma aula experimental grátis!</h1>
+                            <h1>faça uma aula experimental grátis!</h1>
                         </div>
                         <div class="box-input">
                             <form className="form-aluno-experimental" onSubmit={cadastrarAlunoExperimental}>
                                 <div className="box-u">
-                                    <label for="">Nome</label>
+                                    <label for="">nome</label>
                                     <input
                                         className="nome"
                                         title="Digite seu nome completo."
@@ -61,7 +61,7 @@ export default function Aula_Experimental() {
                                     />
                                 </div>
                                 <div className="box-u">
-                                    <label for="">E-mail</label>
+                                    <label for="">e-mail</label>
                                     <input
                                         className="email"
                                         title="Digite seu e-mail."
@@ -74,7 +74,7 @@ export default function Aula_Experimental() {
                                     />
                                 </div>
                                 <div className="box-u">
-                                    <label for="">Telefone</label>
+                                    <label for="">telefone</label>
                                     <input
                                         className="telefone"
                                         title="Digite seu telefone"
@@ -87,7 +87,7 @@ export default function Aula_Experimental() {
                                     />
                                 </div>
                                 <div className="button-container">
-                                    <button className="button" type="submit">Ver datas disponíveis</button>
+                                    <button className="button" type="submit">ver datas disponíveis</button>
                                 </div>
                             </form>
                         </div>

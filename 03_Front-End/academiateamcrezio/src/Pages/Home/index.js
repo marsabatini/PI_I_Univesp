@@ -94,15 +94,15 @@ export default function Inicio() {
                             <div className="planos">
 
                                 <div className="imgPlanos">
-                                    <img src={white_belt} alt=""/>
-                                    <img src={blue_belt} alt=""/>
-                                    <img src={purple_belt} alt=""/>
-                                    <img src={kids}/>
-                                    <img src={black_belt} alt=""/>
-                                    <img src={single} alt=""/>
-                                    <img src={single_plus} alt=""/>
-                                    <img src={triple} alt=""/>
-                                    <img src={triple_plus} alt=""/>
+                                    <img src={white_belt} alt="plano white belt"/>
+                                    <img src={blue_belt} alt="plano blue belt"/>
+                                    <img src={purple_belt} alt="plano purple belt"/>
+                                    <img src={kids} alt="plano kids"/>
+                                    <img src={black_belt} alt="plano black belt"/>
+                                    <img src={single} alt="plano single"/>
+                                    <img src={single_plus} alt="plano single plus"/>
+                                    <img src={triple} alt="plano triple"/>
+                                    <img src={triple_plus} alt="plano triple plus"/>
 
                                 </div>
 
@@ -110,19 +110,19 @@ export default function Inicio() {
                         </div>
 
                         <div className="bull">
-                            <img src={bull} alt=""/>
+                            <img src={bull} alt="foto touro team crezio"/>
                         </div>
                 
 
                         <div>
-                            <span className="mestres">TREINE COM NOSSOS MESTRES</span>
+                            <span className="mestres">treine com nossos mestres</span>  
                         </div>
 
                         <div className="professores">
                             <div className="foto-professores">
-                                <img src={eduardo_pic} />
-                                <img src={gabr_carv_pic} />
-                                <img src={eli_braz_pic} />
+                                <img src={eduardo_pic} alt="professor Eduardo"/>
+                                <img src={gabr_carv_pic} alt=""/>
+                                <img src={eli_braz_pic} alt=""/>
                             </div>
                         </div>
                         
@@ -177,7 +177,7 @@ export default function Inicio() {
                         </div>
                
                         
-                        <span className="mural">MURAL</span>
+                        <span className="mural">mural</span>
 
                         <div className="corpoMural">
                             <div className="slider-2">

@@ -32,21 +32,24 @@ export default function Login() {
 
         try {
             const response = await api.post('/api/login', data);
+            const userData = response.data;
 
-            localStorage.setItem('email', email);
+            
+            // localStorage.setItem('email', email);
             localStorage.setItem('id', response.data.id);
-            localStorage.setItem('nome', response.data.nome);
-            localStorage.setItem('acessToken', response.data.token);
-            localStorage.setItem('refreshToken', response.data.refreshToken);
+            // localStorage.setItem('nome', response.data.nome);
+            // localStorage.setItem('refreshToken', response.data.refreshToken);
+            localStorage.setItem('acessToken', JSON.stringify(response.data.token));
             localStorage.setItem('role', response.data.role);
-
+            
             // Precisaremos fazer a lógica para, caso seja funcionário ou aluno
             if (response.data.role === "ALUNO") {
                 navigate('/aluno')
+                localStorage.setItem('userData',JSON.stringify(userData));
             } else if (response.data.role === "ADMIN") {
-                navigate('/adm/agenda')
+                navigate('/adm/cadastro_gerais')
             } else if (response.data.role === "PROFESSOR" || response.data.role === "TREINADOR") {
-                navigate('/funcionario')
+                navigate('/adm/agenda')
             } else {
                 alert("Usuário não encontrado!!!!!!!");
             }
@@ -65,9 +68,9 @@ export default function Login() {
                     <div className="cadastro">
                         <div className="flexz">
                             <img src={logo} alt="logo tc" />
-                            <p> Caso não seja cadastrado ainda, crie sua conta!</p>
+                            <p> caso não seja cadastrado ainda, crie sua conta!</p>
                             <Link to="/cadastro">
-                                <button className="c-bnt">Cadastrar</button>
+                                <button className="c-bnt">cadastrar</button>
                             </Link>
                         </div>
                     </div>
@@ -82,7 +85,7 @@ export default function Login() {
                                     onChange={e => setEmail(e.target.value)}
                                     required
                                 />
-                                <label>Usuário</label>
+                                <label>usuário</label>
                             </div>
                             <div className="caixa-u">
                                 <input
@@ -92,13 +95,13 @@ export default function Login() {
                                     onChange={e => setSenha(e.target.value)}
                                     required
                                 />
-                                <label>Senha</label>
+                                <label>senha</label>
                             </div>
                             <div className="esquecerSenha">
-                                <Link className="esqueceu" to="/login/Redefinir_Senha"> Esqueci a senha </Link>
+                                <Link className="esqueceu" to="/login/Redefinir_Senha"> esqueci a senha </Link>
                             </div>
                             <div className="div_entrar_button">
-                                <button type="submit" className="l-bnt">Entrar</button>
+                                <button type="submit" className="l-bnt">entrar</button>
                             </div>
                         </form>
                     </div>
