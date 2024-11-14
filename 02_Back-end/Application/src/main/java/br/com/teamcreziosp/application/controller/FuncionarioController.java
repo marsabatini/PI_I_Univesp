@@ -1,6 +1,5 @@
 package br.com.teamcreziosp.application.controller;
 
-import br.com.teamcreziosp.application.model.Aluno;
 import br.com.teamcreziosp.application.model.Funcionario;
 import br.com.teamcreziosp.application.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +25,5 @@ public class FuncionarioController {
 
     @GetMapping("/{id}")
     public Optional<Funcionario> findById(@PathVariable(value = "id") Integer id) {return funcionarioRepository.findById(id);}
-
 
 }

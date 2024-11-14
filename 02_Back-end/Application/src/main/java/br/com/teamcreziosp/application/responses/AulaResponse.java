@@ -1,16 +1,23 @@
 package br.com.teamcreziosp.application.responses;
 
 import br.com.teamcreziosp.application.model.Aula;
-import br.com.teamcreziosp.application.model.Funcionario;
 
-import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public record AulaResponse(
-        Funcionario funcionario,
-        LocalDateTime data,
-        Integer qtddLimiteAlunos
+        String funcionario,
+        String dataHora,
+        Integer qtddLimiteAlunos,
+        String modalidade
 ) {
+    static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+
     public AulaResponse(Aula aula) {
-        this(aula.getFuncionario(), aula.getDataHora(), aula.getQtddLimiteAlunos());
+        this(
+                aula.getFuncionario().getNome() + " " + aula.getFuncionario().getSobrenome(),
+                aula.getDataHora().format(formatter),
+                aula.getQtddLimiteAlunos(),
+                aula.getModalidade().getNome()
+        );
     }
 }

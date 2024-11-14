@@ -8,12 +8,14 @@ import br.com.teamcreziosp.application.repository.AlunoRepository;
 import br.com.teamcreziosp.application.repository.AulaRepository;
 import br.com.teamcreziosp.application.repository.FuncionarioRepository;
 import br.com.teamcreziosp.application.repository.ProfessorRepository;
+import br.com.teamcreziosp.application.responses.AulaResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.swing.text.DateFormatter;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
@@ -34,8 +36,15 @@ public class AulaController {
     private AlunoRepository alunoRepository;
 
     @GetMapping("/aulas")
-    public List<Aula> findAll() {
-        return aulaRepository.findAll();
+    public List<AulaResponse> findAll() {
+        List<Aula> todasAsAulas = aulaRepository.findAll();
+        List<AulaResponse> aulaResponses = new ArrayList<>();
+
+        todasAsAulas.forEach(aula -> {
+            aulaResponses.add(new AulaResponse(aula));
+        });
+
+        return aulaResponses;
     }
 
     @PostMapping("/aulas")
@@ -93,9 +102,6 @@ public class AulaController {
         Aluno aluno = buscarAluno.get();
 
         if (!aula.getAlunosInscritos().contains(aluno)) {
-            aula.getAlunosInscritos().add(aluno);
-            aulaRepository.save(aula);
-
             aluno.getAulasInscritas().add(aula);
             alunoRepository.save(aluno);
 
@@ -121,8 +127,8 @@ public class AulaController {
         Aluno aluno = buscarAluno.get();
 
         if (aula.getAlunosInscritos().contains(aluno)) {
-            aula.getAlunosInscritos().remove(aluno);
-            aulaRepository.save(aula);
+            aluno.getAulasInscritas().remove(aula);
+            alunoRepository.save(aluno);
             return ResponseEntity.ok("Aluno removido com sucesso.");
         } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Aluno não está inscrito nesta aula.");
@@ -168,7 +174,7 @@ public class AulaController {
                 .map(aula -> {
                     Map<String, Object> aulaDetalhes = new HashMap<>();
                     aulaDetalhes.put("id",aula.getId());
-                    aulaDetalhes.put("modalidade",aula.getModalidade());
+                    aulaDetalhes.put("modalidade",aula.getModalidade().getNome());
                     aulaDetalhes.put("dataHora", aula.getDataHora().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
                     return aulaDetalhes;
                 })
