@@ -13,9 +13,14 @@ import api from "../../../Services/Api";
 export default function Agenda_Aluno() {
 
     const [classData, setClassData] = useState([]);
-    const [aulasMarcadas, setAulasMarcadas] = useState([])
+    const [aulasMarcadas, setAulasMarcadas] = useState([]);
+    const [numAlunosAula, setNumAlunosAula] = useState([]);
+
+    
+    
 
     async function retornarAgendaAluno() {
+        
         
         
         try {
@@ -29,7 +34,7 @@ export default function Agenda_Aluno() {
             
             //carregar as aulas quando carregar a página
         
-        } catch (error) {
+        } catch (err) {
             alert('Não foi possível carregar a agenda')
             
         }
@@ -40,14 +45,30 @@ export default function Agenda_Aluno() {
     async function carregarAulasAluno() {
         const idAluno = JSON.parse(localStorage.getItem('id'));
 
+        
         try {
             const response = await api.get(`adm/aulas/aulasdoaluno/${idAluno}`);
-            setAulasMarcadas(response.data.map(aula => aula.id));
+            setAulasMarcadas(response.data);
+            
 
-        } catch (error) {
-            alert('Não foi possível carregar as aulas do Aluno');
+        } catch (err) {
+            
         }
         
+    }
+
+    async function listaAlunosAula(idAula) {
+        
+        try {
+            const response = await api.get(`adm/aulas/alunosinscritosnaaula/${idAula}`)
+            setNumAlunosAula(prev => ({
+                ...prev,
+                [idAula]: response.data.length
+            }));
+
+        } catch (error) {
+            
+        }
     }
 
     async function marcarAula(idAula) {
@@ -57,18 +78,49 @@ export default function Agenda_Aluno() {
 
         try {
             await api.post(`adm/aulas/adicionaraluno/${idAluno}/${idAula}`);
-            carregarAulasAluno();
-            alert('Aula marcada.')
+
+            const aulaMarcada = classData.find(aula => aula.id === idAula);
+
+            if (aulaMarcada) {
+                setAulasMarcadas(prev => [...prev, aulaMarcada]);
+                
+            }
+            alert('Aula marcada com sucesso.');
             
+            listaAlunosAula(idAula);
         } catch (err) {
-            alert('Falha ao marcar a aula.')
+            alert('Falha ao marcar a aula.');
         }
 
     }
 
+    async function desmarcarAula(idAula) {
+
+        const idAluno = JSON.parse(localStorage.getItem('id'));
+
+        try {
+            await api.delete(`adm/aulas/removeraluno/${idAluno}/${idAula}`);
+            setAulasMarcadas(prev => prev.filter(aula => aula.id !== idAula));
+            
+            alert('Aula desmacarda com sucesso.');
+            
+            listaAlunosAula(idAula);
+        } catch (err) {
+            alert('Aula não está agendada.');
+        }
+
+    }
+
+    useEffect(() => {
+        classData.forEach(aula => {
+            listaAlunosAula(aula.id);
+        });
+    }, [classData]);
+
     useEffect(() =>{
         retornarAgendaAluno();
         carregarAulasAluno();
+        
     },[]);
 
     return (
@@ -164,7 +216,7 @@ export default function Agenda_Aluno() {
                                 <div className="consulta_modalidade">
                                     <div>
                                         <h2 className="titulos">
-                                            AGENDA DO FULANO
+                                            Sua Agenda Pessoal
                                         </h2>
                                     </div>
 
@@ -172,8 +224,7 @@ export default function Agenda_Aluno() {
                                         {aulasMarcadas.length > 0 ? (
                                             aulasMarcadas.map(aula => (
                                                 <div key={aula.id}>
-                                                    <span>{aula.dataHora}</span>
-                                                    <span>{aula.modalidade}</span>
+                                                    <span>{aula.dataHora + " " + aula.modalidade}</span>
                                                 </div>
                                             ))
                                         ) : (
@@ -211,8 +262,12 @@ export default function Agenda_Aluno() {
 
                                                     <tbody>
                                                         {classData.map(aula => {
-                                                            const isMarcada = aulasMarcadas.includes(aula.id);
-                                                            const [dia, hora] = aula.dataHora.split('T');
+                                                            const isMarcada = aulasMarcadas.some(aulasMarcada => aulasMarcada.id === aula.id);
+                                                            const [dia, hora] = aula.dataHora.split(' ');
+
+                                                            const inscritos = numAlunosAula[aula.id] || 0;
+
+                                                           
                                                             return (
                                                                 <tr key={aula.id} className="aula">
                                                                     <td className="atributo_aula">{dia}</td>
@@ -220,17 +275,19 @@ export default function Agenda_Aluno() {
                                                                     <td className="atributo_aula">{aula.modalidade}</td>
                                                                     <td className="atributo_aula">{aula.funcionario}</td>
                                                                     <td className="atributo_aula">{aula.qtddLimiteAlunos}</td>
-                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos}</td>
-                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos}</td>
+                                                                    <td className="atributo_aula">{inscritos}</td>
+                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos - inscritos}</td>
                                                                     <td>
                                                                         <button
                                                                             className={isMarcada ? 'remover_aluno' : 'inserir_aluno'}
                                                                             type="button"
                                                                             onClick={() => {
                                                                                 if (isMarcada) {
-                                                                                    alert('Aula já está marcada')
-                                                                                } else {
+                                                                                    desmarcarAula(aula.id);
+                                                                                } else if (inscritos < aula.qtddLimiteAlunos){
                                                                                     marcarAula(aula.id)
+                                                                                } else {
+                                                                                    alert('Aula está cheia.')
                                                                                 }
                                                                             }}
                                                                         >

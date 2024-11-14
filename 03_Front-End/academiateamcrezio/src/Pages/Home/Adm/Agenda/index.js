@@ -23,6 +23,7 @@ export default function Agenda() {
     const [funcionario, setFuncionario] = useState('');
     const [qtddLimiteAlunos, setQttdLimiteAlunos] = useState('');
     const [classData, setClassData] = useState([]);
+    const [numAlunosAula, setNumAlunosAula] = useState([]); 
 
     let dictionary = {
         "Jiu-jitsu": 0,
@@ -56,7 +57,7 @@ export default function Agenda() {
 
         try {
             await api.post('/adm/aulas', data);
-
+            retornarAgendaAdm()
             alert('aula cadastrada com sucesso')
 
             
@@ -82,15 +83,17 @@ export default function Agenda() {
             const classData = response.data
             localStorage.setItem('classData', response.data.classData)
 
+            
             setClassData(classData);
             console.log(classData);
             
             classData.forEach(aula => {
                 const id = aula.id;
-                const [dia , hora] = aula.dataHora.split('T');
+                const [dia , hora] = aula.dataHora.split(' ');
                 const modalidade = aula.modalidade;
                 const funcionario = aula.funcionario
                 const qtddLimiteAlunos = aula.qtddLimiteAlunos
+                const inscritos =  numAlunosAula[id] || 0;
                 
                 aulas += `<tr id="aula" class="aula">
                             <td class="atributo_aula">${dia}</td>
@@ -98,8 +101,8 @@ export default function Agenda() {
                             <td class="atributo_aula">${modalidade}</td>
                             <td class="atributo_aula">${funcionario}</td>
                             <td class="atributo_aula">${qtddLimiteAlunos}</td>
-                            <td class="atributo_aula">${qtddLimiteAlunos}</td>
-                            <td class="atributo_aula">${qtddLimiteAlunos}</td>
+                            <td class="atributo_aula">${inscritos}</td>
+                            <td class="atributo_aula">${qtddLimiteAlunos - inscritos}</td>
                         </tr>
                         `
             });
@@ -115,6 +118,26 @@ export default function Agenda() {
 
         
     }
+
+    async function listaAlunosAula(idAula) {
+        
+        try {
+            const response = await api.get(`adm/aulas/alunosinscritosnaaula/${idAula}`)
+            setNumAlunosAula(prev => ({
+                ...prev,
+                [idAula]: response.data.length
+            }));
+
+        } catch (error) {
+            
+        }
+    }
+
+    useEffect(() => {
+        classData.forEach(aula => {
+            listaAlunosAula(aula.id);
+        });
+    }, [classData]);
 
     useEffect(() => {
         retornarAgendaAdm();
