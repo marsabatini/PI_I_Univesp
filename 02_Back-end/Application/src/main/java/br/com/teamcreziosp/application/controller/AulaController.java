@@ -15,7 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.swing.text.DateFormatter;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
@@ -160,8 +159,9 @@ public class AulaController {
 
     //buscar quais aulas o aluno está inscrito: retorna uma lista com ID das aulas
     @GetMapping("/aulas/aulasdoaluno/{idAluno}")
-    public ResponseEntity<List<Map<String, Object>>> aulasDoAluno(@PathVariable(value = "idAluno") Integer idAluno) {
+    public ResponseEntity<List<AulaResponse>> aulasDoAluno(@PathVariable(value = "idAluno") Integer idAluno) {
         Optional<Aluno> buscarAluno = alunoRepository.findById(idAluno);
+
         if (buscarAluno.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
@@ -169,18 +169,16 @@ public class AulaController {
         Aluno aluno = buscarAluno.get();
         List<Aula> aulasInscritas = aluno.getAulasInscritas();
 
-        List<Map<String, Object>> aulasComDataHora = aulasInscritas
-                .stream()
-                .map(aula -> {
-                    Map<String, Object> aulaDetalhes = new HashMap<>();
-                    aulaDetalhes.put("id",aula.getId());
-                    aulaDetalhes.put("modalidade",aula.getModalidade().getNome());
-                    aulaDetalhes.put("dataHora", aula.getDataHora().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
-                    return aulaDetalhes;
-                })
-                .toList();
+        if (aulasInscritas.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
 
-        return ResponseEntity.status(HttpStatus.OK).body(aulasComDataHora);
+        List<AulaResponse> aulasResponse = new ArrayList<>();
+
+        aulasInscritas.forEach(aula -> aulasResponse.add(new AulaResponse(aula)));
+
+        return ResponseEntity.status(HttpStatus.OK).body(aulasResponse);
     }
+
 
 }
