@@ -14,19 +14,25 @@ export default function Redefinir_Senha() {
         <>
             <div>
                 <section>
-                    <Header/>
-                    <form action="">
-                        <div className="recuperação">
-                            <h1 className="center">esqueci minha senha</h1>
-                            <h3>no quadro abaixo coloque email de seu cadastro para verificação de senha</h3>
-                            <div className="emailveri">
-                                <input type="email" name-="" required placeholder="Email do cadastro" />
-                            </div>
-                            <h3>apos a redefinição de senha voce vai estar recebendo um email em sua caixa de entrada para verificação</h3>
-                           <Link to="/Nova_Senha"> <button>envie email para redefinição</button> </Link>
-                        </div>
-                    </form>
-                    <Footer/>
+                    <Header />
+                    <main>
+                        <article>
+                            <section>
+                                <form action="">
+                                    <div className="recuperação">
+                                        <h1 className="center">esqueci minha senha</h1>
+                                        <h3>no quadro abaixo coloque email de seu cadastro para verificação de senha</h3>
+                                        <div className="emailveri">
+                                            <input type="email" name-="" required placeholder="Email do cadastro" />
+                                        </div>
+                                        <h3>apos a redefinição de senha voce vai estar recebendo um email em sua caixa de entrada para verificação</h3>
+                                        <Link to="/Nova_Senha"> <button>envie email para redefinição</button> </Link>
+                                    </div>
+                                </form>
+                            </section>
+                        </article>
+                    </main>
+                    <Footer />
                 </section>
             </div>
         </>

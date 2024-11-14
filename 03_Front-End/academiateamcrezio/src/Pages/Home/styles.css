@@ -1,4 +1,4 @@
-.conteudo {
+ .conteudo {
 
     padding: 0;
     background-color: #ffffff;
@@ -238,7 +238,7 @@
 }
 
 .agenda-Semanal img {
-    width: 650px;
+    width: auto;
     box-shadow: 5px 5px 5px #0006;
 }
 
@@ -377,7 +377,7 @@
 }
 
 .parceiros img {
-    margin-bottom: 0;
+    margin-bottom: 50px;
     width: 100%;
     height: 100%;
 }

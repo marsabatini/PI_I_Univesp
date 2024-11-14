@@ -26,6 +26,8 @@ export default function Modalidades () {
 
                     <Header/>
                         <main className={style_modalidades.principal}>
+<section className="alinhamento_m">
+
 
                             <div class="jiu_jitsu">
   
@@ -146,6 +148,7 @@ export default function Modalidades () {
                                 <img src={PersonalTrainer}/>
 
                             </div>
+                            </section>
                             
 
                         </main>

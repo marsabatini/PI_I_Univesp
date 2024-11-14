@@ -22,7 +22,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin: 0px 0px -50px 0px;
+}
+.containerp h1 {
+  margin-bottom: 12px;
 }
 .caixa3 {
   gap: -10px;
@@ -192,6 +195,13 @@ body {
 
 .button_p:active {
     transform: scale(0.93);
+}
+
+.button_mp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -20px;
 }
 
 @media (max-width: 780px) {

@@ -1,261 +1,228 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-body { 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background:#fff;
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fff;
 }
 .login {
-    background: #f0f0f0;
-    width: 600px;
-    padding: 40px;
-    height: 550px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5) ;
-
-    
+  background: #f0f0f0;
+  width: 600px;
+  padding: 40px;
+  height: 550px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
-.login h2{
-    margin-bottom: 120px;
-    font-size: 30px;
-    color: #000;
-
+.login h2 {
+  margin-bottom: 120px;
+  font-size: 30px;
+  color: #000;
 }
 
 .login .caixa-u {
-    position: relative;
-    margin-bottom: 15px;
-    text-align: start;
+  position: relative;
+  margin-bottom: 15px;
+  text-align: start;
 }
 
-.login .caixa-u input{
-    width: 100%;
-    padding: 10px 0px 0px;
-    outline: none;
-    border: 0;
-    background:transparent;
-    border-bottom: 1px solid #3D3E40;
-    color:#000;
-    font-size: 16px;
-    margin-bottom: 30px ;
+.login .caixa-u input {
+  width: 100%;
+  padding: 10px 0px 0px;
+  outline: none;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #3d3e40;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 .login .caixa-u label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0px 0px; 
-    color:#000000;
-    font-size: 25px ;
-    pointer-events: none;
-    transition: .5s;
-    line-height: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0px 0px;
+  color: #000000;
+  font-size: 25px;
+  pointer-events: none;
+  transition: 0.5s;
+  line-height: 0.8;
 }
-.login .caixa-u input:focus~label,
-.login .caixa-u input:valid~label
-{
-    top: -28px;
-    left: 0;
-    color: rgb(212, 212, 212);
-    font-size: 15px;
+.login .caixa-u input:focus ~ label,
+.login .caixa-u input:valid ~ label {
+  top: -28px;
+  left: 0;
+  color: rgb(212, 212, 212);
+  font-size: 15px;
 }
 .forget {
-    font-size: 20px;
-    color: #000;
-    display: flex;
-    justify-content:flex-end;
-    margin-bottom: 15px;
-    margin-top: -30px;
+  font-size: 20px;
+  color: #000;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  margin-top: -30px;
 }
-.b-ent{
-    margin-top: 45px;
-
+.b-ent {
+  margin-top: 45px;
 }
-.l-bnt  {
-    border: none;
-    width: 111px;
-    height: 55px;
-    font-size: 20px;
-    color: #fff;
-    background-color:#A21500;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all .3s;
-
+.l-bnt {
+  border: none;
+  width: 111px;
+  height: 55px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #a21500;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .l-bnt:hover {
-
-    background-color: #DD6457;
-    transform: scale(0.95);
-
+  background-color: #dd6457;
+  transform: scale(0.95);
 }
 
-
 .l-bnt:hover:active {
-
-    transform: scale(0.90);
-
+  transform: scale(0.9);
 }
 
 .cadastro {
-
-    background-color: #A21500;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #a21500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .cadastro p {
-    position: relative;  
-    font-size: 20px; 
-    color: #f0f0f0;
-    margin-bottom: 50px;
+  position: relative;
+  font-size: 20px;
+  color: #f0f0f0;
+  margin-bottom: 50px;
 }
 
-.container_login { 
-    display: flex;
+.container_login {
+  display: flex;
 }
 .c-bnt {
-    width: 111px;
-    height: 55px;
-    font-size: 19px;
-    color: #fff;
-    background-color:#2f3031;
-    border-radius: 15px; 
-    border: none;
-    align-content: center;  
-    transition: all .3s;
-    cursor: pointer;
-
+  width: 111px;
+  height: 55px;
+  font-size: 19px;
+  color: #fff;
+  background-color: #2f3031;
+  border-radius: 15px;
+  border: none;
+  align-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .c-bnt:hover {
-
-    background-color: #3D3E40;
-    transform: scale(0.95);
-
+  background-color: #3d3e40;
+  transform: scale(0.95);
 }
 
-
 .c-bnt:hover:active {
-
-    transform: scale(0.90);
-
+  transform: scale(0.9);
 }
 
 .flexz {
-    margin-top: 55px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px;
+  margin-top: 55px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
 }
 .flexz img {
-    width: 150px;
-    margin-bottom: 50px; 
-}   
+  width: 150px;
+  margin-bottom: 50px;
+}
 .all {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .login_section {
-
-    display: flex;
-
+  display: flex;
 }
 
 .div_entrar_button {
-
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
- /* ------------------RESPONSIVIDADE-------------------- */
+/* ------------------RESPONSIVIDADE-------------------- */
 @media (max-width: 980px) {
-    
-    .container_login {
-        flex-direction: column;
-        min-width: 370px;
-        max-width: 440px;
-        margin-top: 50px;
-    }
+  .container_login {
+    flex-direction: column;
+    min-width: 370px;
+    max-width: 440px;
+    margin-top: 50px;
+  }
 
-    .flexz {
-        margin-top: 0px;
-        padding: 15px;
-    }
+  .flexz {
+    margin-top: 0px;
+    padding: 15px;
+  }
 
-    .flexz img {
-        width: 50px;
-        margin-bottom: 0px;
-    }
+  .flexz img {
+    width: 50px;
+    margin-bottom: 0px;
+  }
 
-    .cadastro p {
-        font-size: 15px;
-        margin-bottom: 0px;
+  .cadastro p {
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
 
-    }
+  .c-bnt {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
 
-    .c-bnt {
-        width: 80px;
-        height: 35px;
-        font-size: 14px;
-        
-    }
+  .login {
+    padding: 30px;
+    width: auto;
+    min-height: 520px;
+    max-height: 540px;
+  }
 
-    .login {
-        padding: 30px;
-        width: auto;
-        min-height: 520px;
-        max-height: 540px;
+  .login h2 {
+    margin-bottom: 70px;
+    font-size: 25px;
+  }
 
-    }
+  .caixa-u {
+    margin-bottom: 0px;
+  }
 
-    .login h2 {
-        margin-bottom: 70px;
-        font-size: 25px;
+  .caixa-u input {
+    font-size: 13px;
+  }
 
+  .login .caixa-u label {
+    font-size: 20px;
+  }
 
-    }
+  .div_entrar_button {
+    margin-top: 40px;
+  }
 
-    .caixa-u {
-        margin-bottom: 0px;
-
-    }
-
-    .caixa-u input {
-        font-size: 13px;
-
-    }
-
-    .login .caixa-u label {
-        font-size: 20px;
-
-    }
-
-    .div_entrar_button {
-        margin-top: 40px;
-
-    }
-
-    .l-bnt {
-        width: 100px;
-        height: 50px;
-
-    }
+  .l-bnt {
+    width: 100px;
+    height: 50px;
+  }
 }

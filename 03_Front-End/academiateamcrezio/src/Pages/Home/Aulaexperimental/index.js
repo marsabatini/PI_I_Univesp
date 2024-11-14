@@ -41,60 +41,63 @@ export default function Aula_Experimental() {
             <div>
                 <section>
                     <Header />
-                    <div className="box-aula-experimental">
-                        <div className="aula_experimental_title">
-                            <h1>faça uma aula experimental grátis!</h1>
-                        </div>
-                        <div class="box-input">
-                            <form className="form-aluno-experimental" onSubmit={cadastrarAlunoExperimental}>
-                                <div className="box-u">
-                                    <label for="">nome</label>
-                                    <input
-                                        className="nome"
-                                        title="Digite seu nome completo."
-                                        name="nome"
-                                        type="text"
-                                        value={nomeCompleto}
-                                        onChange={e => setNomecompleto(e.target.value)}
-                                        placeholder="Nome completo"
-                                        required
-                                    />
-                                </div>
-                                <div className="box-u">
-                                    <label for="">e-mail</label>
-                                    <input
-                                        className="email"
-                                        title="Digite seu e-mail."
-                                        name="email"
-                                        type="text"
-                                        value={email}
-                                        onChange={e => setEmail(e.target.value)}
-                                        placeholder="E-mail"
-                                        required
-                                    />
-                                </div>
-                                <div className="box-u">
-                                    <label for="">telefone</label>
-                                    <input
-                                        className="telefone"
-                                        title="Digite seu telefone"
-                                        name="telefone"
-                                        type="text"
-                                        value={telefone}
-                                        onChange={e => setTelefone(e.target.value)}
-                                        placeholder="Telefone"
-                                        required
-                                    />
-                                </div>
-                                <div className="button-container">
-                                    <button className="button" type="submit">ver datas disponíveis</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    <main>
+                        <article className="box-aula-experimental">
+                            <section className="aula_experimental_title">
+                                <h1>faça uma aula experimental grátis!</h1>
+                            </section>
+                            <section class="box-input">
+                                <form className="form-aluno-experimental" onSubmit={cadastrarAlunoExperimental}>
+                                    <div className="box-u">
+                                        <label for="">nome</label>
+                                        <input
+                                            className="nome"
+                                            title="Digite seu nome completo."
+                                            name="nome"
+                                            type="text"
+                                            value={nomeCompleto}
+                                            onChange={e => setNomecompleto(e.target.value)}
+                                            placeholder="Nome completo"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="box-u">
+                                        <label for="">e-mail</label>
+                                        <input
+                                            className="email"
+                                            title="Digite seu e-mail."
+                                            name="email"
+                                            type="text"
+                                            value={email}
+                                            onChange={e => setEmail(e.target.value)}
+                                            placeholder="E-mail"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="box-u">
+                                        <label for="">telefone</label>
+                                        <input
+                                            className="telefone"
+                                            title="Digite seu telefone"
+                                            name="telefone"
+                                            type="text"
+                                            value={telefone}
+                                            onChange={e => setTelefone(e.target.value)}
+                                            placeholder="Telefone"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="button-container">
+                                        <button className="button" type="submit">ver datas disponíveis</button>
+                                    </div>
+                                </form>
+                            </section>
+                        </article>
+                    </main>
+                    <Footer />
                 </section>
             </div>
-            <Footer />
+
         </>
     );
 }

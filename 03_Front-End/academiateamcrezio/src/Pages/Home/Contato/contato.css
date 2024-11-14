@@ -77,5 +77,42 @@ a:focus {
     outline: 3px solid #007ACC;
 }
 
+@media (max-width: 780px) {
+    .fotoDeFundo {  
+        background-image: none;
+        margin-top: -200px;
+    }
+    .conteúdoContato {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-bottom: -10px;
+    }
+
+    .titulo_principal h1 {
+        font-size: 30px;
+        margin-bottom: -200px;
+    }
+
+    .elemento {
+        width: 350px;
+        justify-content: center;
+    }
+
+    .elemento h2 {
+        font-size: 20px;
+    }
+
+    .elemento p {
+        font-size: 15px;
+    }
+    
+    .elemento img {
+        width: 25px;
+        height: 25px;
+    }
+
+}
+ 
 
 

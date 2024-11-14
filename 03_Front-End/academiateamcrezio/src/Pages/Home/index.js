@@ -13,7 +13,7 @@ import triple from "../../Assets/triple.jpeg";
 import single_plus from "../../Assets/single+.jpeg";
 import triple_plus from "../../Assets/triple+.jpeg";
 import bull from "../../Assets/fight_like_a_bull.png";
-import tabela_horarios from "../../Assets/Agenda.jpg";
+import tabela_horarios from "../../Assets/tabelaHorários.png";
 import professores from "../../Assets/professores.png";
 import black_belt from "../../Assets/blackBelt.jpeg";
 
@@ -66,27 +66,27 @@ export default function Inicio() {
 
         <div>
             <container>
-                
-                <Header />
-                <section>
 
-                    <main className="conteudo">
-                        
-                        
-                        <div className="quadro_imagem_inicial">
-                            
+                <Header />
+                <main>
+
+                    <article className="conteudo">
+
+
+                        <section className="quadro_imagem_inicial">
+
                             <picture>
                                 <source media="(max-width:780px)" srcSet={foto_inicial_responsiva}></source>
                                 <img src={foto_inicial} className="boas-vindas" />
                             </picture>
 
-                        </div>
+                        </section>
 
-                        <div className="aula_experimental_home">
-                           <Link to="/aula_experimental"> <button > marque agora uma aula  <br /> aula experimental</button></Link>
-                        </div>
+                        <section className="aula_experimental_home">
+                            <Link to="/aula_experimental"> <button > marque agora uma aula  <br /> aula experimental</button></Link>
+                        </section>
 
-                        <div>
+                        <section>
                             <div>
                                 <span className="planoTeamCrezio">planos<br /> team crezio</span>
                             </div>
@@ -94,39 +94,39 @@ export default function Inicio() {
                             <div className="planos">
 
                                 <div className="imgPlanos">
-                                    <img src={white_belt} alt="plano white belt"/>
-                                    <img src={blue_belt} alt="plano blue belt"/>
-                                    <img src={purple_belt} alt="plano purple belt"/>
-                                    <img src={kids} alt="plano kids"/>
-                                    <img src={black_belt} alt="plano black belt"/>
-                                    <img src={single} alt="plano single"/>
-                                    <img src={single_plus} alt="plano single plus"/>
-                                    <img src={triple} alt="plano triple"/>
-                                    <img src={triple_plus} alt="plano triple plus"/>
+                                    <img src={white_belt} alt="plano white belt" />
+                                    <img src={blue_belt} alt="plano blue belt" />
+                                    <img src={purple_belt} alt="plano purple belt" />
+                                    <img src={kids} alt="plano kids" />
+                                    <img src={black_belt} alt="plano black belt" />
+                                    <img src={single} alt="plano single" />
+                                    <img src={single_plus} alt="plano single plus" />
+                                    <img src={triple} alt="plano triple" />
+                                    <img src={triple_plus} alt="plano triple plus" />
 
                                 </div>
 
                             </div>
-                        </div>
+                        </section>
 
-                        <div className="bull">
-                            <img src={bull} alt="foto touro team crezio"/>
-                        </div>
-                
+                        <section className="bull">
+                            <img src={bull} alt="foto touro team crezio" />
+                        </section>
 
-                        <div>
-                            <span className="mestres">treine com nossos mestres</span>  
-                        </div>
-
-                        <div className="professores">
-                            <div className="foto-professores">
-                                <img src={eduardo_pic} alt="professor Eduardo"/>
-                                <img src={gabr_carv_pic} alt=""/>
-                                <img src={eli_braz_pic} alt=""/>
+                        <section>
+                            <div>
+                                <span className="mestres">treine com nossos mestres</span>
                             </div>
-                        </div>
-                        
-                        
+
+                            <div className="professores">
+                                <div className="foto-professores">
+                                    <img src={eduardo_pic} alt="professor Eduardo Fonseca" />
+                                    <img src={gabr_carv_pic} alt="professora Gabriela Carvalho" />
+                                    <img src={eli_braz_pic} alt=" professor Eli Braz" />
+                                </div>
+                            </div>
+                        </section>
+                        <section>
                             <span className="modalidades"> mais modalidades</span>
                             <div className="fotos-modalidades">
                                 <div className="gallery-container">
@@ -139,80 +139,78 @@ export default function Inicio() {
                                     <a className="gallery-items">
                                         <img src={boxe} alt="boxe-aula" />
                                     </a>
-                                    <a  className="gallery-items">
+                                    <a className="gallery-items">
                                         <img src={PFL} alt="p-f-l" />
                                     </a>
-                                    <a  className="gallery-items">
+                                    <a className="gallery-items">
                                         <img src={self_defense} alt="self-defense" />
                                     </a>
-                                    <a  className="gallery-items">
+                                    <a className="gallery-items">
                                         <img src={personal_trainer} alt="personal-trainer" />
                                     </a>
 
                                 </div>
                             </div>
-                       
+                        </section>
 
-                        
+
                         <span className="tabela">agenda semanal</span>
-                            <div className="agenda-Semanal">
-                                <img src={tabela_horarios} alt="tabela do horario das aulas"/>
-                            </div>
-                        
+                        <div className="agenda-Semanal">
+                            <img src={tabela_horarios} alt="tabela do horario das aulas" />
+                        </div>
+
                         <div className="botão-matriculese">
                             <Link to="/cadastro"><button> matricule-se agora</button></Link>
                         </div>
-                        
 
-                        
                         <span className="loja">conheça nossa loja</span>
 
                         <div className="foto-loja">
                             <div>
-                                <img src={item_1}  alt="imagem1" />
-                                <img src={item_2}  alt="imagem2" />
-                                <img src={item_3}  alt="imagem3" />
-                                <img src={item_4}  alt="imagem4" />
-                            </div>
-                        </div>
-               
-                        
-                        <span className="mural">mural</span>
-
-                        <div className="corpoMural">
-                            <div className="slider-2">
-                                <div className="images-2">
-                                    <input type="radio" name="slide-2" id="img01" defaultChecked/>
-                                    <input type="radio" name="slide-2" id="img02" />
-                                    <input type="radio" name="slide-2" id="img03" />
-                                    {/* <input type="radio" name="slide-2" id="img04" /> */}
-
-                                    <img src={item_mural_1} className="m01" alt="img01" />
-                                    <img src={item_mural_2} className="m02" alt="img02" />
-                                    <img src={item_mural_3} className="m03" alt="img03" />
-                                    {/* <img src={item_mural_4} className="m04" alt="img04" /> */}
-                                </div>
-                                <div className="dots-2">
-                                    <label for="img01"></label>
-                                    <label for="img02"></label>
-                                    <label for="img03"></label>
-                                    {/* <label for="img04"></label> */}
-                                </div>
+                                <img src={item_1} alt="fotos de produtos da loja" />
+                                <img src={item_2} alt="fotos de produtos da loja" />
+                                <img src={item_3} alt="fotos de produtos da loja" />
+                                <img src={item_4} alt="fotos de produtos da loja" />
                             </div>
                         </div>
 
-                        <div className="parceiros">
-                            
+                        <section>
+                            <span className="mural">mural</span>
+
+                            <div className="corpoMural">
+                                <div className="slider-2">
+                                    <div className="images-2">
+                                        <input type="radio" name="slide-2" id="img01" defaultChecked />
+                                        <input type="radio" name="slide-2" id="img02" />
+                                        <input type="radio" name="slide-2" id="img03" />
+                                        {/* <input type="radio" name="slide-2" id="img04" /> */}
+
+                                        <img src={item_mural_1} className="m01" alt="img01" />
+                                        <img src={item_mural_2} className="m02" alt="img02" />
+                                        <img src={item_mural_3} className="m03" alt="img03" />
+                                        {/* <img src={item_mural_4} className="m04" alt="img04" /> */}
+                                    </div>
+                                    <div className="dots-2">
+                                        <label for="img01"></label>
+                                        <label for="img02"></label>
+                                        <label for="img03"></label>
+                                        {/* <label for="img04"></label> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="parceiros">
                             <img src={nossos_parceiros} />
-        
-                        </div>
+                        </section>
 
-                    </main>
+                    </article>
+                </main>
                 <Footer />
 
 
-                </section>
-                
+
+
             </container>
         </div>
 

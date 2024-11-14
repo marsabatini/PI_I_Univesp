@@ -181,6 +181,152 @@
     padding-inline: 20px;     
 }
 
+@media (max-width: 780px) {
+    .alinhamento_m {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .jiu_jitsu {
+    width: 360px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .jiu_jitsu img {
+        max-width: 220px;
+      }
+    
+    .jiu_jitsu h1 {
+        font-size: 30px;
+        line-height: 1.5;
+        color: #ffffff;
+        text-align: center
+    }
+     
+    .jiu_jitsu p {
+        font-size: 18px; 
+    }
+    
+    .boxe {
+        width: 360px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      }
+    
+    .boxe img {
+        max-width: 220px;
+    }
+    
+    .boxe h1 {
+        font-size: 30px;
+        line-height: 1.5;
+        color: #ffffff;
+        text-align: center
+    }
+    
+    .boxe p {
+        font-size: 18px; 
+    }  
+    
+    .cross_training {
+        width: 360px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      }
+    
+    .cross_training img {
+        max-width: 220px;
+    }
+    
+    .cross_training h1 {
+        font-size: 30px;
+        line-height: 1.5;
+        color: #ffffff;
+        text-align: center
+    }
+    
+    .cross_training p {
+        font-size: 18px; 
+    }
+    
+    .jiu-jitsu-kidsTeens {
+        width: 360px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      }
+    
+    .jiu-jitsu-kidsTeens img {
+        max-width: 220px;
+    }
+    
+    .jiu-jitsu-kidsTeens h1 {
+        font-size: 30px;
+        line-height: 1.5;
+        color: #ffffff;
+        text-align: center
+    }
+    
+    .jiu-jitsu-kidsTeens p {
+        font-size: 18px; 
+    }
+    
+    .defesa_pessoal-feminina {
+        width: 360px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      }
+    
+    .defesa_pessoal-feminina img {
+        max-width: 220px;
+    }
+    
+    .defesa_pessoal-feminina h1{
+        font-size: 30px;
+        line-height: 1.5;
+        color: #ffffff;
+        text-align: center
+    }
+    
+    .defesa_pessoal-feminina p {
+        font-size: 18px; 
+    }
+    
+    .personal_trainer {
+        width: 360px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      }
+    
+    .personal_trainer img {
+        max-width: 220px;
+    }
+    
+    .personal_trainer h1{
+        font-size: 30px;
+        line-height: 1.5;
+        color: #ffffff;
+        text-align: center
+    }
+    
+    .personal_trainer p {
+        font-size: 18px; 
+    }
+
+}
+
 
 
 
