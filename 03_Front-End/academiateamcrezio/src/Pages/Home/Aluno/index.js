@@ -13,8 +13,23 @@ export default function Aluno() {
     const [userData, setUserData] = useState({});
     const [email, setEmail] = useState({});
     const [senha, setSenha] = useState({});
+    const [aulasMarcadas, setAulasMarcadas] = useState({})
 
-    // {leo123@gmail.com,Leo-2308}, {lucarmo@gmail.com,lucarmo-2308}
+
+    async function carregarAulasAluno() {
+        const idAluno = JSON.parse(localStorage.getItem('id'));
+
+        
+        try {
+            const response = await api.get(`adm/aulas/aulasdoaluno/${idAluno}`);
+            setAulasMarcadas(response.data);
+            
+
+        } catch (err) {
+            
+        }
+        
+    }
 
     
     useEffect(() => {
@@ -36,6 +51,8 @@ export default function Aluno() {
         };
 
         carregarDados();
+        carregarAulasAluno();
+
 
     }, []);
 
@@ -118,13 +135,17 @@ export default function Aluno() {
                             <h2>proximas aulas</h2>
                             <i id="hidden_aulas" onClick={() => OpenInfo('aulas_marcadas','hidden_aulas','marcadas','open_aulas')} class="bi bi-caret-down-fill"></i>
                         </div>
+                        
+                        {aulasMarcadas.length > 0 ? (
+                            aulasMarcadas.map(aula => (
+                                <div key={aula.id}>
+                                    <span>{aula.dataHora + " " + aula.modalidade}</span>
+                                </div>
+                            ))
+                        ) : (
+                            <p>Nenhuma aula marcada...</p>
+                        )}
 
-                        <span>segunda:</span>
-                        <span>terça:</span>
-                        <span>quarta:</span>
-                        <span>quinta:</span>
-                        <span>sexta:</span>
-                        <span>sábado:</span>
                     </div>
                     <div className="botoes">
 
@@ -142,7 +163,7 @@ export default function Aluno() {
                             <div id="avisos" className="avisos_aluno">
                                 <div className="avisos_aluno_title">
                                     <h2>avisos importantes</h2>
-                                    <i id="hidden_avisos" class="bi bi-caret-down-fill"></i>
+                                    <i id="hidden_avisos" onClick={() => OpenInfo('avisos','hidden_avisos','avisos_aluno','open_avisos')} class="bi bi-caret-down-fill"></i>
                                 </div>
                                     <ul>
                                         <li>Evento no ibirapuera dia 20/05/2024</li>

@@ -49,7 +49,7 @@ export default function Agenda_Aluno() {
         try {
             const response = await api.get(`adm/aulas/aulasdoaluno/${idAluno}`);
             setAulasMarcadas(response.data);
-            
+            localStorage.setItem('aulasMarcadas', response.data);
 
         } catch (err) {
             
@@ -128,17 +128,17 @@ export default function Agenda_Aluno() {
         <>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"></link>
             <div>
-                <section>
+                
 
-                    <div class="caixa_agenda_aluno">
+                   
                         <Header />
 
-                        <section className="section_agenda_aluno">
+                        <section >
                             <div className="agenda">
-                                <div className="consulta_modalidade">
+                                <div className="consulta_modalidade_aluno">
 
                                     <form>
-                                        <select className="modalidade_input" id="modalidade" name="modalidade">
+                                        <select className="modalidade_input_aluno" id="modalidade" name="modalidade">
                                             <option value="Todas as Modalidades" >Todas as Modalidades</option>
                                             <option value="Boxe">Boxe</option>
                                             <option value="Jiu-Jitsu">Jiu-Jitsu</option>
@@ -148,7 +148,7 @@ export default function Agenda_Aluno() {
                                             <option value="Teen">Teen</option>
                                         </select>
                                     </form>
-                                    <div className="menu_calendario">
+                                    <div className="menu_calendario_aluno">
 
                                         <div className="menu_calendario_data_atual">
                                             <span id="prev" className="material-symbols-rounded">chevron_left</span>
@@ -156,8 +156,8 @@ export default function Agenda_Aluno() {
                                             <span id="next" className="material-symbols-rounded">chevron_right</span>
                                         </div>
 
-                                        <div className="calendar">
-                                            <ul className="weeks">
+                                        <div className="calendar_aluno">
+                                            <ul className="weeks_aluno">
                                                 <li class="inactive">Domingo</li>
                                                 <li>Segunda</li>
                                                 <li>Terça</li>
@@ -166,7 +166,7 @@ export default function Agenda_Aluno() {
                                                 <li>Sexta</li>
                                                 <li>Sábado</li>
                                             </ul>
-                                            <ul className="days">
+                                            <ul className="days_aluno">
                                                 <li className="inactive">28</li>
                                                 <li className="inactive">29</li>
                                                 <li className="inactive">30</li>
@@ -213,7 +213,7 @@ export default function Agenda_Aluno() {
 
                                 </div>
 
-                                <div className="consulta_modalidade">
+                                <div className="consulta_modalidade_aluno">
                                     <div>
                                         <h2 className="titulos">
                                             Sua Agenda Pessoal
@@ -236,26 +236,26 @@ export default function Agenda_Aluno() {
 
                                 </div>
 
-                                <div className="Agendamento">
+                                <div>
 
                                     <h2 className="titulos">
                                         AGENDA COMUM - PÚBLICA
                                     </h2>
 
-                                    <div className="Agenda_Publica">
+                                    <div className="Agenda_Publica_aluno">
 
                                         <div>
 
 
                                             <ul className="header_agenda_aluno">
-                                                <li>Data</li>
-                                                <li>Horario</li>
-                                                <li>Modalidade</li>
-                                                <li>Professor</li>
-                                                <li>Qtd Limite de Inscrições</li>
-                                                <li>Inscritos</li>
-                                                <li>Vagas</li>
-                                                <li>Status</li>
+                                                <li className="Agenda_Publica_data">Data</li>
+                                                <li className="Agenda_Publica_hora">Horario</li>
+                                                <li className="Agenda_Publica_modal">Modalidade</li>
+                                                <li className="Agenda_Publica_func">Professor</li>
+                                                <li className="Agenda_Publica_qtddlimi">Qtd Limite de Inscrições</li>
+                                                <li className="Agenda_Publica_incritos">Inscritos</li>
+                                                <li className="Agenda_Publica_vagas">Vagas</li>
+                                                <li className="Agenda_Publica_status">Status</li>
                                             </ul>
                                             <div id="lista_aulas" className="lista_aulas_aluno">
                                                 <table id="Semana-Dia-Atual" className="Semana-Dia-Atual">
@@ -270,13 +270,13 @@ export default function Agenda_Aluno() {
                                                            
                                                             return (
                                                                 <tr key={aula.id} className="aula">
-                                                                    <td className="atributo_aula">{dia}</td>
-                                                                    <td className="atributo_aula">{hora}</td>
-                                                                    <td className="atributo_aula">{aula.modalidade}</td>
-                                                                    <td className="atributo_aula">{aula.funcionario}</td>
-                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos}</td>
-                                                                    <td className="atributo_aula">{inscritos}</td>
-                                                                    <td className="atributo_aula">{aula.qtddLimiteAlunos - inscritos}</td>
+                                                                    <td className="atributo_aula_aluno_dia">{dia}</td>
+                                                                    <td className="atributo_aula_aluno_hora">{hora}</td>
+                                                                    <td className="atributo_aula_aluno_modal">{aula.modalidade}</td>
+                                                                    <td className="atributo_aula_aluno_func">{aula.funcionario}</td>
+                                                                    <td className="atributo_aula_aluno_qtddlim">{aula.qtddLimiteAlunos}</td>
+                                                                    <td className="atributo_aula_aluno_inscr">{inscritos}</td>
+                                                                    <td className="atributo_aula_aluno_vagas">{aula.qtddLimiteAlunos - inscritos}</td>
                                                                     <td>
                                                                         <button
                                                                             className={isMarcada ? 'remover_aluno' : 'inserir_aluno'}
@@ -311,9 +311,9 @@ export default function Agenda_Aluno() {
 
                         </section>
                     </div>
+                
                     <Footer />
-                </section>
-            </div>
+            
 
         </>
 

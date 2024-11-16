@@ -485,10 +485,13 @@ body {
 
 .Agenda_Publica {
     display: flex;
-    width: 1285px;
+    width: auto;
     margin-bottom: 45px;
     padding: 5px;
     justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    line-height: normal;
 }
 
 .header_agenda_adm {
@@ -502,32 +505,19 @@ body {
 }
 
 
-.Agenda_Publica .horario{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    font-size: 28px;
-    padding-top: 60px;
-    margin-top: 15px;
-    margin-right: 10px;
-    width: 90px;
-}
 
-.Agenda_Publica .horario li:hover{
-    font-size: 30px;
-}
 
-.Agenda_Publica .horario ul li{
+
+.Agenda_Publica  ul li{
     background-color: #18191a;
-    width: 90px;
+    width: 150px;
     height: 75px;
     color: #fff;
     margin-bottom: 10px;
     align-content: center;
     justify-content: left;
     list-style: none;
-    cursor: pointer;
+
 }
 
 .alter_modalidade {
@@ -845,8 +835,7 @@ body {
 .inserir_nova_aula div {
 
     display: flex;
-    margin-bottom: 15px;
-    margin-top: 10px;
+    margin: 15px;
     margin-left: auto;
     width: 100%;
     align-items: center;
@@ -869,7 +858,7 @@ body {
 .inserir_nova_aula label {
 
     font-size: 25px;
-    width: auto;
+    width: 90px;
     text-align: center;
 
 }

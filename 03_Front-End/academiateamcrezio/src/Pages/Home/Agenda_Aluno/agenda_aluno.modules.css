@@ -146,11 +146,6 @@ body {
     height: auto;
 }
 
-.section_agenda_aluno {
-    width: 1600px;
-    padding: 6rem 0;
-    
-}
 
 .gerenciador{
     display: block;
@@ -235,10 +230,10 @@ body {
 }
 
 
-.consulta_modalidade {
+.consulta_modalidade_aluno {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: auto;
     height: 550px;
     align-items: center;
     margin-bottom: 20px;
@@ -255,7 +250,7 @@ body {
     
 } 
 
-.modalidade_input {
+.modalidade_input_aluno {
     width: 500px;
     height: 65px;
     padding: 20px;
@@ -277,9 +272,10 @@ body {
     width: 500px;
     height: 440px;
     box-shadow: inset 0.1px 3px 3px 3px #acacac;
-    padding: 10px;
+    padding: 20px;
     overflow-y: hidden;
     font-size: 25px;
+    text-align: center;
 
 }
 
@@ -313,7 +309,7 @@ body {
     font-size: 20px;
 }
 
-.menu_calendario {
+.menu_calendario_aluno {
     width: 500px;
     height: 400px;
     background-color:#abcaa9c9;
@@ -333,65 +329,65 @@ body {
     margin: 0px;
 }
 
-.menu_calendario span{
+.menu_calendario_aluno span{
     font-size: 40px;
     cursor:pointer;
 }
 
-.menu_calendario span:hover{
+.menu_calendario_aluno span:hover{
     background-color: #869c84c9;
     border-radius: 50%;
     color: #313133;
 }
 
-.calendar {
+.calendar_aluno {
     padding: 0px 10px 0px;
 }
 
-.calendar ul{
+.calendar_aluno ul{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     text-align: center;
 }
 
-.calendar .weeks{
+.calendar_aluno .weeks_aluno{
     color: #777777;
     font-size: 20px;
 }
 
-.calendar .weeks li{
+.calendar_aluno .weeks_aluno li{
     margin-bottom: 15px;
     cursor: pointer;
 }
 
-.calendar .weeks li:hover{
+.calendar_aluno .weeks_aluno li:hover{
     border-radius: 10px;
     background-color: #869c84c9;
 }
 
-.calendar ul li{
+.calendar_aluno ul li{
     width: calc(100% / 7);
     justify-items: center;
     text-align: center;
 }
 
-.calendar .days li{
+.calendar_aluno .days_aluno li{
     margin-bottom: 25px;
     cursor:pointer;
 }
 
-.calendar li.inactive{
+.calendar_aluno li.inactive{
     color:#aaaaaa;
 }
 
-.calendar li.active{
+.calendar_aluno li.active{
     color:#fff;
     background-color: #A21500;
     border-radius: 1em;
 }
 
-.calendar .days li::before{
+.calendar_aluno .days_aluno li::before{
     position: absolute;
     content: "";
     height: 40px;
@@ -484,7 +480,13 @@ body {
 
 
 
-.atributo_aula{
+.atributo_aula_aluno_dia,
+.atributo_aula_aluno_hora,
+.atributo_aula_aluno_modal,
+.atributo_aula_aluno_func,
+.atributo_aula_aluno_qtddlim,
+.atributo_aula_aluno_inscr,
+.atributo_aula_aluno_vagas{
     width: 150px;
     height: 50px;
     background-color: #d1d1d1;
@@ -495,7 +497,13 @@ body {
 
 }
 
-.atributo_aula:hover{
+.atributo_aula_aluno_dia:hover,
+.atributo_aula_aluno_hora:hover,
+.atributo_aula_aluno_modal:hover,
+.atributo_aula_aluno_func:hover,
+.atributo_aula_aluno_qtddlim:hover,
+.atributo_aula_aluno_inscr:hover,
+.atributo_aula_aluno_vagas:hover{
     background: #777777;
     color: #fff;
 }
@@ -565,10 +573,10 @@ body {
 
 
 
-.Agenda_Publica {
+.Agenda_Publica_aluno {
     display: flex;
-    width: 1285px;
-    margin-bottom: 45px;
+    width: auto;
+    margin-bottom: 80px;
     padding: 5px;
     justify-content: center;
     
@@ -585,7 +593,14 @@ body {
 
 
 
-.Agenda_Publica li {
+.Agenda_Publica_data, 
+.Agenda_Publica_hora,
+.Agenda_Publica_modal,
+.Agenda_Publica_func,
+.Agenda_Publica_qtddlimi,
+.Agenda_Publica_incritos,
+.Agenda_Publica_vagas,
+.Agenda_Publica_status {
 
     width: 150px;
     height: 60px;
@@ -597,7 +612,7 @@ body {
     line-height: 25px;
 }
 
-.Agenda_Publica .horario{
+.Agenda_Publica_aluno .horario_aluno{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -609,11 +624,11 @@ body {
     width: 90px;
 }
 
-.Agenda_Publica .horario li:hover{
+.Agenda_Publica_aluno .horario_aluno li:hover{
     font-size: 30px;
 }
 
-.Agenda_Publica .horario ul li{
+.Agenda_Publica_aluno .horario_aluno ul li{
     background-color: #18191a;
     width: 90px;
     height: 75px;
@@ -916,4 +931,89 @@ body {
 .cancelar_button:hover {
     background-color: #741000;
     cursor: pointer;
+}
+
+@media (max-width: 780px) {
+    .Agenda_Publica_data, 
+    .Agenda_Publica_hora,
+    .Agenda_Publica_modal,
+    .Agenda_Publica_func,
+    .Agenda_Publica_qtddlimi {
+        width: 65px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+
+    .remover_aluno {
+        width: 180px;
+        height: 35px;
+        font-size: 18px;
+        margin-left: 0px;
+    }
+
+    .inserir_aluno {
+        width: 180px;
+        height: 35px;
+        font-size: 18px;
+        margin-left: 0px;
+    }
+
+    .atributo_aula_aluno_dia,
+    .atributo_aula_aluno_hora,
+    .atributo_aula_aluno_modal,
+    .atributo_aula_aluno_func,
+    .atributo_aula_aluno_qtddlim {
+        width: 65px;
+        font-size: 15px;
+        
+    }
+
+    .lista_aulas_aluno {
+        width: 405px;
+    }
+
+    .agenda_alunos {
+        width: 400px;
+        height: 420px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .modalidade_input_aluno {
+        width: 400px;
+    }
+
+    .atributo_aula_aluno_inscr,
+    .atributo_aula_aluno_vagas {
+        display: none;
+    }
+
+    .Semana-Dia-Atual tr {
+        justify-content: center;
+    }
+
+    .Agenda_Publica_incritos,
+    .Agenda_Publica_vagas,
+    .Agenda_Publica_status {
+        display: none;
+    }
+
+    .separador {
+        display: none;
+    }
+
+    .agenda {
+        flex-direction: column;
+    }
+
+    .menu_calendario_aluno {
+        height: 430px;
+        width: 400px;
+    }
+
+    .calendar_aluno .weeks_aluno{
+        font-size: 17px;
+    }
+
 }
